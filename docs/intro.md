@@ -1,35 +1,19 @@
 ---
+sidebar_label: 'Overview'
 sidebar_position: 1
 ---
 
-# Tutorial Intro
+# Overview
 
-Let's discover **Docusaurus in less than 5 minutes**.
+WeTix Open APIs allow developers to utilize WeTix's core functionalities such as get cinemas, movies, showtimes, seat layout and create order. WeTix Open API uses [GraphQL](https://graphql.org/) as its data query and manipulation language.
 
-## Getting Started
+## API Environment Summary
+There are two services for our API (OAuth and Open API), both for sandbox and production environment. OAuth server is for the authentication, Open API server is for the core functions.
 
-Get started by **creating a new site**.
+### Sandbox Environment
+Open API Server -> [https://sb-graph.wetix.my](https://sb-graph.wetix.my)  
+OAuth Server -> [https://sb-oauth.wetix.my](https://sb-oauth.wetix.my)
 
-Or **try Docusaurus immediately** with **[new.docusaurus.io](https://new.docusaurus.io)**.
-
-## Generate a new site
-
-Generate a new Docusaurus site using the **classic template**:
-
-```shell
-npx @docusaurus/init@latest init my-website classic
-```
-
-## Start your site
-
-Run the development server:
-
-```shell
-cd my-website
-
-npx docusaurus start
-```
-
-Your site starts at `http://localhost:3000`.
-
-Open `docs/intro.md` and edit some lines: the site **reloads automatically** and display your changes.
+### Production Environment
+Open API Server -> [https://graph.wetix.my](https://graph.wetix.my)  
+OAuth Server -> [https://oauth.wetix.my](https://oauth.wetix.my)
