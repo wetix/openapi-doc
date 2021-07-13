@@ -17,6 +17,17 @@ The list of available cinemas that have movie showtimes.
 | `nodes` [`([Cinema!])`](/docs/objects#cinema)      | The list of cinemas.                       |
 | `pageInfo` [`(PageInfo!)`](/docs/objects#pageinfo) | The page information to assist pagination. |
 
+## MovieConnection
+
+The list of movies.
+
+**Fields**
+
+| Name                                               | Description                                |
+| -------------------------------------------------- | ------------------------------------------ |
+| `nodes` [`([Movie!])`](/docs/objects#movie)        | The list of movies.                        |
+| `pageInfo` [`(PageInfo!)`](/docs/objects#pageinfo) | The page information to assist pagination. |
+
 ## Cinema
 
 The cinema object.
@@ -33,6 +44,25 @@ The cinema object.
 | `stateCode` [`(String!)`](/docs/scalars#string)    | The state code of the cinema.                    |
 | `imageUrl` [`(String!)`](/docs/scalars#string)     | The URL of the logo of the cinema.               |
 | `geopoint` [`(GeoPoint!)`](/docs/scalars#geopoint) | The latitude and longitude of the cinema.        |
+
+## Movie
+
+The movie object.
+
+**Fields**
+
+| Name                                                            | Description                                          |
+| --------------------------------------------------------------- | ---------------------------------------------------- |
+| `key` [`(Key!)`](/docs/scalars#key)                             | An unique identifier for this object.                |
+| `title` [`(String!)`](/docs/scalars#string)                     | The title of the movie.                              |
+| `censorship` [`(Censorship!)`](/docs/enums#censorship)          | The censor rating of the movie.                      |
+| `category` [`(MovieCategory!)`](/docs/enums#moviecategory)      | The category of the movie.                           |
+| `screeningType` [`(ScreeningType!)`](/docs/enums#screeningtype) | The screening type of the movie.                     |
+| `plot` [`(String!)`](/docs/scalars#string)                      | The plot of the movie.                               |
+| `portraitImageUrl` [`(String!)`](/docs/scalars#string)          | The poster image URL of the movie.                   |
+| `genres` [`([String!]!)`](/docs/scalars#string)                 | The genres of the movie.                             |
+| `releasedAt` [`(Date!)`](/docs/scalars#date)                    | The date when the movie was released in cinemas.     |
+| `createdAt` [`(DateTime!)`](/docs/scalars#datetime)             | The date time the movie was created in WeTix system. |
 
 ## PageInfo
 
