@@ -54,5 +54,4 @@ jobs:
         run: |
           echo ${{ secrets.K8S_KEY }} | base64 --decode --ignore-garbage > /tmp/config
           export KUBECONFIG=/tmp/config
-          kubectl apply -f app.yaml
           kubectl set image deployment openapi-doc openapi-doc=registry-intl-vpc.ap-southeast-3.aliyuncs.com/wetix/openapi-doc:${{ github.sha }} --namespace=default
