@@ -5,7 +5,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 module.exports = {
   title: 'WeTix',
   tagline: 'Open API',
-  url: 'https://your-docusaurus-test-site.com',
+  url: 'https://doc.wetix.my',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -21,10 +21,15 @@ module.exports = {
       // Useful if you want to support a single color mode
       disableSwitch: true,
     },
+    docsSideNavCollapsible: true,
+    // headerLinks: [
+    //   { doc: 'my-examples', label: 'Examples' },
+    //   { languages: true },
+    // ],
     navbar: {
       logo: {
-        alt: 'My Site Logo',
-        src: 'https://wetix.my/assets/img/wetix_logo.png',
+        alt: 'WeTix',
+        src: '/img/wetix.svg',
       },
       items: [
         {
@@ -77,7 +82,7 @@ module.exports = {
       //     ],
       //   },
       // ],
-      copyright: `Copyright © ${new Date().getFullYear()} WeTix SDN BHD (Company NO.1253397-W). All rights reserved.`,
+      copyright: `© ${new Date().getFullYear()} WeTix Sdn Bhd (Company NO.1253397-W). All rights reserved.`,
     },
     prism: {
       theme: lightCodeTheme,
