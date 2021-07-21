@@ -76,3 +76,49 @@ The page information to assist pagination.
 | `hasPreviousPage` [`(Boolean!)`](/docs/scalars#boolean) | A flag indicating if there are more pages to paginate backwards. |
 | `startCursor` [`(Key)`](/docs/scalars#key)              | The cursor to be used to paginate backwards.                     |
 | `endCursor` [`(Key)`](/docs/scalars#key)                | The cursor to be used to paginate forwards.                      |
+
+## MovieShowtimes
+
+The showtimes of a movie grouped by the cinemas that are playing the movie and the hall types of the cinemas.
+
+**Fields**
+
+| Name                                                            | Description                                                           |
+| --------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `screeningCinemas` [`([Cinema!])`](/docs/objects#cinema)        | The list of cinemas that are screening the movie.                     |
+| `screeningDates` [`([Date!])`](/docs/scalars#date)              | The the list of dates that the showtimes for the movie are available. |
+| `cinemaGroups` [`([CinemaGroup!]!)`](/docs/objects#cinemagroup) | The showtimes grouped by the cinemas that are playing the movie.      |
+
+## CinemaGroup
+
+The showtimes of a movie that are playing in a cinema, grouped by the hall types of the cinema.
+
+**Fields**
+
+| Name                                                                  | Description                                            |
+| --------------------------------------------------------------------- | ------------------------------------------------------ |
+| `cinema` [`(Cinema!)`](/docs/objects#cinema)                          | The cinema that is screening the movie.                |
+| `hallTypeGroups` [`([HallTypeGroup!]!)`](/docs/objects#halltypegroup) | The showtimes grouped by the hall types of the cinema. |
+
+## HallTypeGroup
+
+The showtimes of a movie that are playing in a cinema hall.
+
+**Fields**
+
+| Name                                                   | Description                  |
+| ------------------------------------------------------ | ---------------------------- |
+| `hallType` [`(String!)`](/docs/scalars#string)         | The hall type of the cinema. |
+| `showtimes` [`([Showtime!]!)`](/docs/objects#showtime) | The list of showtimes.       |
+
+## Showtime
+
+The showtime object.
+
+**Fields**
+
+| Name                                       | Description                           |
+| ------------------------------------------ | ------------------------------------- |
+| `key` [`(Key!)`](/docs/scalars#key)        | An unique identifier for this object. |
+| `seatsLeft` [`(Uint)`](/docs/scalars#uint) | The number of seats left.             |
+| `time` [`(Time!)`](/docs/scalars#time)     | The time when the showtime is played. |

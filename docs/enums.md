@@ -1,5 +1,5 @@
 ---
-sidebar_label: 'Enum'
+sidebar_label: "Enums"
 sidebar_position: 4
 ---
 
