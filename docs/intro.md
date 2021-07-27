@@ -17,3 +17,4 @@ OAuth Server -> [https://sb-oauth2.wetix.my](https://sb-oauth2.wetix.my)
 ### Production Environment
 Open API Server -> [https://graph.wetix.my](https://graph.wetix.my)  
 OAuth Server -> [https://oauth2.wetix.my](https://oauth2.wetix.my)
+

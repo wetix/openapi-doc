@@ -1,6 +1,6 @@
 ---
 sidebar_label: "Scalars"
-sidebar_position: 3
+sidebar_position: 6
 ---
 
 ## Key

@@ -5,18 +5,6 @@ sidebar_position: 2
 
 # Fields
 
-## cinema
-
-Gets cinema by its key.
-
-**Type:** [Cinema!](/docs/objects#cinema)
-
-Arguments:
-
-| Name                                | Description            |
-| ----------------------------------- | ---------------------- |
-| `key` [`(Key!)`](/docs/scalars#key) | The key of the cinema. |
-
 ## movie
 
 Gets movie by its key.
