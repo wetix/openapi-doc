@@ -1,9 +1,9 @@
 ---
-sidebar_label: "Fields"
+sidebar_label: "Authenticating with GraphQL"
 sidebar_position: 2
 ---
 
-# Fields
+<!-- # Fields
 
 ## movie
 
@@ -28,4 +28,4 @@ Arguments:
 | Name                                     | Description                                           |
 | ---------------------------------------- | ----------------------------------------------------- |
 | `movieKey` [`(Key!)`](/docs/scalars#key) | The key of the movie whose showtimes will be fetched. |
-| `date` [`(Date!)`](/docs/scalars#date)   | The date of the showtimes.                            |
+| `date` [`(Date!)`](/docs/scalars#date)   | The date of the showtimes.                            | -->

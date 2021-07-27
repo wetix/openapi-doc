@@ -53,18 +53,18 @@ The movie object.
 
 **Fields**
 
-| Name               | Data Type                                   | Description                                          |
-| ------------------ | ------------------------------------------- | ---------------------------------------------------- |
-| `key`              | [Key!](/docs/graphql/scalars#key)           | An unique identifier for this object.                |
-| `title`            | [String!](/docs/graphql/scalars#string)     | The title of the movie.                              |
-| `censorship`       | [Censorship!](/docs/enums#censorship)       | The censor rating of the movie.                      |
-| `category`         | [MovieCategory!](/docs/enums#moviecategory) | The category of the movie.                           |
-| `screeningType`    | [ScreeningType!](/docs/enums#screeningtype) | The screening type of the movie.                     |
-| `plot`             | [String!](/docs/graphql/scalars#string)     | The plot of the movie.                               |
-| `portraitImageUrl` | [String!](/docs/graphql/scalars#string)     | The poster image URL of the movie.                   |
-| `genres`           | [String!](/docs/graphql/scalars#string)     | The genres of the movie.                             |
-| `releasedAt`       | [Date!](/docs/graphql/scalars#date)         | The date when the movie was released in cinemas.     |
-| `createdAt`        | [DateTime!](/docs/graphql/scalars#datetime) | The date time the movie was created in WeTix system. |
+| Name               | Data Type                                           | Description                                          |
+| ------------------ | --------------------------------------------------- | ---------------------------------------------------- |
+| `key`              | [Key!](/docs/graphql/scalars#key)                   | An unique identifier for this object.                |
+| `title`            | [String!](/docs/graphql/scalars#string)             | The title of the movie.                              |
+| `censorship`       | [Censorship!](/docs/graphql/enums#censorship)       | The censor rating of the movie.                      |
+| `category`         | [MovieCategory!](/docs/graphql/enums#moviecategory) | The category of the movie.                           |
+| `screeningType`    | [ScreeningType!](/docs/graphql/enums#screeningtype) | The screening type of the movie.                     |
+| `plot`             | [String!](/docs/graphql/scalars#string)             | The plot of the movie.                               |
+| `portraitImageUrl` | [String!](/docs/graphql/scalars#string)             | The poster image URL of the movie.                   |
+| `genres`           | [String!](/docs/graphql/scalars#string)             | The genres of the movie.                             |
+| `releasedAt`       | [Date!](/docs/graphql/scalars#date)                 | The date when the movie was released in cinemas.     |
+| `createdAt`        | [DateTime!](/docs/graphql/scalars#datetime)         | The date time the movie was created in WeTix system. |
 
 ## [PageInfo](/docs/graphql/objects#pageinfo)
 
