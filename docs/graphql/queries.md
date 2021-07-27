@@ -7,10 +7,16 @@ sidebar_position: 1
 
 - [cinemas](/docs/graphql/queries#cinemas)
 - [movies](/docs/graphql/queries#movies)
+- [seatMap](/docs/graphql/queries#seatmap)
+- [tickets](/docs/graphql/queries#tickets)
+- [concessions](/docs/graphql/queries#concessions)
+- [vouchers](/docs/graphql/queries#vouchers)
+- [movieOrders](/docs/graphql/queries#movieOrders)
+- [payments](/docs/graphql/queries#payments)
 
-# Connections
+<!-- # Connections
 
-Connections return a paginated list of items. The pagination is cursor-based.
+Connections return a paginated list of items. The pagination is cursor-based. -->
 
 ## [cinemas](/docs/graphql/objects#cinemaconnection)
 
@@ -38,12 +44,12 @@ The list of now showing or coming soon movies.
 **Arguments**
 
 | Name           | Data Type                                | Description                                                                                                                                   |
-| -------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- | --- |
+| -------------- | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
 | `after`        | [Key](/docs/graphql/scalars#key)         | To return the elements in the list that comes after the specified cursor.                                                                     |
 | `before`       | [Key](/docs/graphql/scalars#key)         | To return the elements in the list that comes before the specified cursor. If both `after` and `before` is passed, `before` takes precedence. |
 | `first`        | [Uint](/docs/graphql/scalars#uint)       | Returns the first n elements from the list.                                                                                                   |
 | `last`         | [Uint](/docs/graphql/scalars#uint)       | Returns the last n elements from the list.                                                                                                    |
-| `onScreenOnly` | [Boolean](/docs/graphql/scalars#boolean) | Select only listings where the movies have showtimes.                                                                                         |     |
+| `onScreenOnly` | [Boolean](/docs/graphql/scalars#boolean) | Select only listings where the movies have showtimes.                                                                                         |
 
 ## [cinema](/docs/graphql/objects#cinema)
 
