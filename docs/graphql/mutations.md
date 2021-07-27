@@ -17,7 +17,7 @@ Create a user session.
 
 **Input Type:** [createMovieOrderSessionInput!](/docs/graphql/input_objects#createmovieordersessioninput)
 
-**Return Type:**
+**Return Type:** [MovieOrderSession!](/docs/graphql/objects#movieordersession)
 
 ## [reserveSeats](/docs/graphql/objects#reseverseats)
 
@@ -25,4 +25,4 @@ Reserve and lock the selected seats.
 
 **Input Type:** [reserveSeatsInput!](/docs/graphql/input_objects#reseverseatsinput)
 
-**Return Type:**
+**Return Type:** [MovieOrderSession!](/docs/graphql/objects#movieordersession)
