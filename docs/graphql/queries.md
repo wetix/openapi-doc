@@ -6,7 +6,9 @@ sidebar_position: 1
 # Queries
 
 - [cinemas](/docs/graphql/queries#cinemas)
+- [cinema](/docs/graphql/queries#cinema)
 - [movies](/docs/graphql/queries#movies)
+- [movie](/docs/graphql/queries#movie)
 - [seatMap](/docs/graphql/queries#seatmap)
 - [tickets](/docs/graphql/queries#tickets)
 - [concessions](/docs/graphql/queries#concessions)
@@ -74,3 +76,15 @@ Look up movie by key.
 | Name  | Data Type                         | Description           |
 | ----- | --------------------------------- | --------------------- |
 | `key` | [Key!](/docs/graphql/scalars#key) | The key of the movie. |
+
+## [seatMap](/docs/graphql/queries#seatmap)
+
+Retrieve seat map by showtime key.
+
+**Return Type:** [SeatMap!](/docs/graphql/objects#seatmap)
+
+**Arguments**
+
+| Name          | Data Type                         | Description              |
+| ------------- | --------------------------------- | ------------------------ |
+| `showtimeKey` | [Key!](/docs/graphql/scalars#key) | The key of the showtime. |

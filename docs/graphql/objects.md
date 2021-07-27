@@ -66,6 +66,18 @@ The movie object.
 | `releasedAt`       | [Date!](/docs/graphql/scalars#date)                 | The date when the movie was released in cinemas.     |
 | `createdAt`        | [DateTime!](/docs/graphql/scalars#datetime)         | The date time the movie was created in WeTix system. |
 
+## [MovieOrderConnection](/docs/graphql/objects#movieorderconnection)
+
+The list of movie orders.
+
+**Fields**
+
+| Name         | Data Type                                       | Description                                            |
+| ------------ | ----------------------------------------------- | ------------------------------------------------------ |
+| `nodes`      | [MovieOrder!](/docs/graphql/objects#movieorder) | The list of movie orders.                              |
+| `pageInfo`   | [PageInfo!](/docs/graphql/objects#pageinfo)     | The page information to assist pagination.             |
+| `totalCount` | [Int!](/docs/graphql/objects#movie)             | Identifies the total count of items in the connection. |
+
 ## [PageInfo](/docs/graphql/objects#pageinfo)
 
 The page information to assist pagination.
@@ -116,6 +128,18 @@ The showtimes of a movie that are playing in a cinema hall.
 ## [Showtime](/docs/graphql/objects#showtime)
 
 The showtime object.
+
+**Fields**
+
+| Name        | Data Type                           | Description                           |
+| ----------- | ----------------------------------- | ------------------------------------- |
+| `key`       | [Key!](/docs/graphql/scalars#key)   | An unique identifier for this object. |
+| `seatsLeft` | [Uint](/docs/graphql/scalars#uint)  | The number of seats left.             |
+| `time`      | [Time!](/docs/graphql/scalars#time) | The time when the showtime is played. |
+
+## [SeatMap](/docs/graphql/objects#seatmap)
+
+The seat map object.
 
 **Fields**
 
