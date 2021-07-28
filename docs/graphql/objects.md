@@ -12,7 +12,7 @@ The list of cinemas.
 
 **Fields**
 
-| Name         | Description                                 |
+| Name         | Data Type                                   | Description                                            |
 | ------------ | ------------------------------------------- | ------------------------------------------------------ |
 | `nodes`      | [Cinema!](/docs/graphql/objects#cinema)     | The list of cinemas.                                   |
 | `pageInfo`   | [PageInfo!](/docs/graphql/objects#pageinfo) | The page information to assist pagination.             |
@@ -78,19 +78,6 @@ The list of movie orders.
 | `pageInfo`   | [PageInfo!](/docs/graphql/objects#pageinfo)     | The page information to assist pagination.             |
 | `totalCount` | [Int!](/docs/graphql/objects#movie)             | Identifies the total count of items in the connection. |
 
-## [PageInfo](/docs/graphql/objects#pageinfo)
-
-The page information to assist pagination.
-
-**Fields**
-
-| Name              | Data Type                                 | Description                                                      |
-| ----------------- | ----------------------------------------- | ---------------------------------------------------------------- |
-| `hasNextPage`     | [Boolean!](/docs/graphql/scalars#boolean) | A flag indicating if there are more pages to paginate forwards.  |
-| `hasPreviousPage` | [Boolean!](/docs/graphql/scalars#boolean) | A flag indicating if there are more pages to paginate backwards. |
-| `startCursor`     | [Key](/docs/graphql/scalars#key)          | The cursor to be used to paginate backwards.                     |
-| `endCursor`       | [Key](/docs/graphql/scalars#key)          | The cursor to be used to paginate forwards.                      |
-
 ## [MovieShowtimes](/docs/graphql/objects#movieshowtimes)
 
 The showtimes of a movie grouped by the cinemas that are playing the movie and the hall types of the cinemas.
@@ -103,7 +90,7 @@ The showtimes of a movie grouped by the cinemas that are playing the movie and t
 | `screeningDates` [`([Date!])`](/docs/graphql/scalars#date)              | The the list of dates that the showtimes for the movie are available. |
 | `cinemaGroups` [`([CinemaGroup!]!)`](/docs/graphql/objects#cinemagroup) | The showtimes grouped by the cinemas that are playing the movie.      |
 
-## CinemaGroup
+## [CinemaGroup](/docs/graphql/objects#cinemagroup)
 
 The showtimes of a movie that are playing in a cinema, grouped by the hall types of the cinema.
 
@@ -114,7 +101,7 @@ The showtimes of a movie that are playing in a cinema, grouped by the hall types
 | `cinema` [`(Cinema!)`](/docs/graphql/objects#cinema)                          | The cinema that is screening the movie.                |
 | `hallTypeGroups` [`([HallTypeGroup!]!)`](/docs/graphql/objects#halltypegroup) | The showtimes grouped by the hall types of the cinema. |
 
-## HallTypeGroup
+## [HallTypeGroup](/docs/graphql/objects#halltypegroup)
 
 The showtimes of a movie that are playing in a cinema hall.
 
@@ -148,3 +135,16 @@ The seat map object.
 | `key`       | [Key!](/docs/graphql/scalars#key)   | An unique identifier for this object. |
 | `seatsLeft` | [Uint](/docs/graphql/scalars#uint)  | The number of seats left.             |
 | `time`      | [Time!](/docs/graphql/scalars#time) | The time when the showtime is played. |
+
+## [PageInfo](/docs/graphql/objects#pageinfo)
+
+The page information to assist pagination.
+
+**Fields**
+
+| Name              | Data Type                                 | Description                                                      |
+| ----------------- | ----------------------------------------- | ---------------------------------------------------------------- |
+| `hasNextPage`     | [Boolean!](/docs/graphql/scalars#boolean) | A flag indicating if there are more pages to paginate forwards.  |
+| `hasPreviousPage` | [Boolean!](/docs/graphql/scalars#boolean) | A flag indicating if there are more pages to paginate backwards. |
+| `startCursor`     | [Key](/docs/graphql/scalars#key)          | The cursor to be used to paginate backwards.                     |
+| `endCursor`       | [Key](/docs/graphql/scalars#key)          | The cursor to be used to paginate forwards.                      |

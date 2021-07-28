@@ -32,3 +32,9 @@ Represents the date in the following layout: YYYY-MM-DD. Ex: 2006-06-22.
 Represents RFC3339 UTC date time string. Ex: 2019-10-12T07:20:50.52Z.
 
 ---
+
+## Boolean
+
+Represents true or false values.
+
+---
