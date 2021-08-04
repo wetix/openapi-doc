@@ -170,6 +170,24 @@ The movie showtime object.
 | `time`      | [Time!](/docs/graphql/scalars#time)         | The time when the showtime is played.         |
 | `isValid`   | [Boolean!](/docs/graphql/scalars#boolean)   | Indicates if the showtime is still available. |
 
+## [MovieOrder](/docs/graphql/objects#movieorder)
+
+The movie order object.
+
+**Fields**
+
+| Name            | Data Type                                       | Description                                               |
+| --------------- | ----------------------------------------------- | --------------------------------------------------------- |
+| `key`           | [Key!](/docs/graphql/scalars#key)               | An unique identifier for this object.                     |
+| `bookingID`     | [String!](/docs/graphql/scalars#string)         | An external unique identifier related this object.        |
+| `transactionID` | [String!](/docs/graphql/scalars#string)         |                                                           |
+| `currencyCode`  | [String!](/docs/graphql/scalars#string)         |                                                           |
+| `payableAmount` | [Money!](/docs/graphql/scalars#money)           |                                                           |
+| `expiredAt`     | [DateTime!](/docs/graphql/scalars#string)       |                                                           |
+| `status`        | [OrderStatus!](/docs/graphql/enums#orderstatus) |                                                           |
+| `createdAt`     | [DateTime!](/docs/graphql/scalars#datetime)     | Identifies the date and time when the object was created. |
+| `lastUpdatedAt` | [DateTime!](/docs/graphql/scalars#datetime)     | Identifies the date and time when the object was updated. |
+
 ## [SeatMap](/docs/graphql/objects#seatmap)
 
 The seat map object.

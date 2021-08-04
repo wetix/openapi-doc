@@ -90,7 +90,19 @@ Look up user by key.
 | ----- | --------------------------------- | -------------------- |
 | `key` | [Key!](/docs/graphql/scalars#key) | The key of the user. |
 
-**Return Type:** [MovieOrderSession!](/docs/graphql/objects#movieordersession)
+**Return Type:** [User!](/docs/graphql/objects#user)
+
+## [movieOrder](/docs/graphql/objects#movieorder)
+
+Look up movie order by key.
+
+**Arguments**
+
+| Name  | Data Type                         | Description                 |
+| ----- | --------------------------------- | --------------------------- |
+| `key` | [Key!](/docs/graphql/scalars#key) | The key of the movie order. |
+
+**Return Type:** [MovieOrder!](/docs/graphql/objects#movieorder)
 
 <!-- ## [movieShowtimes](/docs/graphql/objects#movieshowtimes)
 
