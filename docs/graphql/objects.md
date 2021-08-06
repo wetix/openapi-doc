@@ -8,6 +8,34 @@ hide_table_of_contents: false
 
 Objects in GraphQL represent the resources you can access. An object can contain a list of fields, which are specifically typed.
 
+## [User](/docs/graphql/objects#user)
+
+The user object.
+
+**Fields**
+
+| Name          | Data Type                                                           | Description                                               |
+| ------------- | ------------------------------------------------------------------- | --------------------------------------------------------- |
+| `key`         | [Key!](/docs/graphql/scalars#key)                                   | An unique identifier for this object.                     |
+| `email`       | [String!](/docs/graphql/scalars#string)                             | The email address of this user.                           |
+| `phoneNo`     | [String!](/docs/graphql/scalars#string)                             | The phone number of this user.                            |
+| `memberCards` | [[MemberCard!]!](/docs/graphql/objects#membercard)                  | The phone number of this user.                            |
+| `movieOrders` | [MovieOrderConnection!](/docs/graphql/objects#movieorderconnection) | An unique identifier for this object.                     |
+| `vouchers`    | [VoucherConnection!](/docs/graphql/objects#voucherconnection)       | An unique identifier for this object.                     |
+| `createdAt`   | [DateTime!](/docs/graphql/scalars#datetime)                         | Identifies the date and time when the object was created. |
+
+## [MemberCard](/docs/graphql/objects#membercard)
+
+The list of member card.
+
+**Fields**
+
+| Name         | Data Type                                   | Description                                            |
+| ------------ | ------------------------------------------- | ------------------------------------------------------ |
+| `nodes`      | [Cinema!](/docs/graphql/objects#membercard) | The list of member card.                               |
+| `pageInfo`   | [PageInfo!](/docs/graphql/objects#pageinfo) | The page information to assist pagination.             |
+| `totalCount` | [Int!](/docs/graphql/objects#movie)         | Identifies the total count of items in the connection. |
+
 ## [Cinema](/docs/graphql/objects#cinema)
 
 The cinema object.
@@ -46,26 +74,27 @@ The movie object.
 
 **Fields**
 
-<!-- | `category`          | [String!](/docs/graphql/scalars#string)     | The censor rating of the movie. Possible value are (U, TBC, P13, 18SX, 18PA, 18SG, 18PL) | -->
-
-| Name                | Data Type                                   | Description                                                                              |
-| ------------------- | ------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| `key`               | [Key!](/docs/graphql/scalars#key)           | An unique identifier for this object.                                                    |
-| `title`             | [String!](/docs/graphql/scalars#string)     | The title of the movie.                                                                  |
-| `censorship`        | [String!](/docs/graphql/scalars#string)     | The censor rating of the movie. Possible value are (U, TBC, P13, 18SX, 18PA, 18SG, 18PL) |
-| `plot`              | [String!](/docs/graphql/scalars#string)     | The plot of the movie.                                                                   |
-| `portraitImageUrl`  | [URI!](/docs/graphql/scalars#uri)           | The portrait poster image URL of the movie.                                              |
-| `landscapeImageUrl` | [URI!](/docs/graphql/scalars#uri)           | The landscape poster image URL of the movie.                                             |
-| `showtimeCount`     | [Uint!](/docs/graphql/scalars#uint)         | Returns a count of how many showtimes there are on this object.                          |
-| `genres`            | [String!](/docs/graphql/scalars#string)     | The genres of the movie.                                                                 |
-| `actors`            | [[Actor!]!](/docs/graphql/objects#actor)    | The actors of the movie.                                                                 |
-| `images`            | [[URI!]!](/docs/graphql/scalars#uri)        | The images related to the movie.                                                         |
-| `releaseDate`       | [Date!](/docs/graphql/scalars#date)         | The date when the movie was released in cinemas.                                         |
-| `isAdvanceSales`    | [Boolean!](/docs/graphql/scalars#boolean)   | Indicates if the movie is advance sales.                                                 |
-| `isOnScreen`        | [Boolean!](/docs/graphql/scalars#boolean)   | Indicates if the movie is on screening.                                                  |
-| `isComingSoon`      | [Boolean!](/docs/graphql/scalars#boolean)   | Indicates if the movie is upcoming screening.                                            |
-| `createdAt`         | [DateTime!](/docs/graphql/scalars#datetime) | Identifies the date and time when the object was created.                                |
-| `lastUpdatedAt`     | [DateTime!](/docs/graphql/scalars#datetime) | Identifies the date and time when the object was updated.                                |
+| Name                | Data Type                                                                   | Description                                                                                                          |
+| ------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `key`               | [Key!](/docs/graphql/scalars#key)                                           | An unique identifier for this object.                                                                                |
+| `title`             | [String!](/docs/graphql/scalars#string)                                     | The title of the movie.                                                                                              |
+| `originalTitle`     | [String!](/docs/graphql/scalars#string)                                     | The original title of the movie.                                                                                     |
+| `censorship`        | [String!](/docs/graphql/scalars#string)                                     | The censor rating of the movie. Possible value are (**U**, **TBC**, **P13**, **18SX**, **18PA**, **18SG**, **18PL**) |
+| `plot`              | [String!](/docs/graphql/scalars#string)                                     | The plot of the movie.                                                                                               |
+| `mainTrailerUrl`    | [URI](/docs/graphql/scalars#uri)                                            | The main movie trailer video. (**YouTube** video link)                                                               |
+| `portraitImageUrl`  | [URI!](/docs/graphql/scalars#uri)                                           | The portrait poster image URL of the movie.                                                                          |
+| `landscapeImageUrl` | [URI](/docs/graphql/scalars#uri)                                            | The landscape poster image URL of the movie.                                                                         |
+| `showtimeCount`     | [Uint!](/docs/graphql/scalars#uint)                                         | Returns a count of how many showtimes there are on this object.                                                      |
+| `genres`            | [String!](/docs/graphql/scalars#string)                                     | The genres of the movie.                                                                                             |
+| `actors`            | [[Actor!]!](/docs/graphql/objects#actor)                                    | The actors of the movie.                                                                                             |
+| `images`            | [[URI!]!](/docs/graphql/scalars#uri)                                        | The images related to the movie.                                                                                     |
+| ~~`comments`~~      | ~~[MovieCommentConnection!](/docs/graphql/objects#moviecommentconnection)~~ | The movie comments. **(Upcoming Feature, 2.1)**                                                                      |
+| `releaseDate`       | [Date!](/docs/graphql/scalars#date)                                         | The date when the movie was released in cinemas.                                                                     |
+| `isAdvanceSales`    | [Boolean!](/docs/graphql/scalars#boolean)                                   | Indicates if the movie is advance sales.                                                                             |
+| `isOnScreen`        | [Boolean!](/docs/graphql/scalars#boolean)                                   | Indicates if the movie is on screening.                                                                              |
+| `isComingSoon`      | [Boolean!](/docs/graphql/scalars#boolean)                                   | Indicates if the movie is upcoming screening.                                                                        |
+| `createdAt`         | [DateTime!](/docs/graphql/scalars#datetime)                                 | Identifies the date and time when the object was created.                                                            |
+| `lastUpdatedAt`     | [DateTime!](/docs/graphql/scalars#datetime)                                 | Identifies the date and time when the object was updated.                                                            |
 
 ## [MovieConnection](/docs/graphql/objects#movieconnection)
 
@@ -91,6 +120,18 @@ The actor object.
 | `characterName` | [String](/docs/graphql/scalars#string)  | The character name in the movie. |
 | `avatarUrl`     | [URI!](/docs/graphql/scalars#uri)       | The avatar of the actor.         |
 
+## [MovieShowtime](/docs/graphql/objects#movieshowtime)
+
+The showtimes of a movie grouped by the cinemas that are playing the movie and the hall types of the cinemas.
+
+**Fields**
+
+| Name                                                                    | Description                                                           |
+| ----------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `screeningCinemas` [`([Cinema!])`](/docs/graphql/objects#cinema)        | The list of cinemas that are screening the movie.                     |
+| `screeningDates` [`([Date!])`](/docs/graphql/scalars#date)              | The the list of dates that the showtimes for the movie are available. |
+| `cinemaGroups` [`([CinemaGroup!]!)`](/docs/graphql/objects#cinemagroup) | The showtimes grouped by the cinemas that are playing the movie.      |
+
 ## [MovieOrderSession](/docs/graphql/objects#movieordersession)
 
 The movie order session object.
@@ -107,6 +148,24 @@ The movie order session object.
 | `createdAt`     | [DateTime!](/docs/graphql/scalars#datetime)                             | Identifies the date and time when the object was created.         |
 | `lastUpdatedAt` | [DateTime!](/docs/graphql/scalars#datetime)                             | Identifies the date and time when the object was updated.         |
 
+## [MovieOrder](/docs/graphql/objects#movieorder)
+
+The movie order object.
+
+**Fields**
+
+| Name            | Data Type                                       | Description                                               |
+| --------------- | ----------------------------------------------- | --------------------------------------------------------- |
+| `key`           | [Key!](/docs/graphql/scalars#key)               | An unique identifier for this object.                     |
+| `bookingId`     | [String!](/docs/graphql/scalars#string)         | An external unique identifier related this object.        |
+| `transactionId` | [String!](/docs/graphql/scalars#string)         |                                                           |
+| `currencyCode`  | [String!](/docs/graphql/scalars#string)         |                                                           |
+| `payableAmount` | [Money!](/docs/graphql/scalars#money)           |                                                           |
+| `expiredAt`     | [DateTime!](/docs/graphql/scalars#string)       |                                                           |
+| `status`        | [OrderStatus!](/docs/graphql/enums#orderstatus) |                                                           |
+| `createdAt`     | [DateTime!](/docs/graphql/scalars#datetime)     | Identifies the date and time when the object was created. |
+| `lastUpdatedAt` | [DateTime!](/docs/graphql/scalars#datetime)     | Identifies the date and time when the object was updated. |
+
 ## [MovieOrderConnection](/docs/graphql/objects#movieorderconnection)
 
 The list of movie orders.
@@ -119,17 +178,17 @@ The list of movie orders.
 | `pageInfo`   | [PageInfo!](/docs/graphql/objects#pageinfo)     | The page information to assist pagination.             |
 | `totalCount` | [Int!](/docs/graphql/objects#movie)             | Identifies the total count of items in the connection. |
 
-## [MovieShowtimes](/docs/graphql/objects#movieshowtimes)
+## [VoucherConnection](/docs/graphql/objects#voucherconnection)
 
-The showtimes of a movie grouped by the cinemas that are playing the movie and the hall types of the cinemas.
+The list of vouchers.
 
 **Fields**
 
-| Name                                                                    | Description                                                           |
-| ----------------------------------------------------------------------- | --------------------------------------------------------------------- |
-| `screeningCinemas` [`([Cinema!])`](/docs/graphql/objects#cinema)        | The list of cinemas that are screening the movie.                     |
-| `screeningDates` [`([Date!])`](/docs/graphql/scalars#date)              | The the list of dates that the showtimes for the movie are available. |
-| `cinemaGroups` [`([CinemaGroup!]!)`](/docs/graphql/objects#cinemagroup) | The showtimes grouped by the cinemas that are playing the movie.      |
+| Name         | Data Type                                   | Description                                            |
+| ------------ | ------------------------------------------- | ------------------------------------------------------ |
+| `nodes`      | [Voucher!](/docs/graphql/objects#voucher)   | The list of vouchers.                                  |
+| `pageInfo`   | [PageInfo!](/docs/graphql/objects#pageinfo) | The page information to assist pagination.             |
+| `totalCount` | [Int!](/docs/graphql/objects#movie)         | Identifies the total count of items in the connection. |
 
 ## [CinemaGroup](/docs/graphql/objects#cinemagroup)
 
@@ -163,30 +222,12 @@ The movie showtime object.
 | ----------- | ------------------------------------------- | --------------------------------------------- |
 | `key`       | [Key!](/docs/graphql/scalars#key)           | An unique identifier for this object.         |
 | `seatsLeft` | [Uint](/docs/graphql/scalars#uint)          | The number of seats left.                     |
-| `hallID`    | [String!](/docs/graphql/scalars#string)     | The hall unique identifier of the showtime.   |
+| `hallId`    | [String!](/docs/graphql/scalars#string)     | The hall unique identifier of the showtime.   |
 | `hallName`  | [String!](/docs/graphql/scalars#string)     | The hall name of the showtime.                |
 | `screenAt`  | [DateTime!](/docs/graphql/scalars#datetime) | The date and time when showtime is played.    |
 | `date`      | [Date!](/docs/graphql/scalars#date)         | The time when the showtime is played.         |
 | `time`      | [Time!](/docs/graphql/scalars#time)         | The time when the showtime is played.         |
 | `isValid`   | [Boolean!](/docs/graphql/scalars#boolean)   | Indicates if the showtime is still available. |
-
-## [MovieOrder](/docs/graphql/objects#movieorder)
-
-The movie order object.
-
-**Fields**
-
-| Name            | Data Type                                       | Description                                               |
-| --------------- | ----------------------------------------------- | --------------------------------------------------------- |
-| `key`           | [Key!](/docs/graphql/scalars#key)               | An unique identifier for this object.                     |
-| `bookingID`     | [String!](/docs/graphql/scalars#string)         | An external unique identifier related this object.        |
-| `transactionID` | [String!](/docs/graphql/scalars#string)         |                                                           |
-| `currencyCode`  | [String!](/docs/graphql/scalars#string)         |                                                           |
-| `payableAmount` | [Money!](/docs/graphql/scalars#money)           |                                                           |
-| `expiredAt`     | [DateTime!](/docs/graphql/scalars#string)       |                                                           |
-| `status`        | [OrderStatus!](/docs/graphql/enums#orderstatus) |                                                           |
-| `createdAt`     | [DateTime!](/docs/graphql/scalars#datetime)     | Identifies the date and time when the object was created. |
-| `lastUpdatedAt` | [DateTime!](/docs/graphql/scalars#datetime)     | Identifies the date and time when the object was updated. |
 
 ## [SeatMap](/docs/graphql/objects#seatmap)
 

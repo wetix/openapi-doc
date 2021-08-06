@@ -11,19 +11,19 @@ When calling the GraphQL API, you must specify nested subfields until you return
 
 ## [Key](/docs/graphql/scalars#key)
 
-Represents a Base64 encoded string that is a unique identifier of an object.
+Represents a **Base64 encoded string** that is a unique identifier of an object.
 
 ---
 
 ## [String](/docs/graphql/scalars#string)
 
-Represents a textual data as UTF-8 character sequences.
+Represents a textual data as **UTF-8** character sequences.
 
 ---
 
 ## [Boolean](/docs/graphql/scalars#uint)
 
-Represents true or false values.
+Represents **true** or **false** values.
 
 ---
 
@@ -35,13 +35,13 @@ Represents an integer that is at most 32 bits in size.
 
 ## [Int](/docs/graphql/scalars#int)
 
-Represents an integer that is at most 32 bits in size.
+Represents a **signed integer** that is at most 32 bits in size.
 
 ---
 
 ## [Int64](/docs/graphql/scalars#int64)
 
-Represents an integer that is at most 64 bits in size.
+Represents a **signed integer** that is at most 64 bits in size.
 
 ---
 
@@ -53,24 +53,36 @@ Represents an unsigned integer that is at most 32 bits in size.
 
 ## [Money](/docs/graphql/scalars#money)
 
-Represents an unsigned integer that is at most 32 bits in size.
+Represents a decimal number which follow the format of **0.00** _(limited to 2 percision)_. Ex: 123.53.
 
 ---
 
 ## [URI](/docs/graphql/scalars#uri)
 
-An RFC 3986, RFC 3987, and RFC 6570 (level 4) compliant URI string.
+An **RFC3986**, **RFC3987**, and **RFC6570** (level 4) compliant URI string.
 
 ---
 
 ## [Date](/docs/graphql/scalars#date)
 
-An [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) date string, using the format of **YYYY-MM-DD**. Ex: 2006-06-22.
+An [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date string, using the format of **YYYY-MM-DD**. Ex: 2006-06-22.
 
 ---
 
 ## [DateTime](/docs/graphql/scalars#datetime)
 
-An RFC3339 UTC date time string. Ex: 2019-10-12T07:20:50.52Z.
+An **RFC3339** UTC date time string. Ex: 2019-10-12T07:20:50.52Z.
+
+---
+
+## [State](/docs/graphql/scalars#state)
+
+An [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2:MY) state string. Ex: **MY-14** for **Kuala Lumpur**.
+
+---
+
+## [Country](/docs/graphql/scalars#country)
+
+An [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2:MY) state string. Ex: **MY-14** for **Kuala Lumpur**.
 
 ---

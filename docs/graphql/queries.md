@@ -11,6 +11,18 @@ Every GraphQL schema has a root type for both queries and mutations. The query t
 
 Connections return a paginated list of items. The pagination is cursor-based. -->
 
+## [user](/docs/graphql/objects#user)
+
+Look up user by key.
+
+**Arguments**
+
+| Name  | Data Type                         | Description          |
+| ----- | --------------------------------- | -------------------- |
+| `key` | [Key!](/docs/graphql/scalars#key) | The key of the user. |
+
+**Return Type:** [User!](/docs/graphql/objects#user)
+
 ## [cinemas](/docs/graphql/objects#cinemaconnection)
 
 The list of cinemas.
@@ -79,18 +91,6 @@ Look up movie order session by key.
 | `key` | [Key!](/docs/graphql/scalars#key) | The key of the movie. |
 
 **Return Type:** [MovieOrderSession!](/docs/graphql/objects#movieordersession)
-
-## [user](/docs/graphql/objects#user)
-
-Look up user by key.
-
-**Arguments**
-
-| Name  | Data Type                         | Description          |
-| ----- | --------------------------------- | -------------------- |
-| `key` | [Key!](/docs/graphql/scalars#key) | The key of the user. |
-
-**Return Type:** [User!](/docs/graphql/objects#user)
 
 ## [movieOrder](/docs/graphql/objects#movieorder)
 

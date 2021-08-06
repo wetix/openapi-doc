@@ -14,8 +14,8 @@ Interfaces serve as parent objects from which other objects can inherit.
 | Name            | Data Type                                       | Description                                               |
 | --------------- | ----------------------------------------------- | --------------------------------------------------------- |
 | `key`           | [Key!](/docs/graphql/scalars#key)               | An unique identifier for this object.                     |
-| `bookingID`     | [String!](/docs/graphql/scalars#string)         | An external unique identifier related this object.        |
-| `transactionID` | [String!](/docs/graphql/scalars#string)         |                                                           |
+| `bookingId`     | [String!](/docs/graphql/scalars#string)         | An external unique identifier related this object.        |
+| `transactionId` | [String!](/docs/graphql/scalars#string)         |                                                           |
 | `currencyCode`  | [String!](/docs/graphql/scalars#string)         |                                                           |
 | `payableAmount` | [Money!](/docs/graphql/scalars#money)           |                                                           |
 | `expiredAt`     | [DateTime!](/docs/graphql/scalars#string)       |                                                           |

@@ -7,7 +7,19 @@ sidebar_position: 2
 
 Every GraphQL schema has a root type for both queries and mutations. The mutation type defines GraphQL operations that change data on the server. It is analogous to performing HTTP verbs such as **POST**, **PATCH**, and **DELETE**.
 
-## [createMovieOrderSession](/docs/graphql/objects#createmovieordersession)
+## [addMovieComment](/docs/graphql/mutations#addmoviecomment)
+
+Add movie comment.
+
+**Input Type:** [AddMovieCommentInput!](/docs/graphql/input_objects#addmoviecommentinput)
+
+**Return Fields**
+
+| Name       | Data Type                                                   | Description             |
+| ---------- | ----------------------------------------------------------- | ----------------------- |
+| `comments` | [MovieCommentConnection!](/docs/graphql/objects#movieorder) | The movie order object. |
+
+## [createMovieOrderSession](/docs/graphql/mutations#createmovieordersession)
 
 Create a movie order session.
 
@@ -19,7 +31,7 @@ Create a movie order session.
 | ------------------- | ------------------------------------------------------------- | ------------------------------- |
 | `movieOrderSession` | [MovieOrderSession!](/docs/graphql/objects#movieordersession) | The movie order session object. |
 
-## [reserveSeats](/docs/graphql/objects#reserveseats)
+## [reserveSeats](/docs/graphql/mutations#reserveseats)
 
 Reserve and lock the selected seats.
 
@@ -31,7 +43,7 @@ Reserve and lock the selected seats.
 | ------------------- | ------------------------------------------------------------- | ------------------------------- |
 | `movieOrderSession` | [MovieOrderSession!](/docs/graphql/objects#movieordersession) | The movie order session object. |
 
-## [releaseSeats](/docs/graphql/objects#releaseseats)
+## [releaseSeats](/docs/graphql/mutations#releaseseats)
 
 Release the locked seats.
 
@@ -42,3 +54,39 @@ Release the locked seats.
 | Name                | Data Type                                                     | Description                     |
 | ------------------- | ------------------------------------------------------------- | ------------------------------- |
 | `movieOrderSession` | [MovieOrderSession!](/docs/graphql/objects#movieordersession) | The movie order session object. |
+
+## [createMovieOrder](/docs/graphql/mutations#createmovieorder)
+
+Create a movie order session.
+
+**Input Type:** [CreateMovieOrderSessionInput!](/docs/graphql/input_objects#createmovieordersessioninput)
+
+**Return Fields**
+
+| Name                | Data Type                                                     | Description                     |
+| ------------------- | ------------------------------------------------------------- | ------------------------------- |
+| `movieOrderSession` | [MovieOrderSession!](/docs/graphql/objects#movieordersession) | The movie order session object. |
+
+## [createPaymentWithMovieOrder](/docs/graphql/mutations#createpaymentwithmovieorder)
+
+Create a new payment with the existing movie order.
+
+**Input Type:** [CreatePaymentWithMovieOrderInput!](/docs/graphql/input_objects#createpaymentwithmovieorderinput)
+
+**Return Fields**
+
+| Name         | Data Type                                       | Description             |
+| ------------ | ----------------------------------------------- | ----------------------- |
+| `movieOrder` | [MovieOrder!](/docs/graphql/objects#movieorder) | The movie order object. |
+
+## [confirmMovieOrder](/docs/graphql/mutations#confirmmovieorder)
+
+Create a new payment with the existing movie order.
+
+**Input Type:** [ConfirmMovieOrderInput!](/docs/graphql/input_objects#confirmmovieorderinput)
+
+**Return Fields**
+
+| Name         | Data Type                                       | Description             |
+| ------------ | ----------------------------------------------- | ----------------------- |
+| `movieOrder` | [MovieOrder!](/docs/graphql/objects#movieorder) | The movie order object. |
