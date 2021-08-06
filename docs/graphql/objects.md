@@ -74,24 +74,27 @@ The movie object.
 
 **Fields**
 
-| Name                | Data Type                                   | Description                                                                                                          |
-| ------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| `key`               | [Key!](/docs/graphql/scalars#key)           | An unique identifier for this object.                                                                                |
-| `title`             | [String!](/docs/graphql/scalars#string)     | The title of the movie.                                                                                              |
-| `censorship`        | [String!](/docs/graphql/scalars#string)     | The censor rating of the movie. Possible value are (**U**, **TBC**, **P13**, **18SX**, **18PA**, **18SG**, **18PL**) |
-| `plot`              | [String!](/docs/graphql/scalars#string)     | The plot of the movie.                                                                                               |
-| `portraitImageUrl`  | [URI!](/docs/graphql/scalars#uri)           | The portrait poster image URL of the movie.                                                                          |
-| `landscapeImageUrl` | [URI!](/docs/graphql/scalars#uri)           | The landscape poster image URL of the movie.                                                                         |
-| `showtimeCount`     | [Uint!](/docs/graphql/scalars#uint)         | Returns a count of how many showtimes there are on this object.                                                      |
-| `genres`            | [String!](/docs/graphql/scalars#string)     | The genres of the movie.                                                                                             |
-| `actors`            | [[Actor!]!](/docs/graphql/objects#actor)    | The actors of the movie.                                                                                             |
-| `images`            | [[URI!]!](/docs/graphql/scalars#uri)        | The images related to the movie.                                                                                     |
-| `releaseDate`       | [Date!](/docs/graphql/scalars#date)         | The date when the movie was released in cinemas.                                                                     |
-| `isAdvanceSales`    | [Boolean!](/docs/graphql/scalars#boolean)   | Indicates if the movie is advance sales.                                                                             |
-| `isOnScreen`        | [Boolean!](/docs/graphql/scalars#boolean)   | Indicates if the movie is on screening.                                                                              |
-| `isComingSoon`      | [Boolean!](/docs/graphql/scalars#boolean)   | Indicates if the movie is upcoming screening.                                                                        |
-| `createdAt`         | [DateTime!](/docs/graphql/scalars#datetime) | Identifies the date and time when the object was created.                                                            |
-| `lastUpdatedAt`     | [DateTime!](/docs/graphql/scalars#datetime) | Identifies the date and time when the object was updated.                                                            |
+| Name                | Data Type                                                                   | Description                                                                                                          |
+| ------------------- | --------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| `key`               | [Key!](/docs/graphql/scalars#key)                                           | An unique identifier for this object.                                                                                |
+| `title`             | [String!](/docs/graphql/scalars#string)                                     | The title of the movie.                                                                                              |
+| `originalTitle`     | [String!](/docs/graphql/scalars#string)                                     | The original title of the movie.                                                                                     |
+| `censorship`        | [String!](/docs/graphql/scalars#string)                                     | The censor rating of the movie. Possible value are (**U**, **TBC**, **P13**, **18SX**, **18PA**, **18SG**, **18PL**) |
+| `plot`              | [String!](/docs/graphql/scalars#string)                                     | The plot of the movie.                                                                                               |
+| `mainTrailerUrl`    | [URI](/docs/graphql/scalars#uri)                                            | The main movie trailer video. (**YouTube** video link)                                                               |
+| `portraitImageUrl`  | [URI!](/docs/graphql/scalars#uri)                                           | The portrait poster image URL of the movie.                                                                          |
+| `landscapeImageUrl` | [URI](/docs/graphql/scalars#uri)                                            | The landscape poster image URL of the movie.                                                                         |
+| `showtimeCount`     | [Uint!](/docs/graphql/scalars#uint)                                         | Returns a count of how many showtimes there are on this object.                                                      |
+| `genres`            | [String!](/docs/graphql/scalars#string)                                     | The genres of the movie.                                                                                             |
+| `actors`            | [[Actor!]!](/docs/graphql/objects#actor)                                    | The actors of the movie.                                                                                             |
+| `images`            | [[URI!]!](/docs/graphql/scalars#uri)                                        | The images related to the movie.                                                                                     |
+| ~~`comments`~~      | ~~[MovieCommentConnection!](/docs/graphql/objects#moviecommentconnection)~~ | The movie comments. **(Upcoming Feature, 2.1)**                                                                      |
+| `releaseDate`       | [Date!](/docs/graphql/scalars#date)                                         | The date when the movie was released in cinemas.                                                                     |
+| `isAdvanceSales`    | [Boolean!](/docs/graphql/scalars#boolean)                                   | Indicates if the movie is advance sales.                                                                             |
+| `isOnScreen`        | [Boolean!](/docs/graphql/scalars#boolean)                                   | Indicates if the movie is on screening.                                                                              |
+| `isComingSoon`      | [Boolean!](/docs/graphql/scalars#boolean)                                   | Indicates if the movie is upcoming screening.                                                                        |
+| `createdAt`         | [DateTime!](/docs/graphql/scalars#datetime)                                 | Identifies the date and time when the object was created.                                                            |
+| `lastUpdatedAt`     | [DateTime!](/docs/graphql/scalars#datetime)                                 | Identifies the date and time when the object was updated.                                                            |
 
 ## [MovieConnection](/docs/graphql/objects#movieconnection)
 
@@ -219,7 +222,7 @@ The movie showtime object.
 | ----------- | ------------------------------------------- | --------------------------------------------- |
 | `key`       | [Key!](/docs/graphql/scalars#key)           | An unique identifier for this object.         |
 | `seatsLeft` | [Uint](/docs/graphql/scalars#uint)          | The number of seats left.                     |
-| `hallID`    | [String!](/docs/graphql/scalars#string)     | The hall unique identifier of the showtime.   |
+| `hallId`    | [String!](/docs/graphql/scalars#string)     | The hall unique identifier of the showtime.   |
 | `hallName`  | [String!](/docs/graphql/scalars#string)     | The hall name of the showtime.                |
 | `screenAt`  | [DateTime!](/docs/graphql/scalars#datetime) | The date and time when showtime is played.    |
 | `date`      | [Date!](/docs/graphql/scalars#date)         | The time when the showtime is played.         |

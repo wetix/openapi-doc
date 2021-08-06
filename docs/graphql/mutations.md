@@ -7,6 +7,18 @@ sidebar_position: 2
 
 Every GraphQL schema has a root type for both queries and mutations. The mutation type defines GraphQL operations that change data on the server. It is analogous to performing HTTP verbs such as **POST**, **PATCH**, and **DELETE**.
 
+## [addMovieComment](/docs/graphql/mutations#addmoviecomment)
+
+Add movie comment.
+
+**Input Type:** [AddMovieCommentInput!](/docs/graphql/input_objects#addmoviecommentinput)
+
+**Return Fields**
+
+| Name       | Data Type                                                   | Description             |
+| ---------- | ----------------------------------------------------------- | ----------------------- |
+| `comments` | [MovieCommentConnection!](/docs/graphql/objects#movieorder) | The movie order object. |
+
 ## [createMovieOrderSession](/docs/graphql/mutations#createmovieordersession)
 
 Create a movie order session.
