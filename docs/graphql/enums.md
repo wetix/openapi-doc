@@ -11,13 +11,13 @@ Enums represent possible sets of values for a field.
 
 The cinema operator name.
 
-| Value     | Description                           |
-| --------- | ------------------------------------- |
-| `GSC`     | Golden Screen Cinemas                 |
-| `TGV`     | TGV Cinemas                           |
-| ~~`MBO`~~ | ~~MBO Cinemas~~ (no longer available) |
-| `MMC`     | mmCineplexes                          |
-| `DADI`    | Dadi Cinema                           |
+| Value     | Description                      |
+| --------- | -------------------------------- |
+| `GSC`     | Golden Screen Cinemas            |
+| `TGV`     | TGV Cinemas                      |
+| ~~`MBO`~~ | ~~MBO Cinemas~~ **(deprecated)** |
+| `MMC`     | mmCineplexes                     |
+| `DADI`    | Dadi Cinema                      |
 
 ## [MovieOrderSessionStatus](/docs/graphql/enums#movieordersessionstatus)
 
@@ -37,7 +37,7 @@ The order status.
 | Value       | Description                                                         |
 | ----------- | ------------------------------------------------------------------- |
 | `DRAFT`     | Indicates if the order is under draft, yet to initiate for payment. |
-| `CANCELLED` | Indicates if the order has been cancelled.                          |
+| `CANCELLED` | Indicates if the order has been cancelled by user.                  |
 | `PENDING`   | Indicates if the order is pending for payment.                      |
 | `PAID`      | Indicates if the order is paid for payment, but tickets not issued. |
 | `REFUNDED`  | Indicates if the order is refunded.                                 |

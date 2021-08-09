@@ -47,7 +47,13 @@ Represents a **signed integer** that is at most 64 bits in size.
 
 ## [Uint](/docs/graphql/scalars#uint)
 
-Represents an unsigned integer that is at most 32 bits in size.
+Represents an **unsigned integer** that is at most 32 bits in size.
+
+---
+
+## [Uint64](/docs/graphql/scalars#uint64)
+
+Represents an **unsigned integer** that is at most 64 bits in size.
 
 ---
 
