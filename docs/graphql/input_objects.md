@@ -31,14 +31,14 @@ Create movie order input with selected tickets and concessions.
 
 **Input Fields**
 
-| Name               | Data Type                                                                       | Description                                |
-| ------------------ | ------------------------------------------------------------------------------- | ------------------------------------------ |
-| `sessionKey`       | [Key!](/docs/graphql/scalars#key)                                               | Unique identifier for movie order session. |
-| `customer`         | [MovieOrderCustomerInput!](/docs/graphql/input_objects#movieordercustomerinput) | Unique identifier for movie order session. |
-| `transactionRefId` | [String](/docs/graphql/scalars#string)                                          | Unique identifier for movie order session. |
-| `tickets`          | [MovieOrderTicketsInput!](/docs/graphql/input_objects#)                         | Unique identifier for movie order session. |
-| `concessions`      | [MovieOrderConcessionsInput!](/docs/graphql/input_objects#)                     | Unique identifier for movie order session. |
-| `promoCode`        | [String!](/docs/graphql/scalars#key)                                            | Unique identifier for movie order session. |
+| Name          | Data Type                                                                       | Description                                   |
+| ------------- | ------------------------------------------------------------------------------- | --------------------------------------------- |
+| `sessionKey`  | [Key!](/docs/graphql/scalars#key)                                               | Unique identifier for movie order session.    |
+| `customer`    | [MovieOrderCustomerInput!](/docs/graphql/input_objects#movieordercustomerinput) | Customer information for movie order session. |
+| `orderId`     | [String!](/docs/graphql/scalars#string)                                         | External unique identifier for order.         |
+| `tickets`     | [MovieOrderTicketsInput!](/docs/graphql/input_objects#)                         | Selected tickets input.                       |
+| `concessions` | [MovieOrderConcessionsInput!](/docs/graphql/input_objects#)                     | Selected concessions input.                   |
+| `promoCode`   | [String!](/docs/graphql/scalars#key)                                            | Promo code applied by the user.               |
 
 ## [MovieOrderCustomerInput](/docs/graphql/input_objects#movieordercustomerinput)
 
@@ -49,6 +49,6 @@ Create movie order input with selected tickets and concessions.
 | Name         | Data Type                               | Description                                                                        |
 | ------------ | --------------------------------------- | ---------------------------------------------------------------------------------- |
 | `key`        | [Key!](/docs/graphql/scalars#key)       | Unique identifier for the user.                                                    |
-| `externalId` | [String!](/docs/graphql/scalars#string) |                                                                                    |
+| `externalId` | [String!](/docs/graphql/scalars#string) | External unique identifier for the user.                                           |
 | `email`      | [String](/docs/graphql/scalars#string)  | The email address of the customer, this will sending a booking confirmation email. |
 | `phoneNo`    | [String!](/docs/graphql/scalars#string) | The phone no of the customer.                                                      |
