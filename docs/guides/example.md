@@ -13,7 +13,7 @@ sidebar_position: 2
     cinemas {
       nodes {
         name
-        showtimes(date: "2020-08-10") {
+        showtimes(date: "2021-08-10") {
           nodes {
             key
             hall {
