@@ -19,22 +19,10 @@ The user object.
 | `key`         | [Key!](/docs/graphql/scalars#key)                                   | An unique identifier for this object.                     |
 | `email`       | [String!](/docs/graphql/scalars#string)                             | The email address of this user.                           |
 | `phoneNo`     | [String!](/docs/graphql/scalars#string)                             | The phone number of this user.                            |
-| `memberCards` | [[MemberCard!]!](/docs/graphql/objects#membercard)                  | The phone number of this user.                            |
+| `memberCards` | [[MemberCard!]!](/docs/graphql/objects#membercard)                  | The member cards of this user.                            |
 | `movieOrders` | [MovieOrderConnection!](/docs/graphql/objects#movieorderconnection) | An unique identifier for this object.                     |
 | `vouchers`    | [VoucherConnection!](/docs/graphql/objects#voucherconnection)       | An unique identifier for this object.                     |
 | `createdAt`   | [DateTime!](/docs/graphql/scalars#datetime)                         | Identifies the date and time when the object was created. |
-
-## [MemberCard](/docs/graphql/objects#membercard)
-
-The list of member card.
-
-**Fields**
-
-| Name         | Data Type                                   | Description                                            |
-| ------------ | ------------------------------------------- | ------------------------------------------------------ |
-| `nodes`      | [Cinema!](/docs/graphql/objects#membercard) | The list of member card.                               |
-| `pageInfo`   | [PageInfo!](/docs/graphql/objects#pageinfo) | The page information to assist pagination.             |
-| `totalCount` | [Int!](/docs/graphql/objects#movie)         | Identifies the total count of items in the connection. |
 
 ## [Cinema](/docs/graphql/objects#cinema)
 
@@ -64,7 +52,7 @@ The list of cinemas.
 
 | Name         | Data Type                                   | Description                                            |
 | ------------ | ------------------------------------------- | ------------------------------------------------------ |
-| `nodes`      | [Cinema!](/docs/graphql/objects#cinema)     | The list of cinemas.                                   |
+| `nodes`      | [[Cinema!]!](/docs/graphql/objects#cinema)  | The list of cinemas.                                   |
 | `pageInfo`   | [PageInfo!](/docs/graphql/objects#pageinfo) | The page information to assist pagination.             |
 | `totalCount` | [Int!](/docs/graphql/objects#movie)         | Identifies the total count of items in the connection. |
 
@@ -88,7 +76,7 @@ The movie object.
 | `genres`            | [String!](/docs/graphql/scalars#string)                                     | The genres of the movie.                                                                                             |
 | `actors`            | [[Actor!]!](/docs/graphql/objects#actor)                                    | The actors of the movie.                                                                                             |
 | `images`            | [[URI!]!](/docs/graphql/scalars#uri)                                        | The images related to the movie.                                                                                     |
-| ~~`comments`~~      | ~~[MovieCommentConnection!](/docs/graphql/objects#moviecommentconnection)~~ | The movie comments. **(Upcoming Feature, 2.1)**                                                                      |
+| ~~`comments`~~      | ~~[MovieCommentConnection!](/docs/graphql/objects#moviecommentconnection)~~ | The movie comments. **(Upcoming Feature)**                                                                           |
 | `releaseDate`       | [Date!](/docs/graphql/scalars#date)                                         | The date when the movie was released in cinemas.                                                                     |
 | `isAdvanceSales`    | [Boolean!](/docs/graphql/scalars#boolean)                                   | Indicates if the movie is advance sales.                                                                             |
 | `isOnScreen`        | [Boolean!](/docs/graphql/scalars#boolean)                                   | Indicates if the movie is on screening.                                                                              |
