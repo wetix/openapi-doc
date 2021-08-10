@@ -29,7 +29,7 @@ Represents **true** or **false** values.
 
 ## [Float](/docs/graphql/scalars#int)
 
-Represents an integer that is at most 32 bits in size.
+A signed double-precision floating-point value.
 
 ---
 
