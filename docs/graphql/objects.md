@@ -178,15 +178,26 @@ The movie order session object.
 
 **Fields**
 
-| Name            | Data Type                                                               | Description                                                       |
-| --------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------- |
-| `key`           | [Key!](/docs/graphql/scalars#key)                                       | An unique identifier for this object.                             |
-| `cinema`        | [Cinema!](/docs/graphql/objects#cinema)                                 | The cinema object belongs to this object.                         |
-| `movie`         | [Movie!](/docs/graphql/objects#movie)                                   | The movie object belongs to this object.                          |
-| `status`        | [MovieOrderSessionStatus!](/docs/graphql/enums#movieordersessionstatus) | The current status of this object.                                |
-| `expiredAt`     | [DateTime!](/docs/graphql/scalars#datetime)                             | Identifies the date and time when the object is going to expires. |
-| `createdAt`     | [DateTime!](/docs/graphql/scalars#datetime)                             | Identifies the date and time when the object was created.         |
-| `lastUpdatedAt` | [DateTime!](/docs/graphql/scalars#datetime)                             | Identifies the date and time when the object was updated.         |
+| Name             | Data Type                                                               | Description                                                       |
+| ---------------- | ----------------------------------------------------------------------- | ----------------------------------------------------------------- |
+| `key`            | [Key!](/docs/graphql/scalars#key)                                       | An unique identifier for this object.                             |
+| `sessionId`      | [ID!](/docs/graphql/scalars#id)                                         | An unique session identifier of this object.                      |
+| `cinema`         | [Cinema!](/docs/graphql/objects#cinema)                                 | The cinema object belongs to this object.                         |
+| `movie`          | [Movie!](/docs/graphql/objects#movie)                                   | The movie object belongs to this object.                          |
+| `showtime`       | [MovieShowtime!](/docs/graphql/objects#movieshowtime)                   | The showtime object belongs to this object.                       |
+| `seatLayout`     | [CinemaHallLayout!](/docs/graphql/objects#cinemahalllayout)             | The cinema hall layout object belongs to this session.            |
+| `tickets`        | [MovieTicket!](/docs/graphql/objects#movieticket)                       | Return the list of movie tickets.                                 |
+| `concessions`    | [MovieConcession!](/docs/graphql/objects#movieconcession)               | Return the list of movie concessions.                             |
+| `currencyCode`   | [Currency!](/docs/graphql/scalars#currency)                             | The currency code of this order session.                          |
+| `discountAmount` | [Money!](/docs/graphql/scalars#money)                                   | The discount amount of this order session.                        |
+| `bookingAmount`  | [Money!](/docs/graphql/scalars#money)                                   | The booking amount of this order session.                         |
+| `totalAmount`    | [Money!](/docs/graphql/scalars#money)                                   | The total amount of this order session.                           |
+| `hasExpiry`      | [Boolean!](/docs/graphql/scalars#int64)                                 | Indicates this order session has expiry.                          |
+| `expiresIn`      | [Int64!](/docs/graphql/scalars#int64)                                   | The difference between current and expired time in seconds.       |
+| `expiredAt`      | [DateTime!](/docs/graphql/scalars#datetime)                             | Identifies the date and time when the object is going to expires. |
+| `status`         | [MovieOrderSessionStatus!](/docs/graphql/enums#movieordersessionstatus) | The current status of this object.                                |
+| `createdAt`      | [DateTime!](/docs/graphql/scalars#datetime)                             | Identifies the date and time when the object was created.         |
+| `lastUpdatedAt`  | [DateTime!](/docs/graphql/scalars#datetime)                             | Identifies the date and time when the object was updated.         |
 
 ## [MovieShowtime](/docs/graphql/objects#movieshowtime)
 
@@ -227,6 +238,37 @@ The list of movie showtimes.
 | `nodes`      | [MovieShowtime!](/docs/graphql/objects#movieshowtime) | The list of movie showtimes.                           |
 | `pageInfo`   | [PageInfo!](/docs/graphql/objects#pageinfo)           | The page information to assist pagination.             |
 | `totalCount` | [Uint64!](/docs/graphql/scalars#uint64)               | Identifies the total count of items in the connection. |
+
+## [MovieTicket](/docs/graphql/objects#movieticket)
+
+The movie ticket object.
+
+**Fields**
+
+| Name              | Data Type                               | Description                                     |
+| ----------------- | --------------------------------------- | ----------------------------------------------- |
+| `id`              | [ID!](/docs/graphql/scalars#id)         | An unique identifier for this object.           |
+| `name`            | [String!](/docs/graphql/scalars#string) | The name of this ticket.                        |
+| `type`            | [String!](/docs/graphql/scalars#string) | The type of this ticket.                        |
+| `purchaseAmount`  | [Money!](/docs/graphql/scalars#money)   | The purchase amount of this ticket.             |
+| `bookingAmount`   | [Money!](/docs/graphql/scalars#money)   | The booking amount of this ticket.              |
+| `seatsAllocation` | [Uint!](/docs/graphql/scalars#uint)     | The seats allocation of this ticket.            |
+| `isPackage`       | [Boolean!](/docs/graphql/scalars#uint)  | Indicates the ticket whether is package ticket. |
+
+## [MovieConcession](/docs/graphql/objects#movieconcession)
+
+The movie concession object.
+
+**Fields**
+
+| Name             | Data Type                               | Description                            |
+| ---------------- | --------------------------------------- | -------------------------------------- |
+| `id`             | [ID!](/docs/graphql/scalars#id)         | An unique identifier for this object.  |
+| `name`           | [String!](/docs/graphql/scalars#string) | The name of this concession.           |
+| `description`    | [String!](/docs/graphql/scalars#string) | The description of this concession.    |
+| `imageUrl`       | [URI!](/docs/graphql/scalars#uri)       | The image url of this concession.      |
+| `purchaseAmount` | [Money!](/docs/graphql/scalars#money)   | The booking amount of this concession. |
+| `isSoldOut`      | [Boolean!](/docs/graphql/scalars#uint)  | Indicates the concession is sold out.  |
 
 ## [CinemaHallLayout](/docs/graphql/objects#cinemahalllayout)
 

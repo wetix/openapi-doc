@@ -11,7 +11,7 @@ Every GraphQL schema has a root type for both queries and mutations. The query t
 
 Connections return a paginated list of items. The pagination is cursor-based. -->
 
-## [user](/docs/graphql/objects#user)
+## [user](/docs/graphql/queries#user)
 
 Look up user by key.
 
@@ -23,7 +23,7 @@ Look up user by key.
 
 **Return Type:** [User!](/docs/graphql/objects#user)
 
-## [cinemas](/docs/graphql/objects#cinemaconnection)
+## [cinemas](/docs/graphql/queries#cinemas)
 
 The list of cinemas.
 
@@ -42,7 +42,7 @@ The list of cinemas.
 
 **Return Type:** [CinemaConnection!](/docs/graphql/objects#cinemaconnection)
 
-## [cinema](/docs/graphql/objects#cinema)
+## [cinema](/docs/graphql/queries#cinema)
 
 Look up cinema by key.
 
@@ -54,7 +54,7 @@ Look up cinema by key.
 
 **Return Type:** [Cinema!](/docs/graphql/objects#cinema)
 
-## [movies](/docs/graphql/objects#movieconnection)
+## [movies](/docs/graphql/queries#movies)
 
 The list of now showing or coming soon movies.
 
@@ -70,7 +70,7 @@ The list of now showing or coming soon movies.
 
 **Return Type:** [MovieConnection!](/docs/graphql/objects#movieconnection)
 
-## [movie](/docs/graphql/objects#movie)
+## [movie](/docs/graphql/queries#movie)
 
 Look up movie by key.
 
@@ -82,7 +82,7 @@ Look up movie by key.
 
 **Return Type:** [Movie!](/docs/graphql/objects#movie)
 
-## [movieOrderSession](/docs/graphql/objects#movieordersession)
+## [movieOrderSession](/docs/graphql/queries#movieordersession)
 
 Look up movie order session by key.
 
@@ -94,7 +94,7 @@ Look up movie order session by key.
 
 **Return Type:** [MovieOrderSession!](/docs/graphql/objects#movieordersession)
 
-## [movieOrder](/docs/graphql/objects#movieorder)
+## [movieOrder](/docs/graphql/queries#movieorder)
 
 Look up movie order by key.
 
@@ -105,28 +105,3 @@ Look up movie order by key.
 | `key` | [Key!](/docs/graphql/scalars#key) | The key of the movie order. |
 
 **Return Type:** [MovieOrder!](/docs/graphql/objects#movieorder)
-
-<!-- ## [movieShowtimes](/docs/graphql/objects#movieshowtimes)
-
-Gets the showtimes for the specified movie and date.
-
-**Return Type:** [MovieShowtimes!](/docs/graphql/objects#movieshowtimes)
-
-Arguments:
-
-| Name                                             | Description                                           |
-| ------------------------------------------------ | ----------------------------------------------------- |
-| `movieKey` [`(Key!)`](/docs/graphql/scalars#key) | The key of the movie whose showtimes will be fetched. |
-| `date` [`(Date!)`](/docs/graphql/scalars#date)   | The date of the showtimes.                            |
-
-## [seatMap](/docs/graphql/queries#seatmap)
-
-Retrieve seat map by showtime key.
-
-**Return Type:** [SeatMap!](/docs/graphql/objects#seatmap)
-
-**Arguments**
-
-| Name          | Data Type                         | Description              |
-| ------------- | --------------------------------- | ------------------------ |
-| `showtimeKey` | [Key!](/docs/graphql/scalars#key) | The key of the showtime. | -->
