@@ -29,7 +29,7 @@ Represents **true** or **false** values.
 
 ## [Float](/docs/graphql/scalars#int)
 
-A signed double-precision floating-point value.
+Represents a **signed decimal** value.
 
 ---
 
@@ -59,7 +59,7 @@ Represents an **unsigned integer** that is at most 64 bits in size.
 
 ## [Money](/docs/graphql/scalars#money)
 
-Represents a decimal number which follow the format of **0.00** _(limited to 2 percision)_. Ex: 123.53.
+Represents a **signed double-precision** which follow the format of **0.00**. Ex: 123.53.
 
 ---
 
@@ -83,12 +83,12 @@ An **RFC3339** UTC date time string. Ex: 2019-10-12T07:20:50.52Z.
 
 ## [State](/docs/graphql/scalars#state)
 
-An [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2:MY) state string. Ex: **MY-14** for **Kuala Lumpur**.
+An [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2:MY) state code string. Ex: **MY-14** for **Kuala Lumpur**.
 
 ---
 
 ## [Country](/docs/graphql/scalars#country)
 
-An [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2:MY) state string. Ex: **MY-14** for **Kuala Lumpur**.
+An [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes) country code string. Ex: **MYS** for **Malaysia**.
 
 ---

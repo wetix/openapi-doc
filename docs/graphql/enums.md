@@ -23,12 +23,12 @@ The cinema operator name.
 
 The movie order session status.
 
-| Value       | Description                                                         |
-| ----------- | ------------------------------------------------------------------- |
-| `PENDING`   | Indicates if the order is under draft, yet to initiate for payment. |
-| `RESERVED`  | Indicates if the order is under draft, yet to initiate for payment. |
-| `CLOSED`    | Indicates if the order is under draft, yet to initiate for payment. |
-| `CANCELLED` | Indicates if the order has been cancelled.                          |
+| Value       | Description                                                                                                                                                                            |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `PENDING`   | Indicates the session is under seats selection phase.                                                                                                                                  |
+| `RESERVED`  | Indicates the session is under seats reserving phase. If you're selected showtime not under **GSC**, the `expiresIn` and `expiredAt` will have value. (normally around **15 minutes**) |
+| `CLOSED`    | Indicates the session has been closed, waiting for payment.                                                                                                                            |
+| `CANCELLED` | Indicates the session has been cancelled.                                                                                                                                              |
 
 ## [OrderStatus](/docs/graphql/enums#orderstatus)
 
