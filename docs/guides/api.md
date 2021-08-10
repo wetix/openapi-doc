@@ -47,7 +47,7 @@ Arguments:
 
 | Name                                | Description           |
 | ----------------------------------- | --------------------- |
-| `key` [`(Key!)`](/docs/scalars#key) | The key of the movie. |
+| `key` [`(Key!)`](/docs/graphql/scalars#key) | The key of the movie. |
 
 ## movieShowtimes
 
@@ -59,5 +59,5 @@ Arguments:
 
 | Name                                     | Description                                           |
 | ---------------------------------------- | ----------------------------------------------------- |
-| `movieKey` [`(Key!)`](/docs/scalars#key) | The key of the movie whose showtimes will be fetched. |
-| `date` [`(Date!)`](/docs/scalars#date)   | The date of the showtimes.                            | -->
+| `movieKey` [`(Key!)`](/docs/graphql/scalars#key) | The key of the movie whose showtimes will be fetched. |
+| `date` [`(Date!)`](/docs/graphql/scalars#date)   | The date of the showtimes.                            | -->
