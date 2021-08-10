@@ -29,14 +29,16 @@ The list of cinemas.
 
 **Arguments**
 
-| Name             | Data Type                                            | Description                                                                                                                                   |
-| ---------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
-| `after`          | [Key](/docs/graphql/scalars#key)                     | To return the elements in the list that comes after the specified cursor.                                                                     |
-| `before`         | [Key](/docs/graphql/scalars#key)                     | To return the elements in the list that comes before the specified cursor. If both `after` and `before` is passed, `before` takes precedence. |
-| `first`          | [Uint](/docs/graphql/scalars#uint)                   | Returns the first n elements from the list.                                                                                                   |
-| `last`           | [Uint](/docs/graphql/scalars#uint)                   | Returns the last n elements from the list.                                                                                                    |
-| `cinemaOperator` | [CinemaOperator](/docs/graphql/enums#cinemaoperator) | Select listings for cinemas owned by the specified cinema operator.                                                                           |
-| `onScreenOnly`   | [Boolean](/docs/graphql/scalars#boolean)             | Select only listings where the cinemas have showtimes.                                                                                        |
+| Name                 | Data Type                                            | Description                                                                                                                                   |
+| -------------------- | ---------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------- |
+| `after`              | [Key](/docs/graphql/scalars#key)                     | To return the elements in the list that comes after the specified cursor.                                                                     |
+| `before`             | [Key](/docs/graphql/scalars#key)                     | To return the elements in the list that comes before the specified cursor. If both `after` and `before` is passed, `before` takes precedence. |
+| `first`              | [Uint](/docs/graphql/scalars#uint)                   | Returns the first n elements from the list.                                                                                                   |
+| `last`               | [Uint](/docs/graphql/scalars#uint)                   | Returns the last n elements from the list.                                                                                                    |
+| `cinemaOperator`     | [CinemaOperator](/docs/graphql/enums#cinemaoperator) | Select listings for cinemas owned by the specified cinema operator.                                                                           |
+| `onScreenOnly`       | [Boolean](/docs/graphql/scalars#boolean)             | Select only listings where the cinemas have showtimes.                                                                                        |
+| `includeMaintenance` | [Boolean](/docs/graphql/scalars#boolean)             | Select only listings where the cinema is under maintenance.                                                                                   |
+| `includeShutdown`    | [Boolean](/docs/graphql/scalars#boolean)             | Select only listings where the cinema is shutdown.                                                                                            |
 
 **Return Type:** [CinemaConnection!](/docs/graphql/objects#cinemaconnection)
 

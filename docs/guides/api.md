@@ -1,13 +1,13 @@
 ---
-sidebar_label: "Authenticating with GraphQL"
+sidebar_label: "Using the API"
 sidebar_position: 2
 ---
 
-# Authentication
+# Using the API
 
-## Authenticating with GraphQL
+## Authentication
 
-To communicate with the GraphQL server, you'll need an OAuth token with the right scopes.
+To authenticate with the GraphQL server, you'll need an OAuth token with the right scopes. The API will notify you if a resource requires a specific scope.
 
 <!-- Follow the steps in "Creating a personal access token" to create a token. The scopes you require depends on the type of data you're trying to request. For example, select the User scopes to request user data. If you need access to repository information, select the appropriate Repository scopes.
 
@@ -23,13 +23,17 @@ read:org
 read:public_key
 read:gpg_key -->
 
-The API notifies you if a resource requires a specific scope.
+**This documentation is a work in progress and we are yet to update our OAuth documentation. Hence, at the current moment, please obtain an authorization token from the person-in-charge of WeTix to authenticate with the API.**
 
-## Communicating with GraphQL
+Before sending any GraphQL requests, make sure to include the obtained token in the `Authorization` header as follows:
 
-Because GraphQL operations consist of multiline JSON, we recommends using the [Altair GraphQL Client](https://altair.sirmuel.design/) to make GraphQL calls. You can also use cURL or any other HTTP-speaking library.
+`Authorization: Bearer <token>`
 
-Before you sending any GraphQL request, make sure you sending with `Authorization` header.
+## Communication
+
+Because GraphQL operations consist of multiline JSON, we recommend using the [Altair GraphQL Client](https://altair.sirmuel.design/) to make GraphQL calls. You can also use cURL or any other HTTP-speaking library.
+
+<img src="/img/altair.png"/>
 
 <!-- # Fields
 
