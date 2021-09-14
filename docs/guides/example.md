@@ -2237,3 +2237,47 @@ mutation ReserveSeats($input: ReserveSeatsInput!){
   }
 }
 ```
+
+## Releasing Seats
+
+#### Sample GraphQL mutation:
+
+```
+mutation ReleaseSeats($input: ReleaseSeatsInput!){
+  releaseSeats(input: $input){
+    session{
+      key
+      hasExpiry
+      expiresIn
+      status
+    }
+  }
+}
+```
+
+**Variables:**
+
+```
+{
+  "input": {
+    "sessionKey":"EhFNb3ZpZU9yZGVyU2Vzc2lvbiIbMXk3aHNzMndmQm1wZ211bkZLZW1yR3BxS0FQ"
+  }
+}
+```
+
+**Sample GraphQL response:**
+
+```
+{
+  "data": {
+    "releaseSeats": {
+      "session": {
+        "key": "EhFNb3ZpZU9yZGVyU2Vzc2lvbiIbMXk3aHNzMndmQm1wZ211bkZLZW1yR3BxS0FQ",
+        "hasExpiry": false,
+        "expiresIn": null,
+        "status": "PENDING"
+      }
+    }
+  }
+}
+```
