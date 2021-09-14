@@ -247,6 +247,7 @@ The movie ticket object.
 
 | Name              | Data Type                               | Description                                     |
 | ----------------- | --------------------------------------- | ----------------------------------------------- |
+| `key`             | [String!](/docs/graphql/scalars#string) | An unique identifier for this object.           |
 | `id`              | [ID!](/docs/graphql/scalars#id)         | An unique identifier for this object.           |
 | `name`            | [String!](/docs/graphql/scalars#string) | The name of this ticket.                        |
 | `type`            | [String!](/docs/graphql/scalars#string) | The type of this ticket.                        |
@@ -263,6 +264,7 @@ The movie concession object.
 
 | Name             | Data Type                               | Description                            |
 | ---------------- | --------------------------------------- | -------------------------------------- |
+| `key`            | [String!](/docs/graphql/scalars#string) | An unique identifier for this object.  |
 | `id`             | [ID!](/docs/graphql/scalars#id)         | An unique identifier for this object.  |
 | `name`           | [String!](/docs/graphql/scalars#string) | The name of this concession.           |
 | `description`    | [String!](/docs/graphql/scalars#string) | The description of this concession.    |
@@ -289,10 +291,10 @@ The seat row object.
 
 **Fields**
 
-| Name    | Data Type                                | Description            |
-| ------- | ---------------------------------------- | ---------------------- |
-| `label` | [String!](/docs/graphql/scalars#string)  | The row label.         |
-| `seats` | [[Seat]!](/docs/graphql/objects#seatrow) | The seats of this row. |
+| Name    | Data Type                               | Description            |
+| ------- | --------------------------------------- | ---------------------- |
+| `label` | [String!](/docs/graphql/scalars#string) | The row label.         |
+| `seats` | [[Seat]!](/docs/graphql/objects#seat)   | The seats of this row. |
 
 ## [Seat](/docs/graphql/objects#seat)
 
@@ -300,13 +302,14 @@ The seat object.
 
 **Fields**
 
-| Name         | Data Type                               | Description                        |
-| ------------ | --------------------------------------- | ---------------------------------- |
-| `label`      | [String!](/docs/graphql/scalars#string) | The label of this seat.            |
-| `type`       | [String!](/docs/graphql/scalars#string) | The type of this seat.             |
-| `areaNo`     | [Int!](/docs/graphql/scalars#int)       | The area no of this seat.          |
-| `areaCode`   | [String!](/docs/graphql/scalars#string) | The area code of this seat.        |
-| `allocation` | [Uint!](/docs/graphql/scalars#uint)     | The seats allocation of this seat. |
+| Name         | Data Type                               | Description                           |
+| ------------ | --------------------------------------- | ------------------------------------- |
+| `key`        | [String!](/docs/graphql/scalars#string) | An unique identifier for this object. |
+| `label`      | [String!](/docs/graphql/scalars#string) | The label of this seat.               |
+| `type`       | [String!](/docs/graphql/scalars#string) | The type of this seat.                |
+| `areaNo`     | [Int!](/docs/graphql/scalars#int)       | The area no of this seat.             |
+| `areaCode`   | [String!](/docs/graphql/scalars#string) | The area code of this seat.           |
+| `allocation` | [Uint!](/docs/graphql/scalars#uint)     | The seats allocation of this seat.    |
 
 ## [User](/docs/graphql/objects#user)
 

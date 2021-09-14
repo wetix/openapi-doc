@@ -21,9 +21,10 @@ Reserve seats in the selected showtime.
 
 **Input Fields**
 
-| Name         | Data Type                         | Description                                |
-| ------------ | --------------------------------- | ------------------------------------------ |
-| `sessionKey` | [Key!](/docs/graphql/scalars#key) | Unique identifier for movie order session. |
+| Name         | Data Type                                  | Description                                |
+| ------------ | ------------------------------------------ | ------------------------------------------ |
+| `sessionKey` | [Key!](/docs/graphql/scalars#key)          | Unique identifier for movie order session. |
+| `seats`      | [[String!]!](/docs/graphql/scalars#string) | An array of selected seats' keys.          |
 
 ## [createMovieOrderInput](/docs/graphql/input_objects#createmovieorderinput)
 
