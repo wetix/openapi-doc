@@ -5,7 +5,7 @@ sidebar_position: 4
 
 # Input Objects
 
-## [createMovieOrderSessionInput](/docs/graphql/input_objects#createmovieordersessioninput)
+## [CreateMovieOrderSessionInput](/docs/graphql/input_objects#createmovieordersessioninput)
 
 Create movie order session input.
 
@@ -15,7 +15,18 @@ Create movie order session input.
 | ------------- | --------------------------------- | ------------------------------- |
 | `showtimeKey` | [Key!](/docs/graphql/scalars#key) | Unique identifier for showtime. |
 
-## [reserveSeatsInput](/docs/graphql/input_objects#reseverseatsinput)
+## [ReserveSeatsInput](/docs/graphql/input_objects#reserveseatsinput)
+
+Reserve seats in the selected showtime.
+
+**Input Fields**
+
+| Name         | Data Type                                  | Description                                |
+| ------------ | ------------------------------------------ | ------------------------------------------ |
+| `sessionKey` | [Key!](/docs/graphql/scalars#key)          | Unique identifier for movie order session. |
+| `seats`      | [[String!]!](/docs/graphql/scalars#string) | An array of selected seats' keys.          |
+
+## [ReleaseSeatsInput](/docs/graphql/input_objects#releaseseatsinput)
 
 Reserve seats in the selected showtime.
 
@@ -25,7 +36,7 @@ Reserve seats in the selected showtime.
 | ------------ | --------------------------------- | ------------------------------------------ |
 | `sessionKey` | [Key!](/docs/graphql/scalars#key) | Unique identifier for movie order session. |
 
-## [createMovieOrderInput](/docs/graphql/input_objects#createmovieorderinput)
+## [CreateMovieOrderInput](/docs/graphql/input_objects#createmovieorderinput)
 
 Create movie order input with selected tickets and concessions.
 

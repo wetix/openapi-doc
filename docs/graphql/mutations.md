@@ -45,7 +45,7 @@ Reserve and lock the selected seats.
 
 ## [releaseSeats](/docs/graphql/mutations#releaseseats)
 
-Release the locked seats.
+Releases all the reserved seats.
 
 **Input Type:** [ReleaseSeatsInput!](/docs/graphql/input_objects#releaseseatsinput)
 
