@@ -21,12 +21,12 @@ query {
       address
       postCode
       stateCode
-      geopoint{
+      geopoint {
         latitude
         longitude
       }
     }
-    pageInfo{
+    pageInfo {
       startCursor
       endCursor
       hasNextPage
@@ -87,8 +87,8 @@ query {
 
 ```
 query{
-  movies(first:1, onScreenOnly:true){ # set onScreenOnly to false for coming soon movies
-    nodes{
+  movies(first: 1, onScreenOnly: true){ # set onScreenOnly to false for coming soon movies
+    nodes {
       key
       title
       originalTitle
@@ -97,7 +97,7 @@ query{
       landscapeImageUrl
       showtimeCount
       genres
-      actors{
+      actors {
         name
         avatarUrl
       }
@@ -109,7 +109,7 @@ query{
       createdAt
       lastUpdatedAt
     }
-    pageInfo{
+    pageInfo {
       startCursor
       endCursor
       hasNextPage
@@ -188,7 +188,7 @@ query {
     cinemas(first: 10) {
       nodes {
         name
-        showtimes(first: 100, date: "2021-08-10", activeOnly: true) {
+        showtimes(first: 100, date: "2021-08-09", activeOnly: true) {
           nodes {
             key
             hall {
