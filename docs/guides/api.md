@@ -1,6 +1,6 @@
 ---
 sidebar_label: "Using the API"
-sidebar_position: 2
+sidebar_position: 1
 ---
 
 # Using the API
