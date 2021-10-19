@@ -63,3 +63,15 @@ Create movie order input with selected tickets and concessions.
 | `externalId` | [String!](/docs/graphql/scalars#string) | External unique identifier for the user.                                           |
 | `email`      | [String](/docs/graphql/scalars#string)  | The email address of the customer, this will sending a booking confirmation email. |
 | `phoneNo`    | [String!](/docs/graphql/scalars#string) | The phone no of the customer.                                                      |
+
+## [SignatureInput](/docs/graphql/input_objects#signatureinput)
+
+The signature input for signed mutations.
+
+**Input Fields**
+
+| Name        | Data Type                                                     | Description                                                                    |
+| ----------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------ |
+| `algorithm` | [SignatureAlgorithm!](/docs/graphql/enums#signaturealgorithm) | The hash function.                                                             |
+| `timestamp` | [String!](/docs/graphql/scalars#string)                       | The UNIX time.                                                                 |
+| `signature` | [String](/docs/graphql/scalars#string)                        | The signature generated following the steps [here](/docs/security/singnature). |

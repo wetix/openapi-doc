@@ -59,7 +59,7 @@ Releases all the reserved seats.
 
 Create a movie order session.
 
-**Input Type:** [CreateMovieOrderSessionInput!](/docs/graphql/input_objects#createmovieordersessioninput)
+**Input Type:** [CreateMovieOrderInput!](/docs/graphql/input_objects#createmovieorderinput)
 
 **Return Fields**
 

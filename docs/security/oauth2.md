@@ -1,5 +1,5 @@
 ---
-sidebar_label: "About OAuth 2.0"
+sidebar_label: "OAuth"
 sidebar_position: 1
 ---
 
