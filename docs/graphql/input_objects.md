@@ -42,27 +42,70 @@ Create movie order input with selected tickets and concessions.
 
 **Input Fields**
 
-| Name          | Data Type                                                                       | Description                                   |
-| ------------- | ------------------------------------------------------------------------------- | --------------------------------------------- |
-| `sessionKey`  | [Key!](/docs/graphql/scalars#key)                                               | Unique identifier for movie order session.    |
-| `customer`    | [MovieOrderCustomerInput!](/docs/graphql/input_objects#movieordercustomerinput) | Customer information for movie order session. |
-| `orderId`     | [String!](/docs/graphql/scalars#string)                                         | External unique identifier for order.         |
-| `tickets`     | [MovieOrderTicketsInput!](/docs/graphql/input_objects#)                         | Selected tickets input.                       |
-| `concessions` | [MovieOrderConcessionsInput!](/docs/graphql/input_objects#)                     | Selected concessions input.                   |
-| `promoCode`   | [String!](/docs/graphql/scalars#key)                                            | Promo code applied by the user.               |
+| Name          | Data Type                                                                                         | Description                                                                     |
+| ------------- | ------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------- |
+| `sessionKey`  | [Key!](/docs/graphql/scalars#key)                                                                 | Unique identifier for movie order session.                                      |
+| `referenceId` | [String!](/docs/graphql/scalars#string)                                                           | External unique identifier for order.                                           |
+| `customer`    | [CreateMovieOrderCustomerInput!](/docs/graphql/input_objects#createmovieordercustomerinput)       | Customer information for movie order session.                                   |
+| `tickets`     | [[CreateMovieOrderTicketInput!]!](/docs/graphql/input_objects#createmovieorderticketinput)        | Selected tickets input.                                                         |
+| `concessions` | [[CreateMovieOrderConcessionInput]!](/docs/graphql/input_objects#createmovieorderconcessioninput) | Selected concessions input.                                                     |
+| `promoCode`   | [String!](/docs/graphql/scalars#key)                                                              | Promo code applied by the user.                                                 |
+| `redirectUrl` | [URI!](/docs/graphql/scalars#uri)                                                                 | Sepecifically required for GSC, we will redirect back once the order confirmed. |
 
-## [MovieOrderCustomerInput](/docs/graphql/input_objects#movieordercustomerinput)
+## [CreateMovieOrderCustomerInput](/docs/graphql/input_objects#movieordercustomerinput)
 
-Create movie order input with selected tickets and concessions.
+The customer info.
 
 **Input Fields**
 
 | Name         | Data Type                               | Description                                                                        |
 | ------------ | --------------------------------------- | ---------------------------------------------------------------------------------- |
-| `key`        | [Key!](/docs/graphql/scalars#key)       | Unique identifier for the user.                                                    |
 | `externalId` | [String!](/docs/graphql/scalars#string) | External unique identifier for the user.                                           |
-| `email`      | [String](/docs/graphql/scalars#string)  | The email address of the customer, this will sending a booking confirmation email. |
+| `email`      | [String!](/docs/graphql/scalars#string) | The email address of the customer, this will sending a booking confirmation email. |
 | `phoneNo`    | [String!](/docs/graphql/scalars#string) | The phone no of the customer.                                                      |
+
+## [CreateMovieOrderTicketInput](/docs/graphql/input_objects#createmovieorderticketinput)
+
+The selected tickets.
+
+**Input Fields**
+
+| Name       | Data Type                               | Description                           |
+| ---------- | --------------------------------------- | ------------------------------------- |
+| `key`      | [String!](/docs/graphql/scalars#string) | The unique identifier for the ticket. |
+| `quantity` | [Uint!](/docs/graphql/scalars#uint)     | The quantity of the ticket.           |
+
+## [CreateMovieOrderConcessionInput](/docs/graphql/input_objects#createmovieorderconcessioninput)
+
+The selected concessions.
+
+**Input Fields**
+
+| Name       | Data Type                               | Description                               |
+| ---------- | --------------------------------------- | ----------------------------------------- |
+| `key`      | [String!](/docs/graphql/scalars#string) | The unique identifier for the concession. |
+| `quantity` | [Uint!](/docs/graphql/scalars#uint)     | The quantity of the concession.           |
+
+## [CreatePaymentWithMovieOrderInput](/docs/graphql/input_objects#createpaymentwithmovieorderinput)
+
+Create payment for movie order input.
+
+**Input Fields**
+
+| Name               | Data Type                             | Description                                |
+| ------------------ | ------------------------------------- | ------------------------------------------ |
+| `orderKey`         | [Key!](/docs/graphql/scalars#key)     | The unique identifier for the movie order. |
+| `transactionRefId` | [String!](/docs/graphql/scalars#uint) | The transaction refererence ID.            |
+
+## [ConfirmMovieOrderInput](/docs/graphql/input_objects#confirmmovieorderinput)
+
+Confirm movie order input.
+
+**Input Fields**
+
+| Name       | Data Type                         | Description                                |
+| ---------- | --------------------------------- | ------------------------------------------ |
+| `orderKey` | [Key!](/docs/graphql/scalars#key) | The unique identifier for the movie order. |
 
 ## [SignatureInput](/docs/graphql/input_objects#signatureinput)
 

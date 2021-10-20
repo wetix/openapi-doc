@@ -7,23 +7,16 @@ sidebar_position: 2
 
 Every GraphQL schema has a root type for both queries and mutations. The mutation type defines GraphQL operations that change data on the server. It is analogous to performing HTTP verbs such as **POST**, **PATCH**, and **DELETE**.
 
-<!-- ## [addMovieComment](/docs/graphql/mutations#addmoviecomment)
-
-Add movie comment.
-
-**Input Type:** [AddMovieCommentInput!](/docs/graphql/input_objects#addmoviecommentinput)
-
-**Return Fields**
-
-| Name       | Data Type                                                   | Description             |
-| ---------- | ----------------------------------------------------------- | ----------------------- |
-| `comments` | [MovieCommentConnection!](/docs/graphql/objects#movieorder) | The movie order object. | -->
 
 ## [createMovieOrderSession](/docs/graphql/mutations#createmovieordersession)
 
 Create a movie order session.
 
-**Input Type:** [CreateMovieOrderSessionInput!](/docs/graphql/input_objects#createmovieordersessioninput)
+**Arguments**
+
+| Name    | Data Type                                                                                 | Description                |
+| ------- | ----------------------------------------------------------------------------------------- | -------------------------- |
+| `input` | [CreateMovieOrderSessionInput!](/docs/graphql/input_objects#createmovieordersessioninput) | The input argument object. |
 
 **Return Fields**
 
@@ -35,7 +28,11 @@ Create a movie order session.
 
 Reserve and lock the selected seats.
 
-**Input Type:** [ReserveSeatsInput!](/docs/graphql/input_objects#reserveseatsinput)
+**Arguments**
+
+| Name    | Data Type                                                           | Description                |
+| ------- | ------------------------------------------------------------------- | -------------------------- |
+| `input` | [ReserveSeatsInput!](/docs/graphql/input_objects#reserveseatsinput) | The input argument object. |
 
 **Return Fields**
 
@@ -45,9 +42,11 @@ Reserve and lock the selected seats.
 
 ## [releaseSeats](/docs/graphql/mutations#releaseseats)
 
-Releases all the reserved seats.
+**Arguments**
 
-**Input Type:** [ReleaseSeatsInput!](/docs/graphql/input_objects#releaseseatsinput)
+| Name    | Data Type                                                           | Description                |
+| ------- | ------------------------------------------------------------------- | -------------------------- |
+| `input` | [ReleaseSeatsInput!](/docs/graphql/input_objects#releaseseatsinput) | The input argument object. |
 
 **Return Fields**
 
@@ -57,21 +56,33 @@ Releases all the reserved seats.
 
 ## [createMovieOrder](/docs/graphql/mutations#createmovieorder)
 
-Create a movie order session.
+Create a movie order.
 
-**Input Type:** [CreateMovieOrderInput!](/docs/graphql/input_objects#createmovieorderinput)
+**Arguments**
+
+| Name        | Data Type                                                                   | Description                    |
+| ----------- | --------------------------------------------------------------------------- | ------------------------------ |
+| `input`     | [CreateMovieOrderInput!](/docs/graphql/input_objects#createmovieorderinput) | The input argument object.     |
+| `signature` | [SignatureInput!](/docs/graphql/input_objects#signatureinput)               | The signature argument object. |
 
 **Return Fields**
 
-| Name      | Data Type                                                     | Description                     |
-| --------- | ------------------------------------------------------------- | ------------------------------- |
-| `session` | [MovieOrderSession!](/docs/graphql/objects#movieordersession) | The movie order session object. |
+| Name              | Data Type                                       | Description                                                                                 |
+| ----------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `order`           | [MovieOrder!](/docs/graphql/objects#movieorder) | The movie order session object.                                                             |
+| `hasCheckoutLink` | [Boolean!](/docs/graphql/scalars/boolean)       | Indicates whether a redirection to the cinema checkout page is required (specific for GSc). |
+| `checkoutUrl`     | [URI!](/docs/graphql/objects#movieorder)        | The cinema checkout URL (specific for GSC).                                                 |
 
 ## [createPaymentWithMovieOrder](/docs/graphql/mutations#createpaymentwithmovieorder)
 
 Create a new payment with the existing movie order.
 
-**Input Type:** [CreatePaymentWithMovieOrderInput!](/docs/graphql/input_objects#createpaymentwithmovieorderinput)
+**Arguments**
+
+| Name        | Data Type                                                                                         | Description                    |
+| ----------- | ------------------------------------------------------------------------------------------------- | ------------------------------ |
+| `input`     | [CreatePaymentWithMovieOrderInput!](/docs/graphql/input_objects#createpaymentwithmovieorderinput) | The input argument object.     |
+| `signature` | [SignatureInput!](/docs/graphql/input_objects#signatureinput)                                     | The signature argument object. |
 
 **Return Fields**
 
@@ -81,9 +92,14 @@ Create a new payment with the existing movie order.
 
 ## [confirmMovieOrder](/docs/graphql/mutations#confirmmovieorder)
 
-Create a new payment with the existing movie order.
+Confirm movie order.
 
-**Input Type:** [ConfirmMovieOrderInput!](/docs/graphql/input_objects#confirmmovieorderinput)
+**Arguments**
+
+| Name        | Data Type                                                                     | Description                    |
+| ----------- | ----------------------------------------------------------------------------- | ------------------------------ |
+| `input`     | [ConfirmMovieOrderInput!](/docs/graphql/input_objects#confirmmovieorderinput) | The input argument object.     |
+| `signature` | [SignatureInput!](/docs/graphql/input_objects#signatureinput)                 | The signature argument object. |
 
 **Return Fields**
 

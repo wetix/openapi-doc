@@ -14,7 +14,7 @@ Please generate a pair of **RSA private and public keys** on your end and send o
 The steps for generating a signature for a mutations are as follows: 
 
 ### Step 1: Sort the Input Argument
-Every WeTix Open API's mutations require the **input** and **signature** arguments. The input argument will be used for generating the signature. 
+WeTix Open API mutations that require to be signed contain the **input** and **signature** arguments. The input argument will be used for generating the signature. 
 
 :::important
 Please **sort the input argument in alphabetical order** by its keys. Any **nested objects within the input argument also need to be sorted** in alphabetical order by its keys.
