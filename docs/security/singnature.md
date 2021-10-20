@@ -8,9 +8,7 @@ sidebar_position: 1
 WeTix Open API requires requests on [createMovieOrder](/docs/graphql/mutations#createmovieorder), [createPaymentWithMovieOrder](/docs/graphql/mutations#createpaymentwithmovieorder) and [confirmMovieOrder](/docs/graphql/mutations#confirmmovieorder) mutations to be signed to ensure the authencity and integrity of the requests.
 
 :::note
-
 Please generate a pair of **RSA private and public keys** on your end and send only the public key to the person-in-charge of WeTix.
-
 :::
 
 The steps for generating a signature for a mutations are as follows: 
@@ -19,9 +17,7 @@ The steps for generating a signature for a mutations are as follows:
 Every WeTix Open API's mutations require the **input** and **signature** arguments. The input argument will be used for generating the signature. 
 
 :::important
-
 Please **sort the input argument in alphabetical order** by its keys. Any **nested objects within the input argument also need to be sorted** in alphabetical order by its keys.
-
 :::
 
 **Example of unsorted input argument object**:
@@ -71,9 +67,7 @@ Please **sort the input argument in alphabetical order** by its keys. Any **nest
 ```
 
 :::important
-
 Please ensure the sorted input argument object is **compact/ minified**.
-
 :::
 
 ### Step 2: Encode the Sorted Input Argument
@@ -83,9 +77,7 @@ Please encode the sorted input argument object using **Base64 encoding**.
 **Example:**
 
 :::note
-
 ewogICJjb25jZXNzaW9ucyI6IG51bGwsCiAgImN1c3RvbWVyIjogewogICAgImVtYWlsIjogImhhcml0aG1vaGFtZDY3QGdtYWlsLmNvbSIsCiAgICAiZXh0ZXJuYWxJZCI6ICJhYmMxMjMiLAogICAgInBob25lTm8iOiAiMDE2NzM4NTM0NiIKICB9LAogICJwcm9tb0NvZGUiOiBudWxsLAogICJyZWRpcmVjdFVybCI6ICJodHRwczovL2dvb2dsZS5jb20iLAogICJyZWZlcmVuY2VJZCI6ICIxMjMiLAogICJzZXNzaW9uS2V5IjogIkVoRk5iM1pwWlU5eVpHVnlVMlZ6YzJsdmJpSWJNWHBvZGt4V2JVZEJNRXhaYkdGdVVXVXhNVU5wYldONk1rbGsiLAogICJ0aWNrZXRzIjogWwogICAgewogICAgICAia2V5IjogIlVfLUhBd0VCQ1VkdllsUnBZMnRsZEFIX2lBQUJCUUVDU1VRQkRBQUJCRTVoYldVQkRBQUJDRUZ5WldGRGIyUmxBUXdBQVFaQmJXOTFiblFCQmdBQkQxTmxZWFJ6UVd4c2IyTmhkR2x2YmdFR0FBQUFHdi1JQVFWQlpIVnNkQUVGUVVSVlRGUUJBVEVCX2ctZ0FRRUEiLAogICAgICAicXVhbnRpdHkiOiAxCiAgICB9CiAgXQp9
-
 :::
 
 ### Step 3: Construct a Plaintext
@@ -103,9 +95,7 @@ Please construct a plaintext with the following parameters in the order specifie
 **Example of plaintext:**
 
 :::note
-
 clientId=1612417576451877743&amp;data=ewogICJjb25jZXNzaW9ucyI6IG51bGwsCiAgImN1c3RvbWVyIjogewogICAgImVtYWlsIjogImhhcml0aG1vaGFtZDY3QGdtYWlsLmNvbSIsCiAgICAiZXh0ZXJuYWxJZCI6ICJhYmMxMjMiLAogICAgInBob25lTm8iOiAiMDE2NzM4NTM0NiIKICB9LAogICJwcm9tb0NvZGUiOiBudWxsLAogICJyZWRpcmVjdFVybCI6ICJodHRwczovL2dvb2dsZS5jb20iLAogICJyZWZlcmVuY2VJZCI6ICIxMjMiLAogICJzZXNzaW9uS2V5IjogIkVoRk5iM1pwWlU5eVpHVnlVMlZ6YzJsdmJpSWJNWHBvZGt4V2JVZEJNRXhaYkdGdVVXVXhNVU5wYldONk1rbGsiLAogICJ0aWNrZXRzIjogWwogICAgewogICAgICAia2V5IjogIlVfLUhBd0VCQ1VkdllsUnBZMnRsZEFIX2lBQUJCUUVDU1VRQkRBQUJCRTVoYldVQkRBQUJDRUZ5WldGRGIyUmxBUXdBQVFaQmJXOTFiblFCQmdBQkQxTmxZWFJ6UVd4c2IyTmhkR2x2YmdFR0FBQUFHdi1JQVFWQlpIVnNkQUVGUVVSVlRGUUJBVEVCX2ctZ0FRRUEiLAogICAgICAicXVhbnRpdHkiOiAxCiAgICB9CiAgXQp9&amp;shaType=SHA256&amp;mutation=createMovieOrder&amp;timestamp=1634616725
-
 :::
 
 ### Step 4: Sign using the Client's Private Key
@@ -115,12 +105,14 @@ Please sign the plaintext using **SHA256 with the RSA private key** that you hav
 **Example of signature:**
 
 :::note
-
 iiOosRbI+60jd5UeE4UbYnQ4KMSIuyX15Nf004ThwPQbotOxLTkc/KPNqF2Zx+mwlIcAO2FcyXiXc/D4hyQPkCivUJXyUD8qB36qEGuGpTqIJRpECbBlsMCocFoTe0C0xMbX6JuQtoGZXqTPbtyWqaBuDzyNkMlJ5qEmnu51zrI=
-
 :::
 
-### Step 5: Signature Argument
+:::important
+Please make sure the signature is **Base64 encoded.**
+:::
+
+### Step 5: Set Signature Argument
 
 Please include the signature and other parameters in the [signature argument](/docs/graphql/input_objects#signatureinput) of the mutation request.
 
