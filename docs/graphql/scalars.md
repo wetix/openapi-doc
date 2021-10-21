@@ -21,13 +21,13 @@ Represents a textual data as **UTF-8** character sequences.
 
 ---
 
-## [Boolean](/docs/graphql/scalars#uint)
+## [Boolean](/docs/graphql/scalars#boolean)
 
 Represents **true** or **false** values.
 
 ---
 
-## [Float](/docs/graphql/scalars#int)
+## [Float](/docs/graphql/scalars#float)
 
 Represents a **signed decimal** value.
 
