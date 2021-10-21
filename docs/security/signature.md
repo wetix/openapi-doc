@@ -90,7 +90,7 @@ Please construct a plaintext with the following parameters in the order specifie
 | `data`      | String    | The content from **Step 2**.                                       |
 | `mutation`  | String    | The mutation name.                                                 |
 | `shaType`   | String    | The hash function. Currently, WeTix Open API only supports SHA256. |
-| `timestamp` | Int64     | The UNIX timestamp.                                                |
+| `timestamp` | String    | The UNIX timestamp.                                                |
 
 **Example of plaintext:**
 

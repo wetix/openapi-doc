@@ -116,5 +116,5 @@ The signature input for signed mutations.
 | Name        | Data Type                                                     | Description                                                                    |
 | ----------- | ------------------------------------------------------------- | ------------------------------------------------------------------------------ |
 | `algorithm` | [SignatureAlgorithm!](/docs/graphql/enums#signaturealgorithm) | The hash function.                                                             |
-| `timestamp` | [String!](/docs/graphql/scalars#string)                       | The UNIX time.                                                                 |
+| `timestamp` | [Int64!](/docs/graphql/scalars#int64)                         | The UNIX time.                                                                 |
 | `hash`      | [String](/docs/graphql/scalars#string)                        | The signature generated following the steps [here](/docs/security/singnature). |
