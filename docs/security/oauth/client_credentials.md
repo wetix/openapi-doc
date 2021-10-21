@@ -60,9 +60,9 @@ curl --location --request POST 'localhost:5004/auth/token' \
 | Name                       | Data Type | Description                                                                                                                       |
 | -------------------------- | --------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | `access_token`             | String    | The access token which will be used to access protected resources on the WeTix Open API.                                          |
-| `expires_in`               | Int       | The access token expiry in seconds. For example, the value 5184000 means the token will expire in 5184000 seconds or 60 days.     |
+| `expires_in`               | Int64     | The access token expiry in seconds. For example, the value 5184000 means the token will expire in 5184000 seconds or 60 days.     |
 | `refresh_token`            | String    | The refresh token, which can be used to request for a new access token once the existing access token expires.                    |
-| `refresh_token_expires_in` | Int       | The refresh token expiry in seconds. For example, the value 31536000 means the token will expire in 31536000 seconds or 365 days. |
+| `refresh_token_expires_in` | Int64     | The refresh token expiry in seconds. For example, the value 31536000 means the token will expire in 31536000 seconds or 365 days. |
 | `token_type`               | String    | WeTix OAuth server only supports "Bearer" token type.                                                                             |
 
 **Response example:**
