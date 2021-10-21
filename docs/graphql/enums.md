@@ -44,3 +44,13 @@ The order status.
 | `FAILED`    | Indicates if the order is failed to pay.                            |
 | `COMPLETED` | Indicates if the order's payment is success and tickets issued.     |
 | `REVERSAL`  | Indicates if the order is refunded due to system error.             |
+
+## [SignatureAlgorithm](/docs/graphql/enums#signaturealgorithm)
+
+The cryptographic hash functions.
+
+| Value    | Description                                        |
+| -------- | -------------------------------------------------- |
+| `SHA1`   | Indicates the cryptographic hash function SHA-1.   |
+| `SHA256` | Indicates the cryptographic hash function SHA-256. |
+| `SHA512` | Indicates the cryptographic hash function SHA-512. |
