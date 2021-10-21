@@ -70,7 +70,7 @@ Create a movie order.
 | Name              | Data Type                                       | Description                                                                                 |
 | ----------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------- |
 | `order`           | [MovieOrder!](/docs/graphql/objects#movieorder) | The movie order session object.                                                             |
-| `hasCheckoutLink` | [Boolean!](/docs/graphql/scalars/boolean)       | Indicates whether a redirection to the cinema checkout page is required (specific for GSc). |
+| `hasCheckoutLink` | [Boolean!](/docs/graphql/scalars#boolean)       | Indicates whether a redirection to the cinema checkout page is required (specific for GSc). |
 | `checkoutUrl`     | [URI!](/docs/graphql/objects#movieorder)        | The cinema checkout URL (specific for GSC).                                                 |
 
 ## [createPaymentWithMovieOrder](/docs/graphql/mutations#createpaymentwithmovieorder)
