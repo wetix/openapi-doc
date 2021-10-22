@@ -140,7 +140,7 @@ Please include the signature and other parameters in the [signature argument](/d
   },
   "signature": {
     "algorithm": "SHA256",
-    "timestamp": "1634638112",
+    "timestamp": 1634638112,
     "hash": "iiOosRbI+60jd5UeE4UbYnQ4KMSIuyX15Nf004ThwPQbotOxLTkc/KPNqF2Zx+mwlIcAO2FcyXiXc/D4hyQPkCivUJXyUD8qB36qEGuGpTqIJRpECbBlsMCocFoTe0C0xMbX6JuQtoGZXqTPbtyWqaBuDzyNkMlJ5qEmnu51zrI="
   }
 }
