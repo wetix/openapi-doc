@@ -92,3 +92,9 @@ An [ISO 3166-2](https://en.wikipedia.org/wiki/ISO_3166-2:MY) state code string. 
 An [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes) country code string. Ex: **MYS** for **Malaysia**.
 
 ---
+
+## [Language](/docs/graphql/scalars#language)
+
+A [BCP 47](https://appmakers.dev/bcp-47-language-codes-list/) language tag string. Ex: **en** for **English**.
+
+---
