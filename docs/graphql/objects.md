@@ -337,11 +337,18 @@ The movie order object.
 | Name            | Data Type                                       | Description                                               |
 | --------------- | ----------------------------------------------- | --------------------------------------------------------- |
 | `key`           | [Key!](/docs/graphql/scalars#key)               | An unique identifier for this object.                     |
+| `movie`         | [Movie!](/docs/graphql/objects#movie)           | The movie of the order.                                   |
+| `cinema`        | [Movie!](/docs/graphql/objects#cinema)          | The cinema of the order.                                  |
 | `bookingId`     | [String!](/docs/graphql/scalars#string)         | An external unique identifier related this object.        |
 | `transactionId` | [String!](/docs/graphql/scalars#string)         |                                                           |
 | `currencyCode`  | [String!](/docs/graphql/scalars#string)         |                                                           |
+| `totalAmount`   | [Money!](/docs/graphql/scalars#money)           |                                                           |
+| `bookingAmount` | [Money!](/docs/graphql/scalars#money)           |                                                           |
 | `payableAmount` | [Money!](/docs/graphql/scalars#money)           |                                                           |
-| `expiredAt`     | [DateTime!](/docs/graphql/scalars#string)       |                                                           |
+| `expiresIn`     | [Int64!](/docs/graphql/scalars#int64)           |                                                           |
+| `expiredAt`     | [DateTime!](/docs/graphql/scalars#datetime)     |                                                           |
+| `paidAt`        | [DateTime!](/docs/graphql/scalars#datetime)     |                                                           |
+| `qrCode`        | [String!](/docs/graphql/scalars#string)         |                                                           |
 | `status`        | [OrderStatus!](/docs/graphql/enums#orderstatus) |                                                           |
 | `createdAt`     | [DateTime!](/docs/graphql/scalars#datetime)     | Identifies the date and time when the object was created. |
 | `lastUpdatedAt` | [DateTime!](/docs/graphql/scalars#datetime)     | Identifies the date and time when the object was updated. |
