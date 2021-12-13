@@ -7,7 +7,7 @@ sidebar_position: 1
 
 ## Authentication
 
-To authenticate with the GraphQL server, you'll need an OAuth token with the right scopes. The API will notify you if a resource requires a specific scope.
+To authenticate with WeTix Open API server, you'll need an access token issued by the WeTix OAuth server. Please refer [here](/docs/security/oauth/client_credentials) on obtaining the access token.
 
 <!-- Follow the steps in "Creating a personal access token" to create a token. The scopes you require depends on the type of data you're trying to request. For example, select the User scopes to request user data. If you need access to repository information, select the appropriate Repository scopes.
 
@@ -23,9 +23,8 @@ read:org
 read:public_key
 read:gpg_key -->
 
-**This documentation is a work in progress and we are yet to update our OAuth documentation. Hence, at the current moment, please obtain an authorization token from the person-in-charge of WeTix to authenticate with the API.**
 
-Before sending any GraphQL requests, make sure to include the obtained token in the `Authorization` header as follows:
+Before sending any GraphQL requests, make sure to include the obtained access token in the `Authorization` header as follows:
 
 `Authorization: Bearer <token>`
 
