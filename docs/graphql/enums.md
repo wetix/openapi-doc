@@ -54,3 +54,29 @@ The cryptographic hash functions.
 | `SHA1`   | Indicates the cryptographic hash function SHA-1.   |
 | `SHA256` | Indicates the cryptographic hash function SHA-256. |
 | `SHA512` | Indicates the cryptographic hash function SHA-512. |
+
+## [SeatType](/docs/graphql/enums#seattype)
+
+The types of seats.
+
+| Value          | Description |
+| -------------- | ----------- |
+| `STANDARD`     |             |
+| `WHEEL_CHAIR`  |             |
+| `HOUSE`        |             |
+| `TWIN`         |             |
+| `BEAN_BAG`     |             |
+| `CUDDLE_COUCH` |             |
+
+## [SeatStatus](/docs/graphql/enums#seatstatus)
+
+The statuses of seats.
+
+| Value       | Description |
+| ----------- | ----------- |
+| `AVAILABLE` |             |
+| `SOLD`      |             |
+| `BROKEN`    |             |
+| `RESERVED`  |             |
+
+
