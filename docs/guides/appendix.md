@@ -17,21 +17,27 @@ sidebar_position: 4
 1. Depending upon the `allocation` value of the [seat](/docs/graphql/objects#seat), several seats may be grouped into a single seat. For example, two adjacent seats with `allocation` values of 2 will be grouped into a single seat. 
 2. However, when reserving a grouped seat, the `key` of each of the seats in the group will need to be passed to the [`reserveSeats`](/docs/graphql/mutations#reserveseats) mutation.
 3. The **grouped seats will be considered as one single seat**, hence **only one ticket will be required to purchase the grouped seat**.
-4. The pseudocode of the suggested algorithm for seats grouping is as follows:
+4. The following is a sample Javascript code snipppet that shows the suggested algorithm for seats grouping:
 
-```
-for(i:=0; len(i); i++){
-    row:= twoDimensionView[i]
-    for(j:=0; len(row.seats); j++){
-        seat := row.seats[j]
-        if(seat != null){
-            groupedSeat := [seat, .... , row.seats[j+seat.allocation-1]]
+```javascript
+for(let i = 0; i < twoDimensionView.length; i++){
+    let row = twoDimensionView[i];
+    for(let j= 0; j < row.seats.length; j++){
+        let seat = row.seats[j];
+        let groupedSeat = [];
+        let occupy = j+seat.allocation
+        if (occupy >= row.seats.length){
+            continue
         }
+        if(seat != null){
+            groupedSeat  = seat.splice(j, occupy);
+        }
+
+        ......
     }
 }
 ```
 
-// TODO:
 <!-- ### Eligible Tickets for Reserved Seats
 
 1. The types of tickets that a user can purchase depends on the type of seats reserved. For example, if a user had reserved a `STANDARD` seat, he would be able to purchase `ADULT`, `STUDENT` or `SENIOR` tickets. Contrarily, if a user had reserved a `TWIN` seat, he would only be able to purchase `TWIN` ticket. 
