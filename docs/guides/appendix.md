@@ -26,7 +26,7 @@ for(let i = 0; i < twoDimensionView.length; i++){
         let seat = row.seats[j];
         let groupedSeat = [];
         let occupy = j+seat.allocation
-        if (occupy >= row.seats.length){
+        if (occupy > row.seats.length){
             continue
         }
         if(seat != null){
