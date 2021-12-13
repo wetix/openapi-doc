@@ -318,7 +318,6 @@ The cinema hall layout object.
 | Name               | Data Type                                    | Description               |
 | ------------------ | -------------------------------------------- | ------------------------- |
 | `twoDimensionView` | [[SeatRow!]!](/docs/graphql/objects#seatrow) | The 2D view of the seats. |
-| `types`            | [[String!]!](/docs/graphql/scalars#string)   | The number of seats left. |
 | `totalRow`         | [Uint!](/docs/graphql/scalars#uint)          | Total row of seats.       |
 | `totalColumn`      | [Uint!](/docs/graphql/scalars#uint)          | Total column of seats.    |
 
