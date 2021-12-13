@@ -1889,21 +1889,24 @@ mutation CreateMovieOrderSession($input: CreateMovieOrderSessionInput!) {
 
 ## Reserving Seats
 
+<img src="/img/ticket_types_and_concessions.jpeg" width="200"/>
+
 #### Sample GraphQL mutation:
 
 ```
-mutation ReserveSeats($input: ReserveSeatsInput!){
-  reserveSeats(input: $input){
-    session{
-      key
-      tickets{
+mutation ReserveSeats($input: ReserveSeatsInput!) {
+  reserveSeats(input: $input) {
+    session {
+      selectedTickets {
         key
         id
-        type
         name
+        type
         purchaseAmount
         bookingAmount
+        areaCode
         seatsAllocation
+        quantity
       }
       hasExpiry
       expiresIn
@@ -1932,7 +1935,7 @@ mutation ReserveSeats($input: ReserveSeatsInput!){
     "reserveSeats": {
       "session": {
         "key": "EhFNb3ZpZU9yZGVyU2Vzc2lvbiIbMXk3aHNzMndmQm1wZ211bkZLZW1yR3BxS0FQ",
-        "tickets": [
+        "selectedTickets": [
           {
             "key": "U_-BAwEBCWdvYlRpY2tldAH_ggABBQECSUQBDAABBE5hbWUBDAABCEFyZWFDb2RlAQwAAQZBbW91bnQBBgABD1NlYXRzQWxsb2NhdGlvbgEGAAAAGv-CAQVBZHVsdAEFQURVTFQBATEB_gg0AQEA",
             "id": "Adult",
@@ -1940,7 +1943,8 @@ mutation ReserveSeats($input: ReserveSeatsInput!){
             "name": "ADULT",
             "purchaseAmount": 21,
             "bookingAmount": 0.5,
-            "seatsAllocation": 1
+            "seatsAllocation": 1,
+            "quantity":2
           },
           {
             "key": "U_-BAwEBCWdvYlRpY2tldAH_ggABBQECSUQBDAABBE5hbWUBDAABCEFyZWFDb2RlAQwAAQZBbW91bnQBBgABD1NlYXRzQWxsb2NhdGlvbgEGAAAAHP-CAQZTZW5pb3IBBlNFTklPUgEBMQH-BdwBAQA",
@@ -1949,7 +1953,8 @@ mutation ReserveSeats($input: ReserveSeatsInput!){
             "name": "SENIOR",
             "purchaseAmount": 15,
             "bookingAmount": 0.5,
-            "seatsAllocation": 1
+            "seatsAllocation": 1,
+            "quantity":0
           },
           {
             "key": "U_-BAwEBCWdvYlRpY2tldAH_ggABBQECSUQBDAABBE5hbWUBDAABCEFyZWFDb2RlAQwAAQZBbW91bnQBBgABD1NlYXRzQWxsb2NhdGlvbgEGAAAAHv-CAQdTdHVkZW50AQdTVFVERU5UAQExAf4F3AEBAA",
@@ -1958,17 +1963,9 @@ mutation ReserveSeats($input: ReserveSeatsInput!){
             "name": "STUDENT",
             "purchaseAmount": 15,
             "bookingAmount": 0.5,
-            "seatsAllocation": 1
+            "seatsAllocation": 1,
+            "quantity":0
           },
-          {
-            "key": "U_-BAwEBCWdvYlRpY2tldAH_ggABBQECSUQBDAABBE5hbWUBDAABCEFyZWFDb2RlAQwAAQZBbW91bnQBBgABD1NlYXRzQWxsb2NhdGlvbgEGAAAAGP-CAQRUd2luAQRUV0lOAQEyAf4SXAECAA",
-            "id": "Twin",
-            "type": "",
-            "name": "TWIN",
-            "purchaseAmount": 47,
-            "bookingAmount": 1,
-            "seatsAllocation": 2
-          }
         ],
         "hasExpiry": false,
         "expiresIn": null,
@@ -2017,6 +2014,157 @@ mutation ReleaseSeats($input: ReleaseSeatsInput!){
         "hasExpiry": false,
         "expiresIn": null,
         "status": "PENDING"
+      }
+    }
+  }
+}
+```
+
+## Create Movie Order
+
+<img src="/img/gsc_checkout.jpeg" width="200"/>
+
+#### Sample GraphQL mutation:
+
+```
+mutation CreateMovieOrder(
+  $input: CreateMovieOrderInput!
+  $signature: SignatureInput!
+) {
+  createMovieOrder(input: $input, signature: $signature) {
+    order {
+      key
+    }
+    hasCheckoutLink
+    checkoutUrl
+  }
+}
+```
+
+**Variables:**
+
+```
+{
+  "input": {
+    "sessionKey": "EhFNb3ZpZU9yZGVyU2Vzc2lvbiIbMjJEcmtwMTNNT2FZVU5mV1lFS3NHT3JsYk1h",
+    "referenceId": "123",
+    "customer": {
+      "externalId": "abc123",
+      "email": "harithmohamd67@gmail.com",
+      "phoneNo": "0167385346"
+    },
+    "tickets": [
+      {
+        "key": "U_-JAwEBCWdvYlRpY2tldAH_igABBQECSUQBDAABBE5hbWUBDAABCEFyZWFDb2RlAQwAAQZBbW91bnQBBgABD1NlYXRzQWxsb2NhdGlvbgEGAAAAK_-KAQ1CZWFuQmFnLUFkdWx0AQ1CRUFOQkFHLUFEVUxUAQIxMQH-BtYBAQA",
+        "quantity": 1
+      }
+    ],
+    "concessions": [],
+    "promoCode": null,
+    "redirectUrl": "https://google.com"
+  },
+  "signature": "OToc8MV22QUjjt4ZiPc8rliwRvkjNC1leuuvbxYwMYAIZ+e6FsPeXrHfd5RW72Je0++S42ZLpYni74wWOC7uTUthbcq7YsbitXMznZ4wxUwhdVv+piCFPJ8VQr/zkt/fTCLUKpCR9/fuGyGtTlJ8aYdgJXuIcAyUCuMifyS4kmw="
+}
+```
+
+**Sample GraphQL response:**
+
+```
+{
+  "data": {
+    "createMovieOrder": {
+      "order": {
+        "key": "EgpNb3ZpZU9yZGVyGNWDrMbn1ZDgFioXEgtPQXV0aENsaWVudBjv1orQ4qedsBY"
+      },
+      "hasCheckoutLink": true,
+      "checkoutUrl": "https://sb-api.wetix.my/gsc/checkout/EgpNb3ZpZU9yZGVyGNWDrMbn1ZDgFioXEgtPQXV0aENsaWVudBjv1orQ4qedsBY"
+    }
+  }
+}
+```
+
+## Create Payment With Movie Order
+
+#### Sample GraphQL mutation:
+
+```
+mutation CreatePaymentWithMovieOrder(
+  $input: CreatePaymentWithMovieOrderInput!
+  $signature: SignatureInput!
+) {
+  createPaymentWithMovieOrder(input: $input, signature: $signature) {
+    order {
+      key
+    }
+  }
+}
+
+```
+
+**Variables:**
+
+```
+{
+  "input": {
+    "orderKey": "EgpNb3ZpZU9yZGVyGPzenquY3pDgFioXEgtPQXV0aENsaWVudBjv1orQ4qedsBY",
+    "transactionRefId": "12345"
+  },
+  "signature": "OToc8MV22QUjjt4ZiPc8rliwRvkjNC1leuuvbxYwMYAIZ+e6FsPeXrHfd5RW72Je0++S42ZLpYni74wWOC7uTUthbcq7YsbitXMznZ4wxUwhdVv+piCFPJ8VQr/zkt/fTCLUKpCR9/fuGyGtTlJ8aYdgJXuIcAyUCuMifyS4kmw="
+}
+```
+
+**Sample GraphQL response:**
+
+```
+{
+  "data": {
+    "createPaymentWithMovieOrder": {
+      "order": {
+        "key": "EgpNb3ZpZU9yZGVyGNWDrMbn1ZDgFioXEgtPQXV0aENsaWVudBjv1orQ4qedsBY"
+      }
+    }
+  }
+}
+```
+
+## Confirm Movie Order
+
+<img src="/img/qr_code.jpeg" width="200"/>
+
+#### Sample GraphQL mutation:
+
+```
+mutation ConfirmMovieOrder(
+  $input: ConfirmMovieOrderInput!
+  $signature: SignatureInput!
+) {
+  confirmMovieOrder(input: $input, signature: $signature) {
+    order {
+      qrCode
+    }
+  }
+}
+```
+
+**Variables:**
+
+```
+{
+  "input": {
+    "orderKey": "EgpNb3ZpZU9yZGVyGPzenquY3pDgFioXEgtPQXV0aENsaWVudBjv1orQ4qedsBY",
+  },
+  "signature": "OToc8MV22QUjjt4ZiPc8rliwRvkjNC1leuuvbxYwMYAIZ+e6FsPeXrHfd5RW72Je0++S42ZLpYni74wWOC7uTUthbcq7YsbitXMznZ4wxUwhdVv+piCFPJ8VQr/zkt/fTCLUKpCR9/fuGyGtTlJ8aYdgJXuIcAyUCuMifyS4kmw="
+}
+```
+
+**Sample GraphQL response:**
+
+```
+{
+  "data": {
+    "confirmMovieOrder": {
+      "order": {
+        "qrCode": "1011111110100100011100011100101111100001110001"
       }
     }
   }
