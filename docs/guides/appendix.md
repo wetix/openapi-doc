@@ -1,9 +1,9 @@
 ---
-sidebar_label: "Seat Layout"
-sidebar_position: 3
+sidebar_label: "Appendix"
+sidebar_position: 4
 ---
 
-# Seat Layout and Seats Grouping
+# Appendix
 
 ### Seat Layout API
 
