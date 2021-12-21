@@ -30,8 +30,8 @@ Please set the **Basic Authorization Header** using the encoded credentials.
 
 Please request the access token from WeTix OAuth Server.
 
-**Production URL:** `https://oauth2.wetix.my/auth/refresh`  
-**Sandbox URL:** `https://sb-oauth2.wetix.my/auth/refresh`  
+**Production URL:** `https://oauth.wetix.my/auth/refresh`  
+**Sandbox URL:** `https://sb-oauth.wetix.my/auth/refresh`  
 **Method:** POST
 
 **Request parameters:**

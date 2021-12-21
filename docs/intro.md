@@ -16,9 +16,9 @@ There are two services for our API (OAuth and Open API), both for sandbox and pr
 **Sandbox Environment :**
 
 Open API Server: [https://sb-open.wetix.my/graphql](https://sb-open.wetix.my/graphql)  
-OAuth Server: [https://sb-oauth2.wetix.my](https://sb-oauth2.wetix.my)
+OAuth Server: [https://sb-oauth.wetix.my](https://sb-oauth.wetix.my)
 
 <!-- ### Production Environment
 
 Open API Server -> [https://graph.wetix.my](https://graph.wetix.my)
-OAuth Server -> [https://oauth2.wetix.my](https://oauth2.wetix.my) -->
+OAuth Server -> [https://oauth.wetix.my](https://oauth.wetix.my) -->

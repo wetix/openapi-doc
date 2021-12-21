@@ -34,8 +34,8 @@ Please set the **Basic Authorization Header** using the encoded credentials.
 
 Please request the access token from WeTix OAuth Server.
 
-**Production URL:** `https://oauth2.wetix.my/auth/token`  
-**Sandbox URL:** `https://sb-oauth2.wetix.my/auth/token`  
+**Production URL:** `https://oauth.wetix.my/auth/token`  
+**Sandbox URL:** `https://sb-oauth.wetix.my/auth/token`  
 **Method:** POST
 
 **Request parameters:**
