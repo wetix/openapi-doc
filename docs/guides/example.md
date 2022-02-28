@@ -1902,11 +1902,18 @@ mutation ReserveSeats($input: ReserveSeatsInput!) {
         id
         name
         type
-        purchaseAmount
-        bookingAmount
+        # purchaseAmount
+        # bookingAmount
         areaCode
         seatsAllocation
         quantity
+      }
+      concessions{
+        key
+        name
+        description
+        purchaseAmount
+        isSoldOut
       }
       hasExpiry
       expiresIn
@@ -1966,6 +1973,107 @@ mutation ReserveSeats($input: ReserveSeatsInput!) {
             "seatsAllocation": 1,
             "quantity":0
           },
+        ],
+        "concessions":[
+          "concessions": [
+          {
+            "key": "Q_-PAwEBDWdvYkNvbmNlc3Npb24B_5AAAQQBAklEAQwAAQROYW1lAQwAAQhJbWFnZVVSTAEMAAEGQW1vdW50AQYAAAD_lf-QAQYwMDAwMDIBKkNhcmFtZWwgUG9wY29ybiAoNzB6KSB3aXRoIDIyb3ogQ29rZSAoaWNlKQFYaHR0cHM6Ly9zdGFnaW5nZXBheW1lbnQuZ3NjLmNvbS5teS9Db25jZXNzaW9uV3MvU2VydmljZS5hc214L0dldFByb2R1Y3RJbWFnZT9jb2RlPTAwMDAwMgH-BUYA",
+            "name": "Caramel Popcorn (70z) with 22oz Coke (ice)",
+            "description": "",
+            "purchaseAmount": 13.5,
+            "isSoldOut": false
+          },
+          {
+            "key": "Q_-PAwEBDWdvYkNvbmNlc3Npb24B_5AAAQQBAklEAQwAAQROYW1lAQwAAQhJbWFnZVVSTAEMAAEGQW1vdW50AQYAAAD_l_-QAQcwMDAwMDIxASpOdWdnZXQgTGFyZ2UgKDE1cGNzKSB3aXRoIDMyb3ogQ29rZSAoaWNlICkBWWh0dHBzOi8vc3RhZ2luZ2VwYXltZW50LmdzYy5jb20ubXkvQ29uY2Vzc2lvbldzL1NlcnZpY2UuYXNteC9HZXRQcm9kdWN0SW1hZ2U_Y29kZT0wMDAwMDIxAf4F3AA",
+            "name": "Nugget Large (15pcs) with 32oz Coke (ice )",
+            "description": "",
+            "purchaseAmount": 15,
+            "isSoldOut": false
+          },
+          {
+            "key": "Q_-PAwEBDWdvYkNvbmNlc3Npb24B_5AAAQQBAklEAQwAAQROYW1lAQwAAQhJbWFnZVVSTAEMAAEGQW1vdW50AQYAAAD_mP-QAQYwMDAwMDMBLUNhcmFtZWwgUG9wY29ybiAoNzBveikgd2l0aCAyMm96IENva2UgKHcvaWNlKQFYaHR0cHM6Ly9zdGFnaW5nZXBheW1lbnQuZ3NjLmNvbS5teS9Db25jZXNzaW9uV3MvU2VydmljZS5hc214L0dldFByb2R1Y3RJbWFnZT9jb2RlPTAwMDAwMwH-BYwA",
+            "name": "Caramel Popcorn (70oz) with 22oz Coke (w/ice)",
+            "description": "",
+            "purchaseAmount": 14.2,
+            "isSoldOut": false
+          },
+          {
+            "key": "Q_-PAwEBDWdvYkNvbmNlc3Npb24B_5AAAQQBAklEAQwAAQROYW1lAQwAAQhJbWFnZVVSTAEMAAEGQW1vdW50AQYAAAD_m_-QAQYwMDAwMDQBMENhcmFtZWwgUG9wY29ybiAoNzBveikgd2l0aCAyMm96IENva2UgWmVybyAoSWNlKQFYaHR0cHM6Ly9zdGFnaW5nZXBheW1lbnQuZ3NjLmNvbS5teS9Db25jZXNzaW9uV3MvU2VydmljZS5hc214L0dldFByb2R1Y3RJbWFnZT9jb2RlPTAwMDAwNAH-BdwA",
+            "name": "Caramel Popcorn (70oz) with 22oz Coke Zero (Ice)",
+            "description": "",
+            "purchaseAmount": 15,
+            "isSoldOut": false
+          },
+          {
+            "key": "Q_-PAwEBDWdvYkNvbmNlc3Npb24B_5AAAQQBAklEAQwAAQROYW1lAQwAAQhJbWFnZVVSTAEMAAEGQW1vdW50AQYAAAD_nf-QAQYwMDAwMDUBMkNhcmFtZWwgUG9wY29ybiAoNzBveikgd2l0aCAyMm96IENva2UgWmVybyAody9pY2UpAVhodHRwczovL3N0YWdpbmdlcGF5bWVudC5nc2MuY29tLm15L0NvbmNlc3Npb25Xcy9TZXJ2aWNlLmFzbXgvR2V0UHJvZHVjdEltYWdlP2NvZGU9MDAwMDA1Af4F3AA",
+            "name": "Caramel Popcorn (70oz) with 22oz Coke Zero (w/ice)",
+            "description": "",
+            "purchaseAmount": 15,
+            "isSoldOut": false
+          },
+          {
+            "key": "Q_-PAwEBDWdvYkNvbmNlc3Npb24B_5AAAQQBAklEAQwAAQROYW1lAQwAAQhJbWFnZVVSTAEMAAEGQW1vdW50AQYAAAD_mP-QAQYwMDAwMDYBLUNhcmFtZWwgUG9wY29ybiAoNzBveikgd2l0aCAyMm96IFNwcml0ZSAoaWNlKQFYaHR0cHM6Ly9zdGFnaW5nZXBheW1lbnQuZ3NjLmNvbS5teS9Db25jZXNzaW9uV3MvU2VydmljZS5hc214L0dldFByb2R1Y3RJbWFnZT9jb2RlPTAwMDAwNgH-BdwA",
+            "name": "Caramel Popcorn (70oz) with 22oz Sprite (ice)",
+            "description": "",
+            "purchaseAmount": 15,
+            "isSoldOut": false
+          },
+          {
+            "key": "Q_-PAwEBDWdvYkNvbmNlc3Npb24B_5AAAQQBAklEAQwAAQROYW1lAQwAAQhJbWFnZVVSTAEMAAEGQW1vdW50AQYAAAD_mv-QAQYwMDAwMDcBL0NhcmFtZWwgUG9wY29ybiAoNzBveikgd2l0aCAyMm96IFNwcml0ZSAody9pY2UpAVhodHRwczovL3N0YWdpbmdlcGF5bWVudC5nc2MuY29tLm15L0NvbmNlc3Npb25Xcy9TZXJ2aWNlLmFzbXgvR2V0UHJvZHVjdEltYWdlP2NvZGU9MDAwMDA3Af4F3AA",
+            "name": "Caramel Popcorn (70oz) with 22oz Sprite (w/ice)",
+            "description": "",
+            "purchaseAmount": 15,
+            "isSoldOut": false
+          },
+          {
+            "key": "Q_-PAwEBDWdvYkNvbmNlc3Npb24B_5AAAQQBAklEAQwAAQROYW1lAQwAAQhJbWFnZVVSTAEMAAEGQW1vdW50AQYAAAD_nf-QAQYwMDAwMDgBMkNhcmFtZWwgUG9wY29ybiAoNzBveikgd2l0aCAyMm96IEZhbnRhIEdyYXBlIChpY2UpAVhodHRwczovL3N0YWdpbmdlcGF5bWVudC5nc2MuY29tLm15L0NvbmNlc3Npb25Xcy9TZXJ2aWNlLmFzbXgvR2V0UHJvZHVjdEltYWdlP2NvZGU9MDAwMDA4Af4F3AA",
+            "name": "Caramel Popcorn (70oz) with 22oz Fanta Grape (ice)",
+            "description": "",
+            "purchaseAmount": 15,
+            "isSoldOut": false
+          },
+          {
+            "key": "Q_-PAwEBDWdvYkNvbmNlc3Npb24B_5AAAQQBAklEAQwAAQROYW1lAQwAAQhJbWFnZVVSTAEMAAEGQW1vdW50AQYAAAD_nf-QAQYwMDAwMDkBMkNhcmFtZWwgUG9wY29ybig3MG96KSB3aXRoIDIyb3ogRmFudGEgR3JhcGUody9pY2UpAVhodHRwczovL3N0YWdpbmdlcGF5bWVudC5nc2MuY29tLm15L0NvbmNlc3Npb25Xcy9TZXJ2aWNlLmFzbXgvR2V0UHJvZHVjdEltYWdlP2NvZGU9MDAwMDA5Af4F3AA",
+            "name": "Caramel Popcorn(70oz) with 22oz Fanta Grape(w/ice)",
+            "description": "",
+            "purchaseAmount": 15,
+            "isSoldOut": false
+          },
+          {
+            "key": "Q_-PAwEBDWdvYkNvbmNlc3Npb24B_5AAAQQBAklEAQwAAQROYW1lAQwAAQhJbWFnZVVSTAEMAAEGQW1vdW50AQYAAAD_nf-QAQYwMDAwMTABMkNhcmFtZWwgUG9wY29ybig3MG96KSB3aXRoIDIyb3ogRi5TdHJhd2JlcnJ5IChpY2UpAVhodHRwczovL3N0YWdpbmdlcGF5bWVudC5nc2MuY29tLm15L0NvbmNlc3Npb25Xcy9TZXJ2aWNlLmFzbXgvR2V0UHJvZHVjdEltYWdlP2NvZGU9MDAwMDEwAf4F3AA",
+            "name": "Caramel Popcorn(70oz) with 22oz F.Strawberry (ice)",
+            "description": "",
+            "purchaseAmount": 15,
+            "isSoldOut": false
+          },
+          {
+            "key": "Q_-PAwEBDWdvYkNvbmNlc3Npb24B_5AAAQQBAklEAQwAAQROYW1lAQwAAQhJbWFnZVVSTAEMAAEGQW1vdW50AQYAAAD_nf-QAQYwMDAwMTEBMkNhcmFtZWwgUG9wY29ybig3MG96KSB3aXRoIDIyb3ogRi5TdHJhd2JlcnJ5IChpY2UpAVhodHRwczovL3N0YWdpbmdlcGF5bWVudC5nc2MuY29tLm15L0NvbmNlc3Npb25Xcy9TZXJ2aWNlLmFzbXgvR2V0UHJvZHVjdEltYWdlP2NvZGU9MDAwMDExAf4F3AA",
+            "name": "Caramel Popcorn(70oz) with 22oz F.Strawberry (ice)",
+            "description": "",
+            "purchaseAmount": 15,
+            "isSoldOut": false
+          },
+          {
+            "key": "Q_-PAwEBDWdvYkNvbmNlc3Npb24B_5AAAQQBAklEAQwAAQROYW1lAQwAAQhJbWFnZVVSTAEMAAEGQW1vdW50AQYAAAD_nf-QAQYwMDAwMTIBMkNhcmFtZWwgUG9wY29ybiAoNzBveikgd2l0aCAyMm96IE0uTS4gT3JhbmdlIChpY2UpAVhodHRwczovL3N0YWdpbmdlcGF5bWVudC5nc2MuY29tLm15L0NvbmNlc3Npb25Xcy9TZXJ2aWNlLmFzbXgvR2V0UHJvZHVjdEltYWdlP2NvZGU9MDAwMDEyAf4F3AA",
+            "name": "Caramel Popcorn (70oz) with 22oz M.M. Orange (ice)",
+            "description": "",
+            "purchaseAmount": 15,
+            "isSoldOut": false
+          },
+          {
+            "key": "Q_-PAwEBDWdvYkNvbmNlc3Npb24B_5AAAQQBAklEAQwAAQROYW1lAQwAAQhJbWFnZVVSTAEMAAEGQW1vdW50AQYAAAD_nf-QAQYwMDAwMTMBMkNhcmFtZWwgUG9wY29ybig3MG96KSB3aXRoIDIyb3ogTS5NIE9yYW5nZSAody9pY2UpAVhodHRwczovL3N0YWdpbmdlcGF5bWVudC5nc2MuY29tLm15L0NvbmNlc3Npb25Xcy9TZXJ2aWNlLmFzbXgvR2V0UHJvZHVjdEltYWdlP2NvZGU9MDAwMDEzAf4F3AA",
+            "name": "Caramel Popcorn(70oz) with 22oz M.M Orange (w/ice)",
+            "description": "",
+            "purchaseAmount": 15,
+            "isSoldOut": false
+          },
+          {
+            "key": "Q_-PAwEBDWdvYkNvbmNlc3Npb24B_5AAAQQBAklEAQwAAQROYW1lAQwAAQhJbWFnZVVSTAEMAAEGQW1vdW50AQYAAAD_m_-QAQYwMDAwMTQBMENhcmFtZWwgUG9wY29ybiAoNzBveikgd2l0aCAyMm96IE0uTSBBcHBsZSAoSWNlKQFYaHR0cHM6Ly9zdGFnaW5nZXBheW1lbnQuZ3NjLmNvbS5teS9Db25jZXNzaW9uV3MvU2VydmljZS5hc214L0dldFByb2R1Y3RJbWFnZT9jb2RlPTAwMDAxNAH-BdwA",
+            "name": "Caramel Popcorn (70oz) with 22oz M.M Apple (Ice)",
+            "description": "",
+            "purchaseAmount": 15,
+            "isSoldOut": false
+          }
         ],
         "hasExpiry": false,
         "expiresIn": null,
