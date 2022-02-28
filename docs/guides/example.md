@@ -1975,7 +1975,6 @@ mutation ReserveSeats($input: ReserveSeatsInput!) {
           },
         ],
         "concessions":[
-          "concessions": [
           {
             "key": "Q_-PAwEBDWdvYkNvbmNlc3Npb24B_5AAAQQBAklEAQwAAQROYW1lAQwAAQhJbWFnZVVSTAEMAAEGQW1vdW50AQYAAAD_lf-QAQYwMDAwMDIBKkNhcmFtZWwgUG9wY29ybiAoNzB6KSB3aXRoIDIyb3ogQ29rZSAoaWNlKQFYaHR0cHM6Ly9zdGFnaW5nZXBheW1lbnQuZ3NjLmNvbS5teS9Db25jZXNzaW9uV3MvU2VydmljZS5hc214L0dldFByb2R1Y3RJbWFnZT9jb2RlPTAwMDAwMgH-BUYA",
             "name": "Caramel Popcorn (70z) with 22oz Coke (ice)",
