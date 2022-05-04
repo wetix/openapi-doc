@@ -192,7 +192,7 @@ query {
     cinemas(first: 10) {
       nodes {
         name
-        showtimes(first: 100, date: "2021-08-09", activeOnly: true) {
+        showtimes(first: 100, date: "2021-08-09") {
           nodes {
             key
             hall {
