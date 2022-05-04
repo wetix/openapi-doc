@@ -92,6 +92,7 @@ query{
       key
       title
       originalTitle
+      censorship
       mainTrailerUrl
       portraitImageUrl
       landscapeImageUrl
@@ -129,7 +130,8 @@ query{
         {
           "key": "EgVNb3ZpZRiT6SwqDhIGT3JpZ2luIgRUTURC",
           "title": "MONSTER RUN",
-          "originalTitle": "",
+          "originalTitle": "怪物先生",
+          "censorship": "18",
           "mainTrailerUrl": "https://www.youtube.com/watch?v=M0Jc28ORRdo&feature=emb_title",
           "portraitImageUrl": "https://asset.wetix.my/images/91bcd798-7fc2-49ae-9573-bc8c5d751066.jpg",
           "landscapeImageUrl": "https://image.tmdb.org/t/p/w500/4a5QISRZ6XdyurHAvMdqMbhWfFI.jpg",
