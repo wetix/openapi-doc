@@ -93,6 +93,7 @@ query{
       title
       originalTitle
       censorship
+      plot
       mainTrailerUrl
       portraitImageUrl
       landscapeImageUrl
@@ -132,6 +133,7 @@ query{
           "title": "MONSTER RUN",
           "originalTitle": "怪物先生",
           "censorship": "18",
+          "plot": "Some strange things have always existed, you think it is a coincidence, or make up a reason to make it reasonable, in fact, because you do not want to admit. At the end of the season, she was regarded as an outlier because she could see monsters, until one day she saw monsters again in the supermarket where she worked and magically met Monster Hunter-Brother Meng. She discovered that there really were monsters in the world, and the two young men were involved in a new storm.",
           "mainTrailerUrl": "https://www.youtube.com/watch?v=M0Jc28ORRdo&feature=emb_title",
           "portraitImageUrl": "https://asset.wetix.my/images/91bcd798-7fc2-49ae-9573-bc8c5d751066.jpg",
           "landscapeImageUrl": "https://image.tmdb.org/t/p/w500/4a5QISRZ6XdyurHAvMdqMbhWfFI.jpg",
