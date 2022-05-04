@@ -2170,7 +2170,11 @@ mutation CreateMovieOrder(
     "promoCode": null,
     "redirectUrl": "https://google.com"
   },
-  "signature": "OToc8MV22QUjjt4ZiPc8rliwRvkjNC1leuuvbxYwMYAIZ+e6FsPeXrHfd5RW72Je0++S42ZLpYni74wWOC7uTUthbcq7YsbitXMznZ4wxUwhdVv+piCFPJ8VQr/zkt/fTCLUKpCR9/fuGyGtTlJ8aYdgJXuIcAyUCuMifyS4kmw="
+  "signature": {
+    "algorithm": "SHA256",
+    "timestamp": 1651677084,
+    "hash": "kepj367kXj5v+Vtjk+9omjW7T09QcJx3b+xrH0Z+PMITPKbPH9/Ek5H0E6TjC8QJ0zadS1AkEmEAiNf5SvHWw9vSr0IMnVNYJJcMkoUdTUDhWugn4G7BfwTeOyOBtLP1aQpLxQPBayR5QOPdB/snVenL0VUKOWEhrktfhVAyMVE="
+  }
 }
 ```
 
