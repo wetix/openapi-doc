@@ -16,6 +16,6 @@ Breaking changes include changes that will break existing queries or could affec
 - Breaking-Change: remove `activeOnly` from [`MovieShowtimeConnection`](/docs/graphql/objects#movieshowtimeconnection) argument. See the changes [here](https://github.com/wetix/openapi-doc/pull/67/commits/32a343b6a4524605f7789538c7af1a58ed5fe0fe) and the description of the breaking change [here](/docs/overview/breaking_changes#breaking-changes-for-23052022).
 - chore: add `showtimeDates` for [`CinemaMovie`](/docs/graphql/objects#cinemamovie) and [`Movie`](/docs/graphql/objects#movie) objects. See the changes [here](https://github.com/wetix/openapi-doc/commit/fd27b8e02526f26a61bb5cf5854d1056222a1647).
 - chore: update [Getting Showtimes For A Movie](/docs/guides/example#getting-showtimes-for-a-movie) and [Getting Movies and Showtimes Screene By a Cinema](/docs/guides/example#getting-movies-and-showtimes-screened-by-a-cinema) examples to use showtimeDates. See the changes [here](https://github.com/wetix/openapi-doc/commit/307f5f8fde4a929d51278bb2b5d0a5f39461bb22).
-- chore: update Getting Seat Layout example to include seat type. See the changes [here](/docs/guides/example#getting-seat-layout).
+- chore: update [Getting Seat Layout](/docs/guides/example#getting-seat-layout) example to include seat type. See the changes [here](https://github.com/wetix/openapi-doc/pull/68/commits/c81d5a74fad16c311c641ea5bd6cebb972cb3031).
 
 
