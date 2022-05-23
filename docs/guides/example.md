@@ -189,10 +189,11 @@ query {
   movie(key: "EgVNb3ZpZRiT6SwqDhIGT3JpZ2luIgRUTURC") {
     title
     genres
+    showtimeDates
     cinemas(first: 10) {
       nodes {
         name
-        showtimes(first: 100, date: "2021-08-09") {
+        showtimes(first: 100, date: "2022-05-23") {
           nodes {
             key
             hall {
@@ -208,7 +209,6 @@ query {
     }
   }
 }
-
 ```
 
 **Sample GraphQL response:**
@@ -222,6 +222,17 @@ query {
         "Action",
         "Fantasy"
       ],
+      "showtimeDates": [
+        "2022-05-23",
+        "2022-05-24",
+        "2022-05-25",
+        "2022-05-26",
+        "2022-05-27",
+        "2022-05-28",
+        "2022-05-29",
+        "2022-05-30",
+        "2022-05-31"
+      ],
       "cinemas": {
         "nodes": [
           {
@@ -229,142 +240,109 @@ query {
             "showtimes": {
               "nodes": [
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ1NzMqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ5KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQyMTMqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
-                    "type": "4DX"
+                    "type": "3D JIN GASTROBAR AFTER DARK"
                   },
-                  "screenAt": "2021-08-10T05:00:00Z",
-                  "date": "2021-08-10",
-                  "time": "01:00PM",
+                  "screenAt": "2022-05-23T13:45:00Z",
+                  "date": "2022-05-23",
+                  "time": "09:45PM",
                   "isValid": true
-                },
+                }
+              ]
+            }
+          },
+          {
+            "name": "GSC 1 Utama",
+            "showtimes": {
+              "nodes": [
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ3NDcqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ1KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODE1NDgqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
-                    "type": "PLAY+"
+                    "type": "3D"
                   },
-                  "screenAt": "2021-08-10T06:10:00Z",
-                  "date": "2021-08-10",
-                  "time": "02:10PM",
-                  "isValid": true
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQzNzAqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ1KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "PREMIERE CLASS"
-                  },
-                  "screenAt": "2021-08-10T07:00:00Z",
-                  "date": "2021-08-10",
-                  "time": "03:00PM",
-                  "isValid": true
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ5MjEqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ1KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "ESCAPE STUDIO"
-                  },
-                  "screenAt": "2021-08-10T07:25:00Z",
-                  "date": "2021-08-10",
-                  "time": "03:25PM",
-                  "isValid": true
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ4MDUqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "3D ONYX"
-                  },
-                  "screenAt": "2021-08-10T07:35:00Z",
-                  "date": "2021-08-10",
-                  "time": "03:35PM",
-                  "isValid": true
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQyNTQqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "3D GOLD CLASS"
-                  },
-                  "screenAt": "2021-08-10T08:15:00Z",
-                  "date": "2021-08-10",
+                  "screenAt": "2022-05-23T08:15:00Z",
+                  "date": "2022-05-23",
                   "time": "04:15PM",
                   "isValid": true
                 },
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ2NjAqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ1KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODE1NDMqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ1KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
-                    "type": "PLAY+"
+                    "type": "STANDARD"
                   },
-                  "screenAt": "2021-08-10T08:30:00Z",
-                  "date": "2021-08-10",
+                  "screenAt": "2022-05-23T08:30:00Z",
+                  "date": "2022-05-23",
                   "time": "04:30PM",
                   "isValid": true
                 },
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ4OTIqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ5KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODE1NTUqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ5KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
-                    "type": "4DX COMFORT CABIN"
+                    "type": "4DX"
                   },
-                  "screenAt": "2021-08-10T09:00:00Z",
-                  "date": "2021-08-10",
+                  "screenAt": "2022-05-23T09:00:00Z",
+                  "date": "2022-05-23",
                   "time": "05:00PM",
                   "isValid": true
                 },
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ4MzQqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODE1NDUqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
-                    "type": "3D ONYX"
+                    "type": "3D"
                   },
-                  "screenAt": "2021-08-10T10:00:00Z",
-                  "date": "2021-08-10",
+                  "screenAt": "2022-05-23T10:00:00Z",
+                  "date": "2022-05-23",
                   "time": "06:00PM",
                   "isValid": true
                 },
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQzOTkqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ1KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODE1MzUqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ1KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
-                    "type": "PREMIERE CLASS"
+                    "type": "STANDARD"
                   },
-                  "screenAt": "2021-08-10T10:35:00Z",
-                  "date": "2021-08-10",
+                  "screenAt": "2022-05-23T10:35:00Z",
+                  "date": "2022-05-23",
                   "time": "06:35PM",
                   "isValid": true
                 },
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ2ODkqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODE1NDIqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
-                    "type": "3D PLAY+"
+                    "type": "3D"
                   },
-                  "screenAt": "2021-08-10T11:55:00Z",
-                  "date": "2021-08-10",
+                  "screenAt": "2022-05-23T11:55:00Z",
+                  "date": "2022-05-23",
                   "time": "07:55PM",
                   "isValid": true
                 },
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ3NzYqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ1KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODE1MzkqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ1KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
-                    "type": "PLAY+"
+                    "type": "STANDARD"
                   },
-                  "screenAt": "2021-08-10T12:20:00Z",
-                  "date": "2021-08-10",
+                  "screenAt": "2022-05-23T12:20:00Z",
+                  "date": "2022-05-23",
                   "time": "08:20PM",
                   "isValid": true
                 },
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQyODMqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODE1NDcqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
-                    "type": "3D GOLD CLASS"
+                    "type": "3D"
                   },
-                  "screenAt": "2021-08-10T12:55:00Z",
-                  "date": "2021-08-10",
+                  "screenAt": "2022-05-23T12:55:00Z",
+                  "date": "2022-05-23",
                   "time": "08:55PM",
                   "isValid": true
                 },
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ0MjgqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODE1MzQqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
-                    "type": "3D PREMIERE CLASS"
+                    "type": "3D"
                   },
-                  "screenAt": "2021-08-10T14:15:00Z",
-                  "date": "2021-08-10",
+                  "screenAt": "2022-05-23T14:15:00Z",
+                  "date": "2022-05-23",
                   "time": "10:15PM",
                   "isValid": true
                 }
@@ -393,7 +371,8 @@ query {
         key
         title
         genres
-        showtimes(first: 100, date: "2021-08-10") {
+        showtimeDates
+        showtimes(first: 100, date: "2022-05-23") {
           nodes {
             key
             hall {
@@ -420,40 +399,31 @@ query {
       "movies": {
         "nodes": [
           {
-            "key": "EgVNb3ZpZRjKlhIqDhIGT3JpZ2luIgRUTURC",
-            "title": "AQUAMAN",
+            "key": "EgVNb3ZpZRiT6SwqDhIGT3JpZ2luIgRUTURC",
+            "title": "MONSTER RUN",
             "genres": [
               "Action",
-              "Adventure"
+              "Fantasy"
+            ],
+            "showtimeDates": [
+              "2022-05-23",
+              "2022-05-24",
+              "2022-05-25",
+              "2022-05-26",
+              "2022-05-27",
+              "2022-05-28",
+              "2022-05-29"
             ],
             "showtimes": {
               "nodes": [
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQxOTYqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDE4KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQyMTMqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
-                    "type": "GOLD CLASS"
+                    "type": "3D JIN GASTROBAR AFTER DARK"
                   },
-                  "date": "2021-08-10",
-                  "time": "09:10PM",
-                  "screenAt": "2021-08-10T13:10:00Z"
-                }
-              ]
-            }
-          },
-          {
-            "key": "EgVNb3ZpZRiQpBIqDhIGT3JpZ2luIgRUTURC",
-            "title": "AVENGERS: INFINITY WAR",
-            "genres": [],
-            "showtimes": {
-              "nodes": [
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ0ODYqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDU2KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "JIN GASTROBAR AFTER DARK"
-                  },
-                  "date": "2021-08-10",
-                  "time": "04:20PM",
-                  "screenAt": "2021-08-10T08:20:00Z"
+                  "date": "2022-05-23",
+                  "time": "09:45PM",
+                  "screenAt": "2022-05-23T13:45:00Z"
                 }
               ]
             }
@@ -464,235 +434,109 @@ query {
             "genres": [
               "Action"
             ],
+            "showtimeDates": [
+              "2022-05-23",
+              "2022-05-24",
+              "2022-05-25",
+              "2022-05-26",
+              "2022-05-27",
+              "2022-05-28",
+              "2022-05-29"
+            ],
             "showtimes": {
               "nodes": [
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ0NTcqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "JIN GASTROBAR AFTER DARK"
-                  },
-                  "date": "2021-08-10",
-                  "time": "01:35PM",
-                  "screenAt": "2021-08-10T05:35:00Z"
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQzMTIqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQyNTcqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
                     "type": "PREMIERE CLASS"
                   },
-                  "date": "2021-08-10",
-                  "time": "05:25PM",
-                  "screenAt": "2021-08-10T09:25:00Z"
+                  "date": "2022-05-23",
+                  "time": "05:15PM",
+                  "screenAt": "2022-05-23T09:15:00Z"
                 },
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQxNjcqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "GOLD CLASS"
-                  },
-                  "date": "2021-08-10",
-                  "time": "06:15PM",
-                  "screenAt": "2021-08-10T10:15:00Z"
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ5NTAqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQxMDMqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
                     "type": "GETHA LUX SUITE"
                   },
-                  "date": "2021-08-10",
-                  "time": "06:35PM",
-                  "screenAt": "2021-08-10T10:35:00Z"
+                  "date": "2022-05-23",
+                  "time": "06:20PM",
+                  "screenAt": "2022-05-23T10:20:00Z"
                 },
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ1MTUqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUxKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQxODAqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUxKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
-                    "type": "4DX JIN GASTROBAR AFTER DARK"
+                    "type": "4DX"
                   },
-                  "date": "2021-08-10",
-                  "time": "07:15PM",
-                  "screenAt": "2021-08-10T11:15:00Z"
+                  "date": "2022-05-23",
+                  "time": "06:45PM",
+                  "screenAt": "2022-05-23T10:45:00Z"
                 },
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQzNDEqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQyNDYqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
                     "type": "PREMIERE CLASS"
                   },
-                  "date": "2021-08-10",
-                  "time": "08:05PM",
-                  "screenAt": "2021-08-10T12:05:00Z"
+                  "date": "2022-05-23",
+                  "time": "07:50PM",
+                  "screenAt": "2022-05-23T11:50:00Z"
                 },
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ4NjMqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "ONYX"
-                  },
-                  "date": "2021-08-10",
-                  "time": "09:00PM",
-                  "screenAt": "2021-08-10T13:00:00Z"
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ5NzkqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQwOTIqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
                     "type": "GETHA LUX SUITE"
                   },
-                  "date": "2021-08-10",
-                  "time": "09:05PM",
-                  "screenAt": "2021-08-10T13:05:00Z"
+                  "date": "2022-05-23",
+                  "time": "08:50PM",
+                  "screenAt": "2022-05-23T12:50:00Z"
                 },
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ1NDQqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUxKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQxNjkqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUxKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
-                    "type": "4DX JIN GASTROBAR AFTER DARK"
+                    "type": "4DX"
                   },
-                  "date": "2021-08-10",
-                  "time": "09:45PM",
-                  "screenAt": "2021-08-10T13:45:00Z"
+                  "date": "2022-05-23",
+                  "time": "09:15PM",
+                  "screenAt": "2022-05-23T13:15:00Z"
                 },
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ3MTgqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQxMjUqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
                     "type": "PLAY+"
                   },
-                  "date": "2021-08-10",
-                  "time": "10:00PM",
-                  "screenAt": "2021-08-10T14:00:00Z"
+                  "date": "2022-05-23",
+                  "time": "09:45PM",
+                  "screenAt": "2022-05-23T13:45:00Z"
                 }
               ]
             }
           },
           {
-            "key": "EgVNb3ZpZRiT6SwqDhIGT3JpZ2luIgRUTURC",
-            "title": "MONSTER RUN",
+            "key": "EgVNb3ZpZRiQpBIqDhIGT3JpZ2luIgRUTURC",
+            "title": "AVENGERS: INFINITY WAR",
             "genres": [
               "Action",
-              "Fantasy"
+              "Superhero"
+            ],
+            "showtimeDates": [
+              "2022-05-23",
+              "2022-05-24",
+              "2022-05-25",
+              "2022-05-26",
+              "2022-05-27",
+              "2022-05-28",
+              "2022-05-29"
             ],
             "showtimes": {
               "nodes": [
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ1NzMqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ5KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQxOTEqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDU2KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
-                    "type": "4DX"
+                    "type": "STANDARD"
                   },
-                  "date": "2021-08-10",
-                  "time": "01:00PM",
-                  "screenAt": "2021-08-10T05:00:00Z"
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ3NDcqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ1KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "PLAY+"
-                  },
-                  "date": "2021-08-10",
-                  "time": "02:10PM",
-                  "screenAt": "2021-08-10T06:10:00Z"
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQzNzAqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ1KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "PREMIERE CLASS"
-                  },
-                  "date": "2021-08-10",
-                  "time": "03:00PM",
-                  "screenAt": "2021-08-10T07:00:00Z"
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ5MjEqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ1KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "ESCAPE STUDIO"
-                  },
-                  "date": "2021-08-10",
-                  "time": "03:25PM",
-                  "screenAt": "2021-08-10T07:25:00Z"
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ4MDUqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "3D ONYX"
-                  },
-                  "date": "2021-08-10",
-                  "time": "03:35PM",
-                  "screenAt": "2021-08-10T07:35:00Z"
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQyNTQqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "3D GOLD CLASS"
-                  },
-                  "date": "2021-08-10",
-                  "time": "04:15PM",
-                  "screenAt": "2021-08-10T08:15:00Z"
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ2NjAqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ1KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "PLAY+"
-                  },
-                  "date": "2021-08-10",
-                  "time": "04:30PM",
-                  "screenAt": "2021-08-10T08:30:00Z"
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ4OTIqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ5KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "4DX COMFORT CABIN"
-                  },
-                  "date": "2021-08-10",
-                  "time": "05:00PM",
-                  "screenAt": "2021-08-10T09:00:00Z"
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ4MzQqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "3D ONYX"
-                  },
-                  "date": "2021-08-10",
-                  "time": "06:00PM",
-                  "screenAt": "2021-08-10T10:00:00Z"
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQzOTkqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ1KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "PREMIERE CLASS"
-                  },
-                  "date": "2021-08-10",
-                  "time": "06:35PM",
-                  "screenAt": "2021-08-10T10:35:00Z"
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ2ODkqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "3D PLAY+"
-                  },
-                  "date": "2021-08-10",
-                  "time": "07:55PM",
-                  "screenAt": "2021-08-10T11:55:00Z"
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ3NzYqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ1KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "PLAY+"
-                  },
-                  "date": "2021-08-10",
-                  "time": "08:20PM",
-                  "screenAt": "2021-08-10T12:20:00Z"
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQyODMqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "3D GOLD CLASS"
-                  },
-                  "date": "2021-08-10",
-                  "time": "08:55PM",
-                  "screenAt": "2021-08-10T12:55:00Z"
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxNzQ0MjgqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "3D PREMIERE CLASS"
-                  },
-                  "date": "2021-08-10",
-                  "time": "10:15PM",
-                  "screenAt": "2021-08-10T14:15:00Z"
+                  "date": "2022-05-23",
+                  "time": "03:50PM",
+                  "screenAt": "2022-05-23T07:50:00Z"
                 }
               ]
             }
