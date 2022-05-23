@@ -92,6 +92,8 @@ query{
       key
       title
       originalTitle
+      censorship
+      plot
       mainTrailerUrl
       portraitImageUrl
       landscapeImageUrl
@@ -129,7 +131,9 @@ query{
         {
           "key": "EgVNb3ZpZRiT6SwqDhIGT3JpZ2luIgRUTURC",
           "title": "MONSTER RUN",
-          "originalTitle": "",
+          "originalTitle": "怪物先生",
+          "censorship": "18",
+          "plot": "Some strange things have always existed, you think it is a coincidence, or make up a reason to make it reasonable, in fact, because you do not want to admit. At the end of the season, she was regarded as an outlier because she could see monsters, until one day she saw monsters again in the supermarket where she worked and magically met Monster Hunter-Brother Meng. She discovered that there really were monsters in the world, and the two young men were involved in a new storm.",
           "mainTrailerUrl": "https://www.youtube.com/watch?v=M0Jc28ORRdo&feature=emb_title",
           "portraitImageUrl": "https://asset.wetix.my/images/91bcd798-7fc2-49ae-9573-bc8c5d751066.jpg",
           "landscapeImageUrl": "https://image.tmdb.org/t/p/w500/4a5QISRZ6XdyurHAvMdqMbhWfFI.jpg",
@@ -188,7 +192,7 @@ query {
     cinemas(first: 10) {
       nodes {
         name
-        showtimes(first: 100, date: "2021-08-09", activeOnly: true) {
+        showtimes(first: 100, date: "2021-08-09") {
           nodes {
             key
             hall {
@@ -2170,7 +2174,11 @@ mutation CreateMovieOrder(
     "promoCode": null,
     "redirectUrl": "https://google.com"
   },
-  "signature": "OToc8MV22QUjjt4ZiPc8rliwRvkjNC1leuuvbxYwMYAIZ+e6FsPeXrHfd5RW72Je0++S42ZLpYni74wWOC7uTUthbcq7YsbitXMznZ4wxUwhdVv+piCFPJ8VQr/zkt/fTCLUKpCR9/fuGyGtTlJ8aYdgJXuIcAyUCuMifyS4kmw="
+  "signature": {
+    "algorithm": "SHA256",
+    "timestamp": 1651677084,
+    "hash": "kepj367kXj5v+Vtjk+9omjW7T09QcJx3b+xrH0Z+PMITPKbPH9/Ek5H0E6TjC8QJ0zadS1AkEmEAiNf5SvHWw9vSr0IMnVNYJJcMkoUdTUDhWugn4G7BfwTeOyOBtLP1aQpLxQPBayR5QOPdB/snVenL0VUKOWEhrktfhVAyMVE="
+  }
 }
 ```
 
