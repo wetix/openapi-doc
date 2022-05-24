@@ -555,24 +555,39 @@ query {
 #### Sample GraphQL mutation:
 
 ```
-mutation CreateMovieOrderSession($input: CreateMovieOrderSessionInput!) {
-  createMovieOrderSession(input: $input) {
-    session {
-      key
-      seatLayout {
-        totalRow
-        totalColumn
-        twoDimensionView {
+query {
+  movieOrderSession(
+    key: "EhFNb3ZpZU9yZGVyU2Vzc2lvbiIbMjlZWXZRZkdLS1ZDczFpSFU1Sm9EQUVhZm4w"
+  ) {
+    key
+    cinema{
+      name
+    }
+    movie{
+      title
+    }
+    showtime {
+      date
+      time
+      hall {
+        id
+        name
+        type
+      }
+    }
+    seatLayout {
+      totalRow
+      totalColumn
+      twoDimensionView {
+        label
+        seats {
+          key
+          type
           label
-          seats {
-            key
-            type
-            label
-            allocation
-            x
-            y
-            status
-          }
+          allocation
+          x
+          y
+          status
         }
       }
     }
@@ -598,6 +613,21 @@ mutation CreateMovieOrderSession($input: CreateMovieOrderSessionInput!) {
       "createMovieOrderSession":{
          "session":{
             "key":"EhFNb3ZpZU9yZGVyU2Vzc2lvbiIbMjlZWXZRZkdLS1ZDczFpSFU1Sm9EQUVhZm4w",
+            "cinema": {
+              "name": "GSC Paradigm Mall (Petaling Jaya)"
+            },
+            "movie": {
+              "title": "ANGEL HAS FALLEN"
+            },
+            "showtime": {
+              "date": "2022-05-25",
+              "time": "09:45PM",
+              "hall": {
+                "id": "8",
+                "name": "PLAY+ 1",
+                "type": "PLAY+"
+              }
+            },
             "seatLayout":{
                "totalRow":15,
                "totalColumn":13,
