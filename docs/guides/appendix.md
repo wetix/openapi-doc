@@ -38,6 +38,40 @@ for(let i = 0; i < twoDimensionView.length; i++){
 }
 ```
 
+### List of Hall Types
+
+Due to the limitations of the cinema APIs, film formats (2D/ STANDARD, 3D, etc) and hall experiences (GETHA LUX SUITE, PLAY+, etc) are seen as a single a property in WeTix, which we refer to as **hall type**, that describes the cinema halls. As such, our API, under the `type` property of the [CinemaHall](/docs/graphql/objects#cinemahall) object, will return a single value that describes the cinema hall. Below are some of the hall types that WeTix API may return. The list of hall types below is not fixed and may change over time as we receive different combinations of film formats and hall experiences from the cinemas:
+
+- STANDARD
+- 3D
+- ATMOS
+- PLAY+
+- ATMOS D-BOX
+- PREMIERE CLASS
+- MAXX
+- GETHA LUX SUITE
+- BIG
+- ATMOS BIG
+- 4DX
+- ATMOS MAXX
+- D-BOX
+- ESCAPE STUDIO
+- STANDARD TAMIL
+- STANDARD TELUGU
+- STANDARD HINDI
+- ATMOS D-BOX MAXX
+- COMFORT CABIN
+- ONYX
+- MX4D
+- ATMOS GETHA LUX SUITE
+- SCREEN X
+- D-BOX MAXX
+- IMAX
+- ATMOS BIG PLAY+
+
+The image below shows sample hall types displayed on WeTix on the showtimes page.
+<img src="/img/hall_type.jpeg" width="300"/>
+
 <!-- ### Eligible Tickets for Reserved Seats
 
 1. The types of tickets that a user can purchase depends on the type of seats reserved. For example, if a user had reserved a `STANDARD` seat, he would be able to purchase `ADULT`, `STUDENT` or `SENIOR` tickets. Contrarily, if a user had reserved a `TWIN` seat, he would only be able to purchase `TWIN` ticket. 
