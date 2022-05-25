@@ -9,6 +9,10 @@ The GraphQL schema changelog is a list of recent and upcoming changes to our Gra
 
 Breaking changes include changes that will break existing queries or could affect the runtime behavior of clients. For a list of breaking changes and when they will occur, see our [breaking changes log](/docs/overview/breaking_changes).
 
+### Documentation and Schema Changes for 25/05/2022
+- chore: add [List of Hall Types](docs/guides/appendix#list-of-hall-types) to appendix. See the changes [here](https://github.com/wetix/openapi-doc/pull/70/commits/356599ae375c2ad94c013ac9b09db28dd23d7396).
+- chore: update possible values of `cencorship` field for [CinemaMovie](/docs/graphql/objects#cinemamovie) and [Movie](/docs/graphql/objects#movie) objects. See the changes [here](https://github.com/wetix/openapi-doc/pull/70/commits/d0026a1f08be3205a993f253a584d87709b287f9).
+
 ### Documentation and Schema Changes for 24/05/2022
 - chore: update [Getting Seat Layout](/docs/guides/example#getting-seat-layout) example to include Cinema, Movie, Showtime and Hall infos. See the changes [here](https://github.com/wetix/openapi-doc/commit/3595540b9eb422ea18de354ef033bdd93b1d0c5c).
 #
