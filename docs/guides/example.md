@@ -2359,6 +2359,17 @@ mutation CreateMovieOrder(
   createMovieOrder(input: $input, signature: $signature) {
     order {
       key
+      bookingId
+      transactionId
+      currencyCode
+      totalAmount
+      bookingAmount
+      payableAmount
+      expiresIn
+      expiredAt
+      paidAt
+      qrCode
+      status
     }
     hasCheckoutLink
     checkoutUrl
@@ -2375,8 +2386,8 @@ mutation CreateMovieOrder(
     "referenceId": "123",
     "customer": {
       "externalId": "abc123",
-      "email": "harithmohamd67@gmail.com",
-      "phoneNo": "0167385346"
+      "email": "abcd@gmail.com",
+      "phoneNo": "011456789"
     },
     "tickets": [
       {
@@ -2386,7 +2397,7 @@ mutation CreateMovieOrder(
     ],
     "concessions": [],
     "promoCode": null,
-    "redirectUrl": "https://google.com"
+    "redirectUrl": "https://payment.shoppe.my"
   },
   "signature": {
     "algorithm": "SHA256",
@@ -2403,7 +2414,18 @@ mutation CreateMovieOrder(
   "data": {
     "createMovieOrder": {
       "order": {
-        "key": "EgpNb3ZpZU9yZGVyGNWDrMbn1ZDgFioXEgtPQXV0aENsaWVudBjv1orQ4qedsBY"
+        "key": "EgpNb3ZpZU9yZGVyGLTx7ebr26b5FioVEgtPQXV0aENsaWVudCIGU0hPUEVF",
+        "bookingId": "26822052651576",
+        "transactionId": "108220526083807791087",
+        "currencyCode": "MYR",
+        "totalAmount": 18,
+        "bookingAmount": 0.5,
+        "payableAmount": 18,
+        "expiresIn": 465,
+        "expiredAt": "2022-05-26T08:46:14.118978Z",
+        "paidAt": null,
+        "qrCode": null,
+        "status": "PENDING"
       },
       "hasCheckoutLink": true,
       "checkoutUrl": "https://sb-api.wetix.my/gsc/checkout/EgpNb3ZpZU9yZGVyGNWDrMbn1ZDgFioXEgtPQXV0aENsaWVudBjv1orQ4qedsBY"
@@ -2424,6 +2446,17 @@ mutation CreatePaymentWithMovieOrder(
   createPaymentWithMovieOrder(input: $input, signature: $signature) {
     order {
       key
+      bookingId
+      transactionId
+      currencyCode
+      totalAmount
+      bookingAmount
+      payableAmount
+      expiresIn
+      expiredAt
+      paidAt
+      qrCode
+      status
     }
   }
 }
@@ -2449,7 +2482,18 @@ mutation CreatePaymentWithMovieOrder(
   "data": {
     "createPaymentWithMovieOrder": {
       "order": {
-        "key": "EgpNb3ZpZU9yZGVyGNWDrMbn1ZDgFioXEgtPQXV0aENsaWVudBjv1orQ4qedsBY"
+        "key": "EgpNb3ZpZU9yZGVyGLTx7ebr26b5FioVEgtPQXV0aENsaWVudCIGU0hPUEVF",
+        "bookingId": "26822052651576",
+        "transactionId": "108220526083807791087",
+        "currencyCode": "MYR",
+        "totalAmount": 18,
+        "bookingAmount": 0.5,
+        "payableAmount": 18,
+        "expiresIn": 465,
+        "expiredAt": "2022-05-26T08:46:14.118978Z",
+        "paidAt": null,
+        "qrCode": null,
+        "status": "PENDING"
       }
     }
   }
@@ -2469,7 +2513,18 @@ mutation ConfirmMovieOrder(
 ) {
   confirmMovieOrder(input: $input, signature: $signature) {
     order {
+      key
+      bookingId
+      transactionId
+      currencyCode
+      totalAmount
+      bookingAmount
+      payableAmount
+      expiresIn
+      expiredAt
+      paidAt
       qrCode
+      status
     }
   }
 }
@@ -2493,7 +2548,18 @@ mutation ConfirmMovieOrder(
   "data": {
     "confirmMovieOrder": {
       "order": {
-        "qrCode": "1011111110100100011100011100101111100001110001"
+      "key": "EgpNb3ZpZU9yZGVyGLTx7ebr26b5FioVEgtPQXV0aENsaWVudCIGU0hPUEVF",
+      "bookingId": "26822052651576",
+      "transactionId": "108220526083807791087",
+      "currencyCode": "MYR",
+      "totalAmount": 18,
+      "bookingAmount": 0.5,
+      "payableAmount": 18,
+      "expiresIn": -125,
+      "expiredAt": "2022-05-26T08:46:14.118978Z",
+      "paidAt": "2022-05-26T08:48:18.396996Z",
+      "qrCode": "1110001111001101110010101010111110000100000010",
+      "status": "COMPLETED"
       }
     }
   }
