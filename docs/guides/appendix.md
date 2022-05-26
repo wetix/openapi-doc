@@ -40,7 +40,7 @@ for(let i = 0; i < twoDimensionView.length; i++){
 
 ### List of Hall Types
 
-Due to the limitations of the cinema APIs, film formats (2D/ STANDARD, 3D, etc) and hall experiences (GETHA LUX SUITE, PLAY+, etc) are seen as a single a property in WeTix, which we refer to as **hall type**, that describes the cinema halls. As such, our API, under the `type` property of the [CinemaHall](/docs/graphql/objects#cinemahall) object, will return a single value that describes the cinema hall. Below are some of the hall types that WeTix API may return. The list of hall types below is not fixed and may change over time as we receive different combinations of film formats and hall experiences from the cinemas:
+Due to the limitations of the cinema APIs, film formats (2D/STANDARD, 3D, etc) and hall experiences (GETHA LUX SUITE, PLAY+, etc) are a single property, which we refer to as a **hall type**. As such, our API will return a single value that describes the cinema hall under the `type` property of the [CinemaHall](/docs/graphql/objects#cinemahall) object. Below are some of the hall types that WeTix API may return. The list of hall types below is not fixed and may change over time as we receive different combinations of film formats and hall experiences from the cinemas:
 
 - STANDARD
 - 3D
@@ -69,7 +69,7 @@ Due to the limitations of the cinema APIs, film formats (2D/ STANDARD, 3D, etc) 
 - IMAX
 - ATMOS BIG PLAY+
 
-The image below shows sample hall types displayed on WeTix on the showtimes page.
+The image below shows sample hall types displayed on WeTix showtimes page.
 <img src="/img/hall_type.jpeg" width="300"/>
 
 <!-- ### Eligible Tickets for Reserved Seats
