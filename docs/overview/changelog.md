@@ -9,6 +9,9 @@ The GraphQL schema changelog is a list of recent and upcoming changes to our Gra
 
 Breaking changes include changes that will break existing queries or could affect the runtime behavior of clients. For a list of breaking changes and when they will occur, see our [breaking changes log](/docs/overview/breaking_changes).
 
+### Documentation and Schema Changes for 16/06/2022
+- chore: update [Getting Seat Layout](/docs/guides/example#creating-movieordersession-to-get-seat-layout) example. See the changes [here](https://github.com/wetix/openapi-doc/commit/0e97fe50645268147ed1b2f9b933096ef3428abb).
+
 ### Documentation and Schema Changes for 26/05/2022
 - chore: Update [Create Movie Order](/docs/guides/example#create-movie-order), [Create Payment With Movie Order](/docs/guides/example#create-payment-with-movie-order) and [Confirm Movie Order](/docs/guides/example#confirm-movie-order) examples. See the changes [here](https://github.com/wetix/openapi-doc/commit/a4f3e98ccdfb455f6c0725a1a70665dc6961a3e0).
 
