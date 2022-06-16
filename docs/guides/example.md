@@ -548,46 +548,46 @@ query {
 }
 ```
 
-## Getting Seat Layout
+## Creating MovieOrderSession to Get Seat Layout
 
 <img src="/img/seat_layout.jpeg" width="200"/> 
 
 #### Sample GraphQL mutation:
 
 ```
-query {
-  movieOrderSession(
-    key: "EhFNb3ZpZU9yZGVyU2Vzc2lvbiIbMjlZWXZRZkdLS1ZDczFpSFU1Sm9EQUVhZm4w"
-  ) {
-    key
-    cinema{
-      name
-    }
-    movie{
-      title
-    }
-    showtime {
-      date
-      time
-      hall {
-        id
+mutation CreateMovieOrderSession($input: CreateMovieOrderSessionInput!) {
+  createMovieOrderSession(input: $input) {
+    session {
+      key
+      cinema {
         name
-        type
       }
-    }
-    seatLayout {
-      totalRow
-      totalColumn
-      twoDimensionView {
-        label
-        seats {
-          key
+      movie {
+        title
+      }
+      showtime {
+        date
+        time
+        hall {
+          id
+          name
           type
+        }
+      }
+      seatLayout {
+        totalRow
+        totalColumn
+        twoDimensionView {
           label
-          allocation
-          x
-          y
-          status
+          seats {
+            key
+            type
+            label
+            allocation
+            x
+            y
+            status
+          }
         }
       }
     }
