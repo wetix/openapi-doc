@@ -13,7 +13,7 @@ sidebar_position: 3
 
 ```
 query {
-  cinemas(first: 3, onScreenOnly: true) {
+  cinemas {
     nodes {
       key
       operator
@@ -25,6 +25,7 @@ query {
         latitude
         longitude
       }
+      hasShowtimes
     }
     pageInfo {
       startCursor
@@ -44,6 +45,84 @@ query {
     "cinemas": {
       "nodes": [
         {
+          "key": "EgZDaW5lbWEiA1RTQyomEgZWZW5kb3IiBVZJU1RBKhUSDkNpbmVtYU9wZXJhdG9yIgNUR1Y",
+          "operator": "TGV",
+          "name": "TGV Tasek Central",
+          "address": "Lot 4-39, Level 4, Tasek Central No.2 Jalan Pendekar 16, Taman Ungku Tun Aminah",
+          "postCode": "81300",
+          "stateCode": "MY-01",
+          "geopoint": {
+            "latitude": 103.652953,
+            "longitude": 1.513734
+          },
+          "hasShowtimes": false
+        },
+        {
+          "key": "EgZDaW5lbWEiA1NXViomEgZWZW5kb3IiBVZJU1RBKhUSDkNpbmVtYU9wZXJhdG9yIgNUR1Y",
+          "operator": "TGV",
+          "name": "TGV Sunway Velocity",
+          "address": "Level 4, Sunway Velocity Mall, 80, Jalan Cheras, Maluri",
+          "postCode": "55100",
+          "stateCode": "MY-14",
+          "geopoint": {
+            "latitude": 101.724507,
+            "longitude": 3.1278344
+          },
+          "hasShowtimes": false
+        },
+        {
+          "key": "EgZDaW5lbWEiA0tQMComEgZWZW5kb3IiBVZJU1RBKhUSDkNpbmVtYU9wZXJhdG9yIgNUR1Y",
+          "operator": "TGV",
+          "name": "TGV Kepong",
+          "address": "R01, Roof Level, AEON Metro Prima Shopping Centre, 1, Jalan Metro Prima",
+          "postCode": "52100",
+          "stateCode": "MY-14",
+          "geopoint": {
+            "latitude": 101.6390061,
+            "longitude": 3.2131469
+          },
+          "hasShowtimes": false
+        },
+        {
+          "key": "EgZDaW5lbWEiA0JVMComEgZWZW5kb3IiBVZJU1RBKhUSDkNpbmVtYU9wZXJhdG9yIgNUR1Y",
+          "operator": "TGV",
+          "name": "TGV 1 Utama",
+          "address": "F01, 1st Floor, Bukit Raja Shopping Centre, Persiaran Bukit Raja 2, Bandar Baru Klang",
+          "postCode": "41150",
+          "stateCode": "MY-10",
+          "geopoint": {
+            "latitude": 101.4721615,
+            "longitude": 3.0608794
+          },
+          "hasShowtimes": false
+        },
+        {
+          "key": "EgZDaW5lbWEiA0FVMiomEgZWZW5kb3IiBVZJU1RBKhUSDkNpbmVtYU9wZXJhdG9yIgNUR1Y",
+          "operator": "TGV",
+          "name": "TGV AU2",
+          "address": "6, Jalan Keramat Hujung, Au 2",
+          "postCode": "54200",
+          "stateCode": "MY-14",
+          "geopoint": {
+            "latitude": 101.7496352,
+            "longitude": 3.1776976
+          },
+          "hasShowtimes": false
+        },
+        {
+          "key": "EgZDaW5lbWEiJDM3OWVlZDQ5LWIzZTUtNDU3OC05NTUyLTUwNGJmMzQ5ZGZjYyopEgZWZW5kb3IiCFBPU0lUSVZFKhUSDkNpbmVtYU9wZXJhdG9yIgNNTUM",
+          "operator": "MMC",
+          "name": "mmCineplexes eCurve",
+          "address": "Lot 3F-01, Mesa Mall, Persiaran Ilmu, Bandar Baru Nilai",
+          "postCode": "71800",
+          "stateCode": "MY-04",
+          "geopoint": {
+            "latitude": 101.778289,
+            "longitude": 2.823862
+          },
+          "hasShowtimes": false
+        },
+        {
           "key": "EgZDaW5lbWEiAzI2OCoVEg5DaW5lbWFPcGVyYXRvciIDR1ND",
           "operator": "GSC",
           "name": "GSC Paradigm Mall (Petaling Jaya)",
@@ -53,7 +132,8 @@ query {
           "geopoint": {
             "latitude": 101.59528,
             "longitude": 3.10495
-          }
+          },
+          "hasShowtimes": true
         },
         {
           "key": "EgZDaW5lbWEiAzI2MCoVEg5DaW5lbWFPcGVyYXRvciIDR1ND",
@@ -65,12 +145,26 @@ query {
           "geopoint": {
             "latitude": 101.61528,
             "longitude": 3.15056
-          }
+          },
+          "hasShowtimes": true
+        },
+        {
+          "key": "EgZDaW5lbWEiCDY2NjY2NjY2KhYSDkNpbmVtYU9wZXJhdG9yIgREQURJ",
+          "operator": "DADI",
+          "name": "Dadi Pavilion Kuala Lumpur",
+          "address": "Bukit Bintang",
+          "postCode": "55100",
+          "stateCode": "MY-14",
+          "geopoint": {
+            "latitude": 101.713067,
+            "longitude": 3.149021
+          },
+          "hasShowtimes": false
         }
       ],
       "pageInfo": {
-        "startCursor": "EgZDaW5lbWEiAzI2OCoVEg5DaW5lbWFPcGVyYXRvciIDR1ND",
-        "endCursor": "EgZDaW5lbWEiAzI2MCoVEg5DaW5lbWFPcGVyYXRvciIDR1ND",
+        "startCursor": "EgZDaW5lbWEiA1RTQyomEgZWZW5kb3IiBVZJU1RBKhUSDkNpbmVtYU9wZXJhdG9yIgNUR1Y",
+        "endCursor": null,
         "hasNextPage": false,
         "hasPreviousPage": false
       }
