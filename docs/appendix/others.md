@@ -1,6 +1,6 @@
 ---
-sidebar_label: "Appendix"
-sidebar_position: 4
+sidebar_label: "Others"
+sidebar_position: 5
 ---
 
 # Appendix
