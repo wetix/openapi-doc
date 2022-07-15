@@ -73,17 +73,6 @@ Create a movie order.
 | `hasCheckoutLink` | [Boolean!](/docs/graphql/scalars#boolean)       | Indicates whether a redirection to the cinema checkout page is required (specific for GSc). |
 | `checkoutUrl`     | [URI!](/docs/graphql/objects#movieorder)        | The cinema checkout URL (specific for GSC).                                                 |
 
-## [createPaymentWithMovieOrder](/docs/graphql/mutations#createpaymentwithmovieorder)
-
-Create a new payment with the existing movie order.
-
-**Arguments**
-
-| Name        | Data Type                                                                                         | Description                    |
-| ----------- | ------------------------------------------------------------------------------------------------- | ------------------------------ |
-| `input`     | [CreatePaymentWithMovieOrderInput!](/docs/graphql/input_objects#createpaymentwithmovieorderinput) | The input argument object.     |
-| `signature` | [SignatureInput!](/docs/graphql/input_objects#signatureinput)                                     | The signature argument object. |
-
 **Return Fields**
 
 | Name    | Data Type                                       | Description             |

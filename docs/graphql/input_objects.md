@@ -86,17 +86,6 @@ The selected concessions.
 | `key`      | [String!](/docs/graphql/scalars#string) | The unique identifier for the concession. |
 | `quantity` | [Uint!](/docs/graphql/scalars#uint)     | The quantity of the concession.           |
 
-## [CreatePaymentWithMovieOrderInput](/docs/graphql/input_objects#createpaymentwithmovieorderinput)
-
-Create payment for movie order input.
-
-**Input Fields**
-
-| Name               | Data Type                             | Description                                |
-| ------------------ | ------------------------------------- | ------------------------------------------ |
-| `orderKey`         | [Key!](/docs/graphql/scalars#key)     | The unique identifier for the movie order. |
-| `transactionRefId` | [String!](/docs/graphql/scalars#uint) | The transaction refererence ID.            |
-
 ## [ConfirmMovieOrderInput](/docs/graphql/input_objects#confirmmovieorderinput)
 
 Confirm movie order input.
