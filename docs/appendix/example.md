@@ -188,6 +188,7 @@ query{
       originalTitle
       censorship
       plot
+      languageCodes
       mainTrailerUrl
       portraitImageUrl
       landscapeImageUrl
@@ -229,10 +230,13 @@ query{
           "originalTitle": "ANGEL HAS FALLEN",
           "censorship": "P13",
           "plot": "After a treacherous attack, Secret Service agent Mike Banning is charged with attempting to assassinate President Trumbull. Chased by his own colleagues and the FBI, Banning begins a race against the clock to clear his name.",
+          "languageCodes": [
+            "id"
+          ],
           "mainTrailerUrl": null,
           "portraitImageUrl": "https://image.tmdb.org/t/p/w300/fapXd3v9qTcNBTm39ZC4KUVQDNf.jpg",
           "landscapeImageUrl": "https://image.tmdb.org/t/p/w500/7uCHvw3j0G5ns5X2rWuU1BXRmoJ.jpg",
-          "showtimeCount": 358,
+          "showtimeCount": 306,
           "runTime": 122,
           "genres": [
             "Action"
@@ -405,10 +409,14 @@ query{
           "originalTitle": "怪物先生",
           "censorship": "18",
           "plot": "Some strange things have always existed, you think it is a coincidence, or make up a reason to make it reasonable, in fact, because you do not want to admit. At the end of the season, she was regarded as an outlier because she could see monsters, until one day she saw monsters again in the supermarket where she worked and magically met Monster Hunter-Brother Meng. She discovered that there really were monsters in the world, and the two young men were involved in a new storm.",
-          "mainTrailerUrl": null,
+          "languageCodes": [
+            "zh",
+            "en"
+          ],
+          "mainTrailerUrl": "https://www.youtube.com/watch?v=8BLkCIifOi4",
           "portraitImageUrl": "https://asset.wetix.my/images/91bcd798-7fc2-49ae-9573-bc8c5d751066.jpg",
           "landscapeImageUrl": "https://image.tmdb.org/t/p/w500/4a5QISRZ6XdyurHAvMdqMbhWfFI.jpg",
-          "showtimeCount": 315,
+          "showtimeCount": 272,
           "runTime": 104,
           "genres": [
             "Action",
@@ -436,7 +444,35 @@ query{
           "isComingSoon": false,
           "releaseDate": "2022-02-20",
           "createdAt": "2020-09-07T10:00:18.465493Z",
-          "lastUpdatedAt": "2022-07-06T08:23:08.268772Z"
+          "lastUpdatedAt": "2022-07-13T00:55:50.677753Z"
+        },
+        {
+          "key": "EgVNb3ZpZRiGkiAqDhIGT3JpZ2luIgRUTURC",
+          "title": "THE KID FROM THE BIG APPLE: BEFORE WE FORGET",
+          "originalTitle": "我来自纽约 2: 当我们在一起",
+          "censorship": "PG13",
+          "plot": "Sequel to the critically acclaim The Kid From The Big Apple. Sarah is back in Malaysia to spend her holiday with grandpa who is showing signs of dementia.",
+          "languageCodes": [
+            "zh"
+          ],
+          "mainTrailerUrl": "https://www.youtube.com/watch?v=ioUnrixU3Mc",
+          "portraitImageUrl": "https://image.tmdb.org/t/p/w300/9VmLJFikglJsv7NeNUVxO3Cyf12.jpg",
+          "landscapeImageUrl": "https://image.tmdb.org/t/p/w500/czvH6mzAK34bI9X0zAycRKmzjvM.jpg",
+          "showtimeCount": 34,
+          "runTime": 115,
+          "genres": [
+            "Drama",
+            "Family",
+            "Comedy"
+          ],
+          "actors": [],
+          "images": [],
+          "isAdvanceSales": false,
+          "isOnScreen": true,
+          "isComingSoon": false,
+          "releaseDate": "2017-11-16",
+          "createdAt": "2022-05-07T09:48:23.954384Z",
+          "lastUpdatedAt": "2022-05-07T09:49:44.479659Z"
         },
         {
           "key": "EgVNb3ZpZRiQpBIqDhIGT3JpZ2luIgRUTURC",
@@ -444,10 +480,13 @@ query{
           "originalTitle": "AVENGERS: INFINITY WAR",
           "censorship": "P13",
           "plot": "As the Avengers and their allies have continued to protect the world from threats too large for any one hero to handle, a new danger has emerged from the cosmic shadows: Thanos. A despot of intergalactic infamy, his goal is to collect all six Infinity Stones, artifacts of unimaginable power, and use them to inflict his twisted will on all of reality. Everything the Avengers have fought for has led up to this moment - the fate of Earth and existence itself has never been more uncertain.",
+          "languageCodes": [
+            "en"
+          ],
           "mainTrailerUrl": "https://www.youtube.com/watch?v=6ZfuNTqbHE8&t=2s",
           "portraitImageUrl": "https://image.tmdb.org/t/p/w300/7WsyChQLEftFiDOVTGkv3hFpyyt.jpg",
           "landscapeImageUrl": "https://image.tmdb.org/t/p/w500/bOGkgRGdhrBYJSLpXaxhXVstddV.jpg",
-          "showtimeCount": 39,
+          "showtimeCount": 34,
           "runTime": 149,
           "genres": [
             "Action",
@@ -763,40 +802,18 @@ query{
           "lastUpdatedAt": "2022-03-24T10:46:56.52048Z"
         },
         {
-          "key": "EgVNb3ZpZRiGkiAqDhIGT3JpZ2luIgRUTURC",
-          "title": "THE KID FROM THE BIG APPLE: BEFORE WE FORGET",
-          "originalTitle": "我来自纽约 2: 当我们在一起",
-          "censorship": "PG13",
-          "plot": "Sequel to the critically acclaim The Kid From The Big Apple. Sarah is back in Malaysia to spend her holiday with grandpa who is showing signs of dementia.",
-          "mainTrailerUrl": "https://www.youtube.com/watch?v=ioUnrixU3Mc",
-          "portraitImageUrl": "https://image.tmdb.org/t/p/w300/9VmLJFikglJsv7NeNUVxO3Cyf12.jpg",
-          "landscapeImageUrl": "https://image.tmdb.org/t/p/w500/czvH6mzAK34bI9X0zAycRKmzjvM.jpg",
-          "showtimeCount": 38,
-          "runTime": 115,
-          "genres": [
-            "Drama",
-            "Family",
-            "Comedy"
-          ],
-          "actors": [],
-          "images": [],
-          "isAdvanceSales": false,
-          "isOnScreen": true,
-          "isComingSoon": false,
-          "releaseDate": "2017-11-16",
-          "createdAt": "2022-05-07T09:48:23.954384Z",
-          "lastUpdatedAt": "2022-05-07T09:49:44.479659Z"
-        },
-        {
           "key": "EgVNb3ZpZRjKlhIqDhIGT3JpZ2luIgRUTURC",
           "title": "AQUAMAN",
           "originalTitle": "AQUAMAN",
           "censorship": "P13",
           "plot": "Once home to the most advanced civilization on Earth, Atlantis is now an underwater kingdom ruled by the power-hungry King Orm. With a vast army at his disposal, Orm plans to conquer the remaining oceanic people and then the surface world. Standing in his way is Arthur Curry, Orm's half-human, half-Atlantean brother and true heir to the throne.",
+          "languageCodes": [
+            "en"
+          ],
           "mainTrailerUrl": "https://www.youtube.com/watch?v=WDkg3h8PCVU",
           "portraitImageUrl": "https://image.tmdb.org/t/p/w300/5Kg76ldv7VxeX9YlcQXiowHgdX6.jpg",
           "landscapeImageUrl": "https://image.tmdb.org/t/p/w500/9QusGjxcYvfPD1THg6oW3RLeNn7.jpg",
-          "showtimeCount": 20,
+          "showtimeCount": 17,
           "runTime": 144,
           "genres": [
             "Action",
