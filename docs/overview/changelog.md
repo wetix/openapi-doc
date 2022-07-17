@@ -9,6 +9,22 @@ The GraphQL schema changelog is a list of recent and upcoming changes to our Gra
 
 Breaking changes include changes that will break existing queries or could affect the runtime behavior of clients. For a list of breaking changes and when they will occur, see our [breaking changes log](/docs/overview/breaking_changes).
 
+### Documentation and Schema Changes for 17/07/2022
+- chore: add `languageCodes` to [`CinemaMovie`](/docs/graphql/objects#cinemamovie) object. See the changes [here](https://github.com/wetix/openapi-doc/commit/5b84deba83bd1e9675da5bbb3d93c65a1bbbefdf).
+- chore: add enumeration values to [`Language`](/docs/graphql/scalars#language) type. See the changes [here](https://github.com/wetix/openapi-doc/commit/d3ac68ec90453a749fe85da07f8daccc926c5256).
+### Documentation and Schema Changes for 15/07/2022
+- breaking-change: remove `CreatePaymentWithMovieOrder` mutation. See the changes [here](https://github.com/wetix/openapi-doc/commit/260818c46b99980ce9e0ca481e2aa7ef36aad47b) and the description of the breaking change [here](/docs/overview/breaking_changes#breaking-changes-for-15072022).
+- breaking-change: change `languageCode` to `languageCodes` for [`Movie`](/docs/graphql/objects#movie) object. See the changes [here](https://github.com/wetix/openapi-doc/commit/214abeb601702f1af7f18086618689e838b99955) and the description of the breaking change [here](/docs/overview/breaking_changes#breaking-changes-for-15072022).
+- chore: add `ORDER_NOT_FOUND` and `PAYMENT_NOT_FOUND` [error codes](/docs/appendix/error_codes). See the changes [here](https://github.com/wetix/openapi-doc/commit/22d74bc3e1d111b92131cf068ee78eb984d07c5e).
+### Documentation and Schema Changes for 14/07/2022
+- chore: add [error codes](/docs/appendix/error_codes). See the changes [here](https://github.com/wetix/openapi-doc/commit/e59083a95f8f7fd1204f6d22ad2d2060aa9d5c1c).
+
+### Documentation and Schema Changes for 12/07/2022
+- chore: add [state diagrams](/docs/appendix/flow#state-diagrams) for `MovieOrderSession` and `MovieOrder` objects. See the changes [here](https://github.com/wetix/openapi-doc/commit/1275292de081871a476c5d0ae146704c15e21fd0).
+- chore: add `hasShowtimes` field for the [`Cinema`](/docs/graphql/objects#cinema) object. See the changes [here](https://github.com/wetix/openapi-doc/commit/e146770373ff4361217bd1fed734d247374e835a).
+- chore: add `runTime` field for the [`Movie`](/docs/graphql/objects#movie) object. See the changes [here](https://github.com/wetix/openapi-doc/commit/b8bef2854483a0a7cd1413e9b3d9311957c4b51a).
+  
+
 ### Documentation and Schema Changes for 29/06/2022
 - chore: update [Getting Seat Layout](/docs/appendix/example#creating-movieordersession-to-get-seat-layout) example. See the changes [here](https://github.com/wetix/openapi-doc/commit/b554693c35040745b15fb2ba97d9963584986bb2).
 
