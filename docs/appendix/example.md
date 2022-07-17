@@ -3354,7 +3354,12 @@ mutation CreateMovieOrder(
         "quantity": 1
       }
     ],
-    "concessions": [],
+    "concessions": [
+      {
+        "key": "Q_-TAwEBDWdvYkNvbmNlc3Npb24B_5QAAQQBAklEAQwAAQROYW1lAQwAAQhJbWFnZVVSTAEMAAEGQW1vdW50AQYAAAD_lP-UAQ45ODc2NTQzMjEwMTIzNAEZTGFyZ2UgQ29rZSBDb21ibyBMb25nIFBMVQFgaHR0cHM6Ly9zdGFnaW5nZXBheW1lbnQuZ3NjLmNvbS5teS9Db25jZXNzaW9uV3MvU2VydmljZS5hc214L0dldFByb2R1Y3RJbWFnZT9jb2RlPTk4NzY1NDMyMTAxMjM0Af4EsAA",
+        "quantity": 1
+      }
+    ],
     "promoCode": null,
     "redirectUrl": "https://payment.shoppe.my"
   },
@@ -3377,9 +3382,9 @@ mutation CreateMovieOrder(
         "bookingId": "26822052651576",
         "transactionId": "108220526083807791087",
         "currencyCode": "MYR",
-        "totalAmount": 18,
+        "totalAmount": 30,
         "bookingAmount": 0.5,
-        "payableAmount": 18,
+        "payableAmount": 30,
         "expiresIn": 465,
         "expiredAt": "2022-05-26T08:46:14.118978Z",
         "paidAt": null,
