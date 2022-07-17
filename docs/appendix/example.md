@@ -1084,7 +1084,6 @@ query {
             screenAt
             date
             time
-            isValid
           }
         }
       }
@@ -1129,7 +1128,6 @@ query {
                   "screenAt": "2022-05-23T13:45:00Z",
                   "date": "2022-05-23",
                   "time": "09:45PM",
-                  "isValid": true
                 }
               ]
             }
@@ -1146,7 +1144,6 @@ query {
                   "screenAt": "2022-05-23T08:15:00Z",
                   "date": "2022-05-23",
                   "time": "04:15PM",
-                  "isValid": true
                 },
                 {
                   "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODE1NDMqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ1KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
@@ -1156,7 +1153,6 @@ query {
                   "screenAt": "2022-05-23T08:30:00Z",
                   "date": "2022-05-23",
                   "time": "04:30PM",
-                  "isValid": true
                 },
                 {
                   "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODE1NTUqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ5KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
@@ -1166,7 +1162,6 @@ query {
                   "screenAt": "2022-05-23T09:00:00Z",
                   "date": "2022-05-23",
                   "time": "05:00PM",
-                  "isValid": true
                 },
                 {
                   "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODE1NDUqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
@@ -1176,7 +1171,6 @@ query {
                   "screenAt": "2022-05-23T10:00:00Z",
                   "date": "2022-05-23",
                   "time": "06:00PM",
-                  "isValid": true
                 },
                 {
                   "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODE1MzUqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ1KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
@@ -1186,7 +1180,6 @@ query {
                   "screenAt": "2022-05-23T10:35:00Z",
                   "date": "2022-05-23",
                   "time": "06:35PM",
-                  "isValid": true
                 },
                 {
                   "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODE1NDIqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
@@ -1196,7 +1189,6 @@ query {
                   "screenAt": "2022-05-23T11:55:00Z",
                   "date": "2022-05-23",
                   "time": "07:55PM",
-                  "isValid": true
                 },
                 {
                   "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODE1MzkqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDQ1KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
@@ -1206,7 +1198,6 @@ query {
                   "screenAt": "2022-05-23T12:20:00Z",
                   "date": "2022-05-23",
                   "time": "08:20PM",
-                  "isValid": true
                 },
                 {
                   "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODE1NDcqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
@@ -1216,7 +1207,6 @@ query {
                   "screenAt": "2022-05-23T12:55:00Z",
                   "date": "2022-05-23",
                   "time": "08:55PM",
-                  "isValid": true
                 },
                 {
                   "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODE1MzQqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
@@ -1226,7 +1216,6 @@ query {
                   "screenAt": "2022-05-23T14:15:00Z",
                   "date": "2022-05-23",
                   "time": "10:15PM",
-                  "isValid": true
                 }
               ]
             }

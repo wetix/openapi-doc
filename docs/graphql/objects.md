@@ -208,15 +208,14 @@ The movie showtime object.
 
 **Fields**
 
-| Name        | Data Type                                       | Description                                   |
-| ----------- | ----------------------------------------------- | --------------------------------------------- |
-| `key`       | [Key!](/docs/graphql/scalars#key)               | An unique identifier for this object.         |
-| `hall`      | [CinemaHall!](/docs/graphql/objects#cinemahall) | The hall object of this showtime.             |
-| `seatsLeft` | [Uint](/docs/graphql/scalars#uint)              | The number of available seats left.           |
-| `screenAt`  | [DateTime!](/docs/graphql/scalars#datetime)     | The date and time when showtime is played.    |
-| `date`      | [Date!](/docs/graphql/scalars#date)             | The time when the showtime is played.         |
-| `time`      | [String!](/docs/graphql/scalars#string)         | The time when the showtime is played.         |
-| `isValid`   | [Boolean!](/docs/graphql/scalars#boolean)       | Indicates if the showtime is still available. |
+| Name        | Data Type                                       | Description                                |
+| ----------- | ----------------------------------------------- | ------------------------------------------ |
+| `key`       | [Key!](/docs/graphql/scalars#key)               | An unique identifier for this object.      |
+| `hall`      | [CinemaHall!](/docs/graphql/objects#cinemahall) | The hall object of this showtime.          |
+| `seatsLeft` | [Uint](/docs/graphql/scalars#uint)              | The number of available seats left.        |
+| `screenAt`  | [DateTime!](/docs/graphql/scalars#datetime)     | The date and time when showtime is played. |
+| `date`      | [Date!](/docs/graphql/scalars#date)             | The time when the showtime is played.      |
+| `time`      | [String!](/docs/graphql/scalars#string)         | The time when the showtime is played.      |
 
 ## [CinemaHall](/docs/graphql/objects#cinemahall)
 
