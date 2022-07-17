@@ -60,7 +60,7 @@ The customer info.
 
 | Name         | Data Type                               | Description                                                                        |
 | ------------ | --------------------------------------- | ---------------------------------------------------------------------------------- |
-| `externalId` | [String!](/docs/graphql/scalars#string) | External unique identifier for the user.                                           |
+| `externalId` | [String](/docs/graphql/scalars#string)  | External unique identifier for the user.                                           |
 | `email`      | [String!](/docs/graphql/scalars#string) | The email address of the customer, this will sending a booking confirmation email. |
 | `phoneNo`    | [String!](/docs/graphql/scalars#string) | The phone no of the customer.                                                      |
 
