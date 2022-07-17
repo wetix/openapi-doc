@@ -1248,13 +1248,14 @@ query {
 query {
   cinema(key: "EgZDaW5lbWEiAzI2OCoVEg5DaW5lbWFPcGVyYXRvciIDR1ND") {
     name
-    movies(first: 10) {
+    movies {
       nodes {
         key
         title
         genres
+        languageCodes
         showtimeDates
-        showtimes(first: 100, date: "2022-05-23") {
+        showtimes(first: 100, date: "2022-07-31") {
           nodes {
             key
             hall {
@@ -1287,25 +1288,88 @@ query {
               "Action",
               "Fantasy"
             ],
+            "languageCodes": [
+              "zh",
+              "en"
+            ],
             "showtimeDates": [
-              "2022-05-23",
-              "2022-05-24",
-              "2022-05-25",
-              "2022-05-26",
-              "2022-05-27",
-              "2022-05-28",
-              "2022-05-29"
+              "2022-07-17",
+              "2022-07-18",
+              "2022-07-19",
+              "2022-07-20",
+              "2022-07-21",
+              "2022-07-22",
+              "2022-07-23",
+              "2022-07-24",
+              "2022-07-25",
+              "2022-07-26",
+              "2022-07-27",
+              "2022-07-28",
+              "2022-07-29",
+              "2022-07-30",
+              "2022-07-31"
             ],
             "showtimes": {
               "nodes": [
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQyMTMqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQ3NDYqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "hall": {
+                    "type": "3D PLAY+"
+                  },
+                  "date": "2022-07-31",
+                  "time": "07:40PM",
+                  "screenAt": "2022-07-31T11:40:00Z"
+                },
+                {
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQ1NDYqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUyKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
                     "type": "3D JIN GASTROBAR AFTER DARK"
                   },
-                  "date": "2022-05-23",
+                  "date": "2022-07-31",
                   "time": "09:45PM",
-                  "screenAt": "2022-05-23T13:45:00Z"
+                  "screenAt": "2022-07-31T13:45:00Z"
+                }
+              ]
+            }
+          },
+          {
+            "key": "EgVNb3ZpZRiGkiAqDhIGT3JpZ2luIgRUTURC",
+            "title": "THE KID FROM THE BIG APPLE: BEFORE WE FORGET",
+            "genres": [
+              "Drama",
+              "Family",
+              "Comedy"
+            ],
+            "languageCodes": [
+              "zh"
+            ],
+            "showtimeDates": [
+              "2022-07-17",
+              "2022-07-18",
+              "2022-07-19",
+              "2022-07-20",
+              "2022-07-21",
+              "2022-07-22",
+              "2022-07-23",
+              "2022-07-24",
+              "2022-07-25",
+              "2022-07-26",
+              "2022-07-27",
+              "2022-07-28",
+              "2022-07-29",
+              "2022-07-30",
+              "2022-07-31"
+            ],
+            "showtimes": {
+              "nodes": [
+                {
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQ4MjEqMRIPTW92aWVDb2xsZWN0aW9uIgcxMDEzMTU0KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "hall": {
+                    "type": "STANDARD"
+                  },
+                  "date": "2022-07-31",
+                  "time": "03:45PM",
+                  "screenAt": "2022-07-31T07:45:00Z"
                 }
               ]
             }
@@ -1316,79 +1380,81 @@ query {
             "genres": [
               "Action"
             ],
+            "languageCodes": [
+              "id"
+            ],
             "showtimeDates": [
-              "2022-05-23",
-              "2022-05-24",
-              "2022-05-25",
-              "2022-05-26",
-              "2022-05-27",
-              "2022-05-28",
-              "2022-05-29"
+              "2022-07-17",
+              "2022-07-18",
+              "2022-07-19",
+              "2022-07-20",
+              "2022-07-21",
+              "2022-07-22",
+              "2022-07-23",
+              "2022-07-24",
+              "2022-07-25",
+              "2022-07-26",
+              "2022-07-27",
+              "2022-07-28",
+              "2022-07-29",
+              "2022-07-30",
+              "2022-07-31"
             ],
             "showtimes": {
               "nodes": [
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQyNTcqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQ1NzEqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "hall": {
+                    "type": "STANDARD"
+                  },
+                  "date": "2022-07-31",
+                  "time": "01:05PM",
+                  "screenAt": "2022-07-31T05:05:00Z"
+                },
+                {
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQ0NzEqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
                     "type": "PREMIERE CLASS"
                   },
-                  "date": "2022-05-23",
-                  "time": "05:15PM",
-                  "screenAt": "2022-05-23T09:15:00Z"
+                  "date": "2022-07-31",
+                  "time": "04:55PM",
+                  "screenAt": "2022-07-31T08:55:00Z"
                 },
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQxMDMqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQ3NzEqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
                     "type": "GETHA LUX SUITE"
                   },
-                  "date": "2022-05-23",
+                  "date": "2022-07-31",
                   "time": "06:20PM",
-                  "screenAt": "2022-05-23T10:20:00Z"
+                  "screenAt": "2022-07-31T10:20:00Z"
                 },
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQxODAqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUxKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQ2MjEqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUxKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
                     "type": "4DX"
                   },
-                  "date": "2022-05-23",
+                  "date": "2022-07-31",
                   "time": "06:45PM",
-                  "screenAt": "2022-05-23T10:45:00Z"
+                  "screenAt": "2022-07-31T10:45:00Z"
                 },
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQyNDYqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "PREMIERE CLASS"
-                  },
-                  "date": "2022-05-23",
-                  "time": "07:50PM",
-                  "screenAt": "2022-05-23T11:50:00Z"
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQwOTIqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQ3OTYqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
                     "type": "GETHA LUX SUITE"
                   },
-                  "date": "2022-05-23",
+                  "date": "2022-07-31",
                   "time": "08:50PM",
-                  "screenAt": "2022-05-23T12:50:00Z"
+                  "screenAt": "2022-07-31T12:50:00Z"
                 },
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQxNjkqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUxKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQ2NDYqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUxKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
                     "type": "4DX"
                   },
-                  "date": "2022-05-23",
+                  "date": "2022-07-31",
                   "time": "09:15PM",
-                  "screenAt": "2022-05-23T13:15:00Z"
-                },
-                {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQxMjUqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDUwKhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
-                  "hall": {
-                    "type": "PLAY+"
-                  },
-                  "date": "2022-05-23",
-                  "time": "09:45PM",
-                  "screenAt": "2022-05-23T13:45:00Z"
+                  "screenAt": "2022-07-31T13:15:00Z"
                 }
               ]
             }
@@ -1400,25 +1466,36 @@ query {
               "Action",
               "Superhero"
             ],
+            "languageCodes": [
+              "en"
+            ],
             "showtimeDates": [
-              "2022-05-23",
-              "2022-05-24",
-              "2022-05-25",
-              "2022-05-26",
-              "2022-05-27",
-              "2022-05-28",
-              "2022-05-29"
+              "2022-07-17",
+              "2022-07-18",
+              "2022-07-19",
+              "2022-07-20",
+              "2022-07-21",
+              "2022-07-22",
+              "2022-07-23",
+              "2022-07-24",
+              "2022-07-25",
+              "2022-07-26",
+              "2022-07-27",
+              "2022-07-28",
+              "2022-07-29",
+              "2022-07-30",
+              "2022-07-31"
             ],
             "showtimes": {
               "nodes": [
                 {
-                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQxOTEqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDU2KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
+                  "key": "Eg1Nb3ZpZVNob3d0aW1lIgYxODQ1OTYqNBIPTW92aWVDb2xsZWN0aW9uIgoxMDAwMDAwMDU2KhUSDkNpbmVtYU9wZXJhdG9yIgNHU0M",
                   "hall": {
                     "type": "STANDARD"
                   },
-                  "date": "2022-05-23",
+                  "date": "2022-07-31",
                   "time": "03:50PM",
-                  "screenAt": "2022-05-23T07:50:00Z"
+                  "screenAt": "2022-07-31T07:50:00Z"
                 }
               ]
             }
