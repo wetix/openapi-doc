@@ -7,6 +7,11 @@ sidebar_position: 2
 
 Breaking changes are any changes that might require action from our integrators.
 
+### Breaking Changes for 17/07/2022
+- Removal of `isValid` field from [`MovieShowtime`](/docs/graphql/objects#movieshowtime) object.  
+  **Reason:** The system will always return showtimes that are not expired and valid. Hence, this field is unnecessary.
+- Make `externalId` argument of [`CreateMovieOrderCustomerInput`](/docs/graphql/input_objects#createmovieordercustomerinput) optional.  
+  **Reason:** Some integrator may not pass the the User ID from their DB as it may be sensitive. 
 ### Breaking Changes for 15/07/2022
 - Removal of `CreatePaymentWithMovieOrder` mutation.   
   **Reason:** The purpose of this mutation is to create payment record on WeTix side. We realized the payment record can be created when the `CreateMovieOrder` mutation is called. Hence, to reduce the network call on the integrator side, we have removed this mutation.
