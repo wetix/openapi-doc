@@ -95,6 +95,27 @@ An [ISO 3166-1 alpha-3](https://en.wikipedia.org/wiki/List_of_ISO_3166_country_c
 
 ## [Language](/docs/graphql/scalars#language)
 
-A [BCP 47](https://appmakers.dev/bcp-47-language-codes-list/) language tag string. Ex: **en** for **English**.
+A [BCP 47](https://appmakers.dev/bcp-47-language-codes-list/) language tag string. Ex: **en** for **English**. 
+
+The possible values that this type may have are as following:
+
+| Value   | Description |
+| ------- | ----------- |
+| `ms`    | Malay       |
+| `ta`    | Tamil       |
+| `ko`    | Korean      |
+| `ja`    | Japanese    |
+| `te`    | Telugu      |
+| `th`    | Thai        |
+| `hi`    | Hindi       |
+| `zh`    | Chinese     |
+| `zh-hk` | Cantonese   |
+| `de`    | German      |
+| `fr`    | French      |
+| `id`    | Indonesian  |
+| `vi`    | Vietnamese  |
+| `ar`    | Arabic      |
+| `bn`    | Bangladesh  |
+| `tr`    | Turkish     |
 
 ---
