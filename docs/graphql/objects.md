@@ -357,6 +357,7 @@ The user object.
 | ------------- | ------------------------------------------------------------------- | --------------------------------------------------------- |
 | `key`         | [Key!](/docs/graphql/scalars#key)                                   | An unique identifier for this object.                     |
 | `email`       | [String!](/docs/graphql/scalars#string)                             | The email address of this user.                           |
+| `CountryCode` | [String!](/docs/graphql/scalars#string)                             | The country code of this user.                            |
 | `phoneNo`     | [String!](/docs/graphql/scalars#string)                             | The phone number of this user.                            |
 | `memberCards` | [[MemberCard!]!](/docs/graphql/objects#membercard)                  | The member cards of this user.                            |
 | `movieOrders` | [MovieOrderConnection!](/docs/graphql/objects#movieorderconnection) | An unique identifier for this object.                     |
