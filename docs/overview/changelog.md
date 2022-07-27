@@ -9,6 +9,8 @@ The GraphQL schema changelog is a list of recent and upcoming changes to our Gra
 
 Breaking changes include changes that will break existing queries or could affect the runtime behavior of clients. For a list of breaking changes and when they will occur, see our [breaking changes log](/docs/overview/breaking_changes).
 
+### Documentation and Schema Changes for 27/07/2022
+- chore: add `countryCode` to [`CreateMovieOrderCustomerInput`](/docs/graphql/input_objects#createmovieordercustomerinput) object. See the changes [here](https://github.com/wetix/openapi-doc/commit/1daa697aea810f8d34bd234c54b672d0f7095b44).
 ### Documentation and Schema Changes for 17/07/2022
 - chore: add `languageCodes` to [`CinemaMovie`](/docs/graphql/objects#cinemamovie) object. See the changes [here](https://github.com/wetix/openapi-doc/commit/5b84deba83bd1e9675da5bbb3d93c65a1bbbefdf).
 - chore: add enumeration values to [`Language`](/docs/graphql/scalars#language) type. See the changes [here](https://github.com/wetix/openapi-doc/commit/d3ac68ec90453a749fe85da07f8daccc926c5256).
