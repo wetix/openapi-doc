@@ -29,7 +29,8 @@ Please **sort the input argument in alphabetical order** by its keys. Any **nest
   "customer": {
     "externalId": "abc123",
     "email": "harithmohamd67@gmail.com",
-    "phoneNo": "0167385346"
+    "countryCode": "60",
+    "phoneNo": "167385346"
   },
   "tickets": [
     {
@@ -51,7 +52,8 @@ Please **sort the input argument in alphabetical order** by its keys. Any **nest
   "customer": {
     "email": "harithmohamd67@gmail.com",
     "externalId": "abc123",
-    "phoneNo": "0167385346"
+    "countryCode": "60",
+    "phoneNo": "167385346"
   },
   "promoCode": null,
   "redirectUrl": "https://google.com",
@@ -126,7 +128,8 @@ Please include the signature and other parameters in the [signature argument](/d
     "customer": {
       "externalId": "abc123",
       "email": "harithmohamd67@gmail.com",
-      "phoneNo": "0167385346"
+      "countryCode": "60",
+      "phoneNo": "167385346"
     },
     "tickets": [
       {

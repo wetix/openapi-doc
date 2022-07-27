@@ -58,11 +58,12 @@ The customer info.
 
 **Input Fields**
 
-| Name         | Data Type                               | Description                                                                        |
-| ------------ | --------------------------------------- | ---------------------------------------------------------------------------------- |
-| `externalId` | [String](/docs/graphql/scalars#string)  | External unique identifier for the user.                                           |
-| `email`      | [String!](/docs/graphql/scalars#string) | The email address of the customer, this will sending a booking confirmation email. |
-| `phoneNo`    | [String!](/docs/graphql/scalars#string) | The phone no of the customer.                                                      |
+| Name          | Data Type                               | Description                                                                        |
+| ------------- | --------------------------------------- | ---------------------------------------------------------------------------------- |
+| `externalId`  | [String](/docs/graphql/scalars#string)  | External unique identifier for the user.                                           |
+| `email`       | [String!](/docs/graphql/scalars#string) | The email address of the customer, this will sending a booking confirmation email. |
+| `countryCode` | [String!](/docs/graphql/scalars#string) | The country code of the user, ie **60**, **65**, **673**.                          |
+| `phoneNo`     | [String!](/docs/graphql/scalars#string) | The phone no of the customer.                                                      |
 
 ## [CreateMovieOrderTicketInput](/docs/graphql/input_objects#createmovieorderticketinput)
 

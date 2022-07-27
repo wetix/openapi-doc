@@ -3335,7 +3335,8 @@ mutation CreateMovieOrder(
     "customer": {
       "externalId": "abc123",
       "email": "abcd@gmail.com",
-      "phoneNo": "011456789"
+      "countryCode": "60",
+      "phoneNo": "1117605200"
     },
     "tickets": [
       {
