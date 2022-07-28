@@ -247,17 +247,17 @@ The movie ticket object.
 
 **Fields**
 
-| Name              | Data Type                               | Description                                     |
-| ----------------- | --------------------------------------- | ----------------------------------------------- |
-| `key`             | [String!](/docs/graphql/scalars#string) | An unique identifier for this object.           |
-| `id`              | [ID!](/docs/graphql/scalars#id)         | An unique identifier for this object.           |
-| `name`            | [String!](/docs/graphql/scalars#string) | The name of this ticket.                        |
-| `type`            | [String!](/docs/graphql/scalars#string) | The type of this ticket.                        |
-| `purchaseAmount`  | [Money!](/docs/graphql/scalars#money)   | The purchase amount of this ticket.             |
-| `bookingAmount`   | [Money!](/docs/graphql/scalars#money)   | The booking amount of this ticket.              |
-| `areaCode`        | [Money!](/docs/graphql/scalars#string)  | The area code of the ticket.                    |
-| `seatsAllocation` | [Uint!](/docs/graphql/scalars#uint)     | The seats allocation of this ticket.            |
-| `isPackage`       | [Boolean!](/docs/graphql/scalars#uint)  | Indicates the ticket whether is package ticket. |
+| Name              | Data Type                               | Description                                                                              |
+| ----------------- | --------------------------------------- | ---------------------------------------------------------------------------------------- |
+| `key`             | [String!](/docs/graphql/scalars#string) | An unique identifier for this object.                                                    |
+| `id`              | [ID!](/docs/graphql/scalars#id)         | An unique identifier for this object.                                                    |
+| `name`            | [String!](/docs/graphql/scalars#string) | The name of this ticket.                                                                 |
+| `type`            | [String!](/docs/graphql/scalars#string) | The type of this ticket.                                                                 |
+| `purchaseAmount`  | [Money!](/docs/graphql/scalars#money)   | The purchase amount of this ticket.                                                      |
+| `bookingAmount`   | [Money!](/docs/graphql/scalars#money)   | The booking amount of this ticket.                                                       |
+| `areaCode`        | [Money!](/docs/graphql/scalars#string)  | The area code of the ticket.                                                             |
+| `seatsAllocation` | [Uint!](/docs/graphql/scalars#uint)     | The seats allocation of this ticket.                                                     |
+| `hasBundle`       | [Boolean!](/docs/graphql/scalars#uint)  | Indicates the ticket whether the ticket has food and drinks selection (for Aurum halls). |
 
 
 
