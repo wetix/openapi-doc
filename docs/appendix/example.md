@@ -2610,7 +2610,7 @@ mutation CreateMovieOrderSession($input: CreateMovieOrderSessionInput!) {
 }
 ```
 
-## Reserving Seats
+## Reserving Seats For Non Aurum Hall
 
 <img src="/img/ticket_types_and_concessions.jpeg" width="200"/>
 
@@ -2627,6 +2627,8 @@ mutation ReserveSeats($input: ReserveSeatsInput!) {
         bookingAmount
         areaCode
         seatsAllocation
+        hasBundle
+        bundleCode
       }
       concessions{
         key
@@ -2669,6 +2671,8 @@ mutation ReserveSeats($input: ReserveSeatsInput!) {
             "bookingAmount": 0.5,
             "areaCode": "1",
             "seatsAllocation": 1
+            "isBundle":false
+            "bundleCode":null
           }
         ],
         "concessions": [
@@ -3238,6 +3242,171 @@ mutation ReserveSeats($input: ReserveSeatsInput!) {
             "description": "",
             "purchaseAmount": 12,
             "isSoldOut": false
+          }
+        ],
+        "hasExpiry": false,
+        "expiresIn": null,
+        "status": "RESERVED"
+      }
+    }
+  }
+}
+```
+
+## Reserving Seats for Aurum Hall
+
+<img src="/img/aurum_bundles.jpeg" width="300"/>
+
+#### Sample GraphQL mutation:
+
+```
+mutation ReserveSeats($input: ReserveSeatsInput!) {
+  reserveSeats(input: $input) {
+    session {
+      tickets {
+        key
+        name
+        purchaseAmount
+        bookingAmount
+        areaCode
+        seatsAllocation
+        hasBundle
+        bundleCode
+      }
+      concessions{
+        key
+        name
+        description
+        purchaseAmount
+        isSoldOut
+      }
+      bundles{
+        code
+        categories{
+          name
+          requiredNo
+          items{
+            key
+            name
+            imageUrl
+          }
+        }
+      }
+      hasExpiry
+      expiresIn
+      status
+    }
+  }
+}
+```
+
+**Variables:**
+
+```
+{"input":
+  {
+    "sessionKey":"EhFNb3ZpZU9yZGVyU2Vzc2lvbiIbMkNYUnpJZUl0NjJDZnpyMlpmVWNMdkU0aDFk" ,
+    "seats": ["df-BAwEBB2dvYlNlYXQB_4IAAQkBAklEAQwAAQRUeXBlAQwAAQxPcmlnaW5hbFR5cGUBDAABBUxhYmVsAQwAAQhBcmVhQ29kZQEMAAEGQXJlYU5vAQQAAQNSb3cBBgABBkNvbHVtbgEGAAEFQ291bnQBBAAAACX_ggEDMTExAQhTVEFOREFSRAECU1UBA0cwMQECMTQCAQEBAQIA"]
+  }
+}
+```
+**Sample GraphQL response:**
+
+```
+{
+  "data": {
+    "reserveSeats": {
+      "session": {
+        "tickets": [
+          {
+            "key": "U_-hAwEBCWdvYlRpY2tldAH_ogABBQECSUQBDAABBE5hbWUBDAABCEFyZWFDb2RlAQwAAQZBbW91bnQBBgABD1NlYXRzQWxsb2NhdGlvbgEGAAAAG_-iAQVDQUJJTgEFQ0FCSU4BAjEzAf4u4AEBAA",
+            "name": "CABIN",
+            "purchaseAmount": 120,
+            "bookingAmount": 0.5,
+            "areaCode": "13",
+            "seatsAllocation": 1,
+            "hasBundle": true,
+            "bundleCode": "781001"
+          },
+          {
+            "key": "U_-hAwEBCWdvYlRpY2tldAH_ogABBQECSUQBDAABBE5hbWUBDAABCEFyZWFDb2RlAQwAAQZBbW91bnQBBgABD1NlYXRzQWxsb2NhdGlvbgEGAAAAG_-iAQVTVUlURQEFU1VJVEUBAjE0Af46mAEBAA",
+            "name": "SUITE",
+            "purchaseAmount": 150,
+            "bookingAmount": 0.5,
+            "areaCode": "14",
+            "seatsAllocation": 1,
+            "hasBundle": true,
+            "bundleCode": "781001"
+          }
+        ],
+        "concessions": [],
+        "bundles": [
+          {
+            "code": "781001",
+            "categories": [
+              {
+                "name": "Food(s)",
+                "requiredNo": 1,
+                "items": [
+                  {
+                    "key": "UP-fAwEBCWdvYkJ1bmRsZQH_oAABBQECSUQBDAABBE5hbWUBDAABCEltYWdlVVJMAQwAAQhDYXRlZ29yeQEMAAEKQnVuZGxlQ29kZQEMAAAA_4H_oAEGNzgxMDAyAQlKaW4gRXhwIEEBWGh0dHBzOi8vc3RhZ2luZ2VwYXltZW50LmdzYy5jb20ubXkvQ29uY2Vzc2lvbldTL1NlcnZpY2UuYXNteC9HZXRQcm9kdWN0SW1hZ2U_Y29kZT03ODEwMDIBB0Zvb2QocykBBjc4MTAwMQA",
+                    "name": "Jin Exp A",
+                    "imageUrl": "https://stagingepayment.gsc.com.my/ConcessionWS/Service.asmx/GetProductImage?code=781002"
+                  },
+                  {
+                    "key": "UP-fAwEBCWdvYkJ1bmRsZQH_oAABBQECSUQBDAABBE5hbWUBDAABCEltYWdlVVJMAQwAAQhDYXRlZ29yeQEMAAEKQnVuZGxlQ29kZQEMAAAA_4H_oAEGNzgxMDAzAQlKaW4gRXhwIEIBWGh0dHBzOi8vc3RhZ2luZ2VwYXltZW50LmdzYy5jb20ubXkvQ29uY2Vzc2lvbldTL1NlcnZpY2UuYXNteC9HZXRQcm9kdWN0SW1hZ2U_Y29kZT03ODEwMDMBB0Zvb2QocykBBjc4MTAwMQA",
+                    "name": "Jin Exp B",
+                    "imageUrl": "https://stagingepayment.gsc.com.my/ConcessionWS/Service.asmx/GetProductImage?code=781003"
+                  },
+                  {
+                    "key": "UP-fAwEBCWdvYkJ1bmRsZQH_oAABBQECSUQBDAABBE5hbWUBDAABCEltYWdlVVJMAQwAAQhDYXRlZ29yeQEMAAEKQnVuZGxlQ29kZQEMAAAA_4H_oAEGNzgxMDA0AQlKaW4gR2FzIEEBWGh0dHBzOi8vc3RhZ2luZ2VwYXltZW50LmdzYy5jb20ubXkvQ29uY2Vzc2lvbldTL1NlcnZpY2UuYXNteC9HZXRQcm9kdWN0SW1hZ2U_Y29kZT03ODEwMDQBB0Zvb2QocykBBjc4MTAwMQA",
+                    "name": "Jin Gas A",
+                    "imageUrl": "https://stagingepayment.gsc.com.my/ConcessionWS/Service.asmx/GetProductImage?code=781004"
+                  },
+                  {
+                    "key": "UP-fAwEBCWdvYkJ1bmRsZQH_oAABBQECSUQBDAABBE5hbWUBDAABCEltYWdlVVJMAQwAAQhDYXRlZ29yeQEMAAEKQnVuZGxlQ29kZQEMAAAA_4H_oAEGNzgxMDA1AQlKaW4gR2FzIEIBWGh0dHBzOi8vc3RhZ2luZ2VwYXltZW50LmdzYy5jb20ubXkvQ29uY2Vzc2lvbldTL1NlcnZpY2UuYXNteC9HZXRQcm9kdWN0SW1hZ2U_Y29kZT03ODEwMDUBB0Zvb2QocykBBjc4MTAwMQA",
+                    "name": "Jin Gas B",
+                    "imageUrl": "https://stagingepayment.gsc.com.my/ConcessionWS/Service.asmx/GetProductImage?code=781005"
+                  },
+                  {
+                    "key": "UP-fAwEBCWdvYkJ1bmRsZQH_oAABBQECSUQBDAABBE5hbWUBDAABCEltYWdlVVJMAQwAAQhDYXRlZ29yeQEMAAEKQnVuZGxlQ29kZQEMAAAA_4H_oAEGNzgxMDA2AQlKaW4gR2FzIEMBWGh0dHBzOi8vc3RhZ2luZ2VwYXltZW50LmdzYy5jb20ubXkvQ29uY2Vzc2lvbldTL1NlcnZpY2UuYXNteC9HZXRQcm9kdWN0SW1hZ2U_Y29kZT03ODEwMDYBB0Zvb2QocykBBjc4MTAwMQA",
+                    "name": "Jin Gas C",
+                    "imageUrl": "https://stagingepayment.gsc.com.my/ConcessionWS/Service.asmx/GetProductImage?code=781006"
+                  }
+                ]
+              },
+              {
+                "name": "Drink(s)",
+                "requiredNo": 1,
+                "items": [
+                  {
+                    "key": "UP-fAwEBCWdvYkJ1bmRsZQH_oAABBQECSUQBDAABBE5hbWUBDAABCEltYWdlVVJMAQwAAQhDYXRlZ29yeQEMAAEKQnVuZGxlQ29kZQEMAAAA_4L_oAEGMzE3MDAxAQlBbWVyaWNhbm8BWGh0dHBzOi8vc3RhZ2luZ2VwYXltZW50LmdzYy5jb20ubXkvQ29uY2Vzc2lvbldTL1NlcnZpY2UuYXNteC9HZXRQcm9kdWN0SW1hZ2U_Y29kZT0zMTcwMDEBCERyaW5rKHMpAQY3ODEwMDEA",
+                    "name": "Americano",
+                    "imageUrl": "https://stagingepayment.gsc.com.my/ConcessionWS/Service.asmx/GetProductImage?code=317001"
+                  },
+                  {
+                    "key": "UP-fAwEBCWdvYkJ1bmRsZQH_oAABBQECSUQBDAABBE5hbWUBDAABCEltYWdlVVJMAQwAAQhDYXRlZ29yeQEMAAEKQnVuZGxlQ29kZQEMAAAA_4P_oAEGMzE3MDAyAQpDYXBwdWNjaW5vAVhodHRwczovL3N0YWdpbmdlcGF5bWVudC5nc2MuY29tLm15L0NvbmNlc3Npb25XUy9TZXJ2aWNlLmFzbXgvR2V0UHJvZHVjdEltYWdlP2NvZGU9MzE3MDAyAQhEcmluayhzKQEGNzgxMDAxAA",
+                    "name": "Cappuccino",
+                    "imageUrl": "https://stagingepayment.gsc.com.my/ConcessionWS/Service.asmx/GetProductImage?code=317002"
+                  },
+                  {
+                    "key": "UP-fAwEBCWdvYkJ1bmRsZQH_oAABBQECSUQBDAABBE5hbWUBDAABCEltYWdlVVJMAQwAAQhDYXRlZ29yeQEMAAEKQnVuZGxlQ29kZQEMAAAAfv-gAQYzMTcwMDMBBUxhdHRlAVhodHRwczovL3N0YWdpbmdlcGF5bWVudC5nc2MuY29tLm15L0NvbmNlc3Npb25XUy9TZXJ2aWNlLmFzbXgvR2V0UHJvZHVjdEltYWdlP2NvZGU9MzE3MDAzAQhEcmluayhzKQEGNzgxMDAxAA",
+                    "name": "Latte",
+                    "imageUrl": "https://stagingepayment.gsc.com.my/ConcessionWS/Service.asmx/GetProductImage?code=317003"
+                  },
+                  {
+                    "key": "UP-fAwEBCWdvYkJ1bmRsZQH_oAABBQECSUQBDAABBE5hbWUBDAABCEltYWdlVVJMAQwAAQhDYXRlZ29yeQEMAAEKQnVuZGxlQ29kZQEMAAAA_4b_oAEGMzE3MDA0AQ1Ib3QgQ2hvY29sYXRlAVhodHRwczovL3N0YWdpbmdlcGF5bWVudC5nc2MuY29tLm15L0NvbmNlc3Npb25XUy9TZXJ2aWNlLmFzbXgvR2V0UHJvZHVjdEltYWdlP2NvZGU9MzE3MDA0AQhEcmluayhzKQEGNzgxMDAxAA",
+                    "name": "Hot Chocolate",
+                    "imageUrl": "https://stagingepayment.gsc.com.my/ConcessionWS/Service.asmx/GetProductImage?code=317004"
+                  },
+                  {
+                    "key": "UP-fAwEBCWdvYkJ1bmRsZQH_oAABBQECSUQBDAABBE5hbWUBDAABCEltYWdlVVJMAQwAAQhDYXRlZ29yeQEMAAEKQnVuZGxlQ29kZQEMAAAAfv-gAQYzMTcwMDUBBU1vY2hhAVhodHRwczovL3N0YWdpbmdlcGF5bWVudC5nc2MuY29tLm15L0NvbmNlc3Npb25XUy9TZXJ2aWNlLmFzbXgvR2V0UHJvZHVjdEltYWdlP2NvZGU9MzE3MDA1AQhEcmluayhzKQEGNzgxMDAxAA",
+                    "name": "Mocha",
+                    "imageUrl": "https://stagingepayment.gsc.com.my/ConcessionWS/Service.asmx/GetProductImage?code=317005"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "hasExpiry": false,
