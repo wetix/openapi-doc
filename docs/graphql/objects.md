@@ -259,24 +259,7 @@ The movie ticket object.
 | `seatsAllocation` | [Uint!](/docs/graphql/scalars#uint)     | The seats allocation of this ticket.            |
 | `isPackage`       | [Boolean!](/docs/graphql/scalars#uint)  | Indicates the ticket whether is package ticket. |
 
-## [SelectedMovieTicket](/docs/graphql/objects#selectedmovieticket)
 
-The selected movie ticket object.
-
-**Fields**
-
-| Name              | Data Type                               | Description                                     |
-| ----------------- | --------------------------------------- | ----------------------------------------------- |
-| `key`             | [String!](/docs/graphql/scalars#string) | An unique identifier for this object.           |
-| `id`              | [ID!](/docs/graphql/scalars#id)         | An unique identifier for this object.           |
-| `name`            | [String!](/docs/graphql/scalars#string) | The name of this ticket.                        |
-| `type`            | [String!](/docs/graphql/scalars#string) | The type of this ticket.                        |
-| `quantity`        | [Uint!](/docs/graphql/scalars#uint)     | The quantity of the ticket.                     |
-| `purchaseAmount`  | [Money!](/docs/graphql/scalars#money)   | The purchase amount of this ticket.             |
-| `bookingAmount`   | [Money!](/docs/graphql/scalars#money)   | The booking amount of this ticket.              |
-| `areaCode`        | [Money!](/docs/graphql/scalars#string)  | The area code of the ticket.                    |
-| `seatsAllocation` | [Uint!](/docs/graphql/scalars#uint)     | The seats allocation of this ticket.            |
-| `isPackage`       | [Boolean!](/docs/graphql/scalars#uint)  | Indicates the ticket whether is package ticket. |
 
 ## [MovieConcession](/docs/graphql/objects#movieconcession)
 
@@ -293,19 +276,6 @@ The movie concession object.
 | `imageUrl`       | [URI!](/docs/graphql/scalars#uri)       | The image url of this concession.      |
 | `purchaseAmount` | [Money!](/docs/graphql/scalars#money)   | The booking amount of this concession. |
 | `isSoldOut`      | [Boolean!](/docs/graphql/scalars#uint)  | Indicates the concession is sold out.  |
-
-## [SelectedConcession](/docs/graphql/objects#selectedconcession)
-
-The selected movie concession object.
-
-**Fields**
-
-| Name       | Data Type                               | Description                           |
-| ---------- | --------------------------------------- | ------------------------------------- |
-| `id`       | [ID!](/docs/graphql/scalars#id)         | An unique identifier for this object. |
-| `name`     | [String!](/docs/graphql/scalars#string) | The name of this concession.          |
-| `imageUrl` | [URI!](/docs/graphql/scalars#uri)       | The image url of this concession.     |
-| `quantity` | [Uint!](/docs/graphql/scalars#uint)     | The quantity of the concession.       |
 
 ## [CinemaHallLayout](/docs/graphql/objects#cinemahalllayout)
 
