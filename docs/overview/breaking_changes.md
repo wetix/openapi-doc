@@ -7,6 +7,10 @@ sidebar_position: 2
 
 Breaking changes are any changes that might require action from our integrators.
 
+### Breaking Changes for 28/07/2022
+- rename `isPackage` field of [`MovieTicket`](/docs/graphql/objects#movieticket) object to `hasBundle`.  
+ **Reason:** So that the field name is more descriptive.
+
 ### Breaking Changes for 17/07/2022
 - Removal of `isValid` field from [`MovieShowtime`](/docs/graphql/objects#movieshowtime) object.  
   **Reason:** The system will always return showtimes that are not expired and valid. Hence, this field is unnecessary.
