@@ -3462,7 +3462,7 @@ mutation ReleaseSeats($input: ReleaseSeatsInput!){
 }
 ```
 
-## Create Movie Order
+## Create Movie Order Without Bundle
 
 <img src="/img/gsc_checkout.jpeg" width="200"/>
 
@@ -3502,7 +3502,6 @@ mutation CreateMovieOrder(
     "sessionKey": "EhFNb3ZpZU9yZGVyU2Vzc2lvbiIbMjJEcmtwMTNNT2FZVU5mV1lFS3NHT3JsYk1h",
     "referenceId": "123",
     "customer": {
-      "externalId": "abc123",
       "email": "abcd@gmail.com",
       "countryCode": "60",
       "phoneNo": "1117605200"
@@ -3544,6 +3543,104 @@ mutation CreateMovieOrder(
         "totalAmount": 30,
         "bookingAmount": 0.5,
         "payableAmount": 30,
+        "expiresIn": 465,
+        "expiredAt": "2022-05-26T08:46:14.118978Z",
+        "paidAt": null,
+        "qrCode": null,
+        "status": "PENDING"
+      },
+      "hasCheckoutLink": true,
+      "checkoutUrl": "https://sb-api.wetix.my/gsc/checkout/EgpNb3ZpZU9yZGVyGNWDrMbn1ZDgFioXEgtPQXV0aENsaWVudBjv1orQ4qedsBY"
+    }
+  }
+}
+```
+
+## Create Movie Order With Bundle
+
+<img src="/img/gsc_checkout.jpeg" width="200"/>
+
+#### Sample GraphQL mutation:
+
+```
+mutation CreateMovieOrder(
+  $input: CreateMovieOrderInput!
+  $signature: SignatureInput!
+) {
+  createMovieOrder(input: $input, signature: $signature) {
+    order {
+      key
+      bookingId
+      transactionId
+      currencyCode
+      totalAmount
+      bookingAmount
+      payableAmount
+      expiresIn
+      expiredAt
+      paidAt
+      qrCode
+      status
+    }
+    hasCheckoutLink
+    checkoutUrl
+  }
+}
+```
+
+**Variables:**
+
+```
+{
+  "input": {
+    "sessionKey": "EhFNb3ZpZU9yZGVyU2Vzc2lvbiIbMjJEcmtwMTNNT2FZVU5mV1lFS3NHT3JsYk1h",
+    "referenceId": "123",
+    "customer": {
+      "email": "abcd@gmail.com",
+      "countryCode": "60",
+      "phoneNo": "1117605200"
+    },
+    "tickets": [
+      {
+        "key": "U_-JAwEBCWdvYlRpY2tldAH_igABBQECSUQBDAABBE5hbWUBDAABCEFyZWFDb2RlAQwAAQZBbW91bnQBBgABD1NlYXRzQWxsb2NhdGlvbgEGAAAAK_-KAQ1CZWFuQmFnLUFkdWx0AQ1CRUFOQkFHLUFEVUxUAQIxMQH-BtYBAQA",
+        "quantity": 1
+      }
+    ],
+    "bundles": [
+      {
+        "key": "Q_-TAwEBDWdvYkNvbmNlc3Npb24B_5QAAQQBAklEAQwAAQROYW1lAQwAAQhJbWFnZVVSTAEMAAEGQW1vdW50AQYAAAD_lP-UAQ45ODc2NTQzMjEwMTIzNAEZTGFyZ2UgQ29rZSBDb21ibyBMb25nIFBMVQFgaHR0cHM6Ly9zdGFnaW5nZXBheW1lbnQuZ3NjLmNvbS5teS9Db25jZXNzaW9uV3MvU2VydmljZS5hc214L0dldFByb2R1Y3RJbWFnZT9jb2RlPTk4NzY1NDMyMTAxMjM0Af4EsAA",
+        "quantity": 1
+      },
+      {
+        "key": "Q_-TAwEBDWdvYkNvbmNlc3Npb24B_5QAAQQBAklEAQwAAQROYW1lAQwAAQhJbWFnZVVSTAEMAAEGQW1vdW50AQYAAAD_lP-UAQ45ODc2NTQzMjEwMTIzNAEZTGFyZ2UgQ29rZSBDb21ibyBMb25nIFBMVQFgaHR0cHM6Ly9zdGFnaW5nZXBheW1lbnQuZ3NjLmNvbS5teS9Db25jZXNzaW9uV3MvU2VydmljZS5hc214L0dldFByb2R1Y3RJbWFnZT9jb2RlPTk4NzY1NDMyMTAxMjM0Af4CsBB",
+        "quantity": 1
+      }
+    ],
+    "promoCode": null,
+    "redirectUrl": "https://payment.shoppe.my"
+  },
+  "signature": {
+    "algorithm": "SHA256",
+    "timestamp": 1651677084,
+    "hash": "kepj367kXj5v+Vtjk+9omjW7T09QcJx3b+xrH0Z+PMITPKbPH9/Ek5H0E6TjC8QJ0zadS1AkEmEAiNf5SvHWw9vSr0IMnVNYJJcMkoUdTUDhWugn4G7BfwTeOyOBtLP1aQpLxQPBayR5QOPdB/snVenL0VUKOWEhrktfhVAyMVE="
+  }
+}
+```
+
+**Sample GraphQL response:**
+
+```
+{
+  "data": {
+    "createMovieOrder": {
+      "order": {
+        "key": "EgpNb3ZpZU9yZGVyGLTx7ebr26b5FioVEgtPQXV0aENsaWVudCIGU0hPUEVF",
+        "bookingId": "26822052651576",
+        "transactionId": "108220526083807791087",
+        "currencyCode": "MYR",
+        "totalAmount": 162,
+        "bookingAmount": 2,
+        "payableAmount": 162,
         "expiresIn": 465,
         "expiredAt": "2022-05-26T08:46:14.118978Z",
         "paidAt": null,
