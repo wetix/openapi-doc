@@ -49,7 +49,7 @@ Create movie order input with selected tickets and concessions.
 | `customer`    | [CreateMovieOrderCustomerInput!](/docs/graphql/input_objects#createmovieordercustomerinput)       | Customer information for movie order session.                                  |
 | `tickets`     | [[CreateMovieOrderTicketInput!]!](/docs/graphql/input_objects#createmovieorderticketinput)        | Selected tickets input.                                                        |
 | `concessions` | [[CreateMovieOrderConcessionInput]!](/docs/graphql/input_objects#createmovieorderconcessioninput) | Selected concessions input.                                                    |
-| `bundles`     | [[CreateMovieOrderBundleInput]!](/docs/graphql/input_objects#createmovieorderbundlesinput)        | Selected bundles input.                                                        |
+| `bundles`     | [[CreateMovieOrderBundleInput]!](/docs/graphql/input_objects#createmovieorderbundleinput)         | Selected bundles input.                                                        |
 | `promoCode`   | [String!](/docs/graphql/scalars#key)                                                              | Promo code applied by the user.                                                |
 | `redirectUrl` | [URI!](/docs/graphql/scalars#uri)                                                                 | Specifically required for GSC, we will redirect back once the order confirmed. |
 

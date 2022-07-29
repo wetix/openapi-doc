@@ -10,7 +10,7 @@ The GraphQL schema changelog is a list of recent and upcoming changes to our Gra
 Breaking changes include changes that will break existing queries or could affect the runtime behavior of clients. For a list of breaking changes and when they will occur, see our [breaking changes log](/docs/overview/breaking_changes).
 
 ### Documentation and Schema Changes for 29/07/2022
-- work-in-progress : add API docs for purchasing foods and drinks for Aurum halls
+- chore: add  `bundles` field to [CreateMovieOrderInput](/docs/graphql/input_objects#createmovieorderinput). See the changes [here](https://github.com/wetix/openapi-doc/commit/64cb4012bcb21dc2bca4094f3009febf0bfff43f).
 ### Documentation and Schema Changes for 28/07/2022
 - chore: add [Reserving Seats for Aurum Hall](/docs/appendix/example#reserving-seats-for-aurum-hall) example. See the changes [here](https://github.com/wetix/openapi-doc/commit/a23c27e0cc7563f6b6f802280160259323fe5792).
 - breaking-change: rename `isPackage` field of [`MovieTicket`](/docs/graphql/objects#movieticket) object to `hasBundle`. See the changes [here](https://github.com/wetix/openapi-doc/commit/c73d3d8160eeb1177fa4c55d76bd07d5a5ee758b) and the description of the breaking change [here](/docs/overview/breaking_changes#breaking-changes-for-28072022).
