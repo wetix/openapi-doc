@@ -7,6 +7,10 @@ sidebar_position: 2
 
 Breaking changes are any changes that might require action from our integrators.
 
+### Breaking Changes for 22/09/2022
+- remove `hasCheckoutLink` and `checkoutUrl` from the return fields of [`createMovieOrder`](/docs/graphql/mutations#createmovieorder).  
+ **Reason:** GSC payment page has been removed and need not to be displayed to user.
+
 ### Breaking Changes for 28/07/2022
 - rename `isPackage` field of [`MovieTicket`](/docs/graphql/objects#movieticket) object to `hasBundle`.  
  **Reason:** So that the field name is more descriptive.
