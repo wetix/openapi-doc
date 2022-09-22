@@ -67,11 +67,10 @@ Create a movie order.
 
 **Return Fields**
 
-| Name              | Data Type                                       | Description                                                                                 |
-| ----------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------------- |
-| `order`           | [MovieOrder!](/docs/graphql/objects#movieorder) | The movie order session object.                                                             |
-| `hasCheckoutLink` | [Boolean!](/docs/graphql/scalars#boolean)       | Indicates whether a redirection to the cinema checkout page is required (specific for GSc). |
-| `checkoutUrl`     | [URI!](/docs/graphql/objects#movieorder)        | The cinema checkout URL (specific for GSC).                                                 |
+| Name    | Data Type                                       | Description                     |
+| ------- | ----------------------------------------------- | ------------------------------- |
+| `order` | [MovieOrder!](/docs/graphql/objects#movieorder) | The movie order session object. |
+
 
 **Return Fields**
 

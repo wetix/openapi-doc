@@ -3488,8 +3488,6 @@ mutation CreateMovieOrder(
       qrCode
       status
     }
-    hasCheckoutLink
-    checkoutUrl
   }
 }
 ```
@@ -3549,8 +3547,6 @@ mutation CreateMovieOrder(
         "qrCode": null,
         "status": "PENDING"
       },
-      "hasCheckoutLink": true,
-      "checkoutUrl": "https://sb-api.wetix.my/gsc/checkout/EgpNb3ZpZU9yZGVyGNWDrMbn1ZDgFioXEgtPQXV0aENsaWVudBjv1orQ4qedsBY"
     }
   }
 }
@@ -3582,8 +3578,6 @@ mutation CreateMovieOrder(
       qrCode
       status
     }
-    hasCheckoutLink
-    checkoutUrl
   }
 }
 ```
@@ -3647,8 +3641,6 @@ mutation CreateMovieOrder(
         "qrCode": null,
         "status": "PENDING"
       },
-      "hasCheckoutLink": true,
-      "checkoutUrl": "https://sb-api.wetix.my/gsc/checkout/EgpNb3ZpZU9yZGVyGNWDrMbn1ZDgFioXEgtPQXV0aENsaWVudBjv1orQ4qedsBY"
     }
   }
 }
