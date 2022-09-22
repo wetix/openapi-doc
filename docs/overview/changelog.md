@@ -9,6 +9,9 @@ The GraphQL schema changelog is a list of recent and upcoming changes to our Gra
 
 Breaking changes include changes that will break existing queries or could affect the runtime behavior of clients. For a list of breaking changes and when they will occur, see our [breaking changes log](/docs/overview/breaking_changes).
 
+### Documentation and Schema Changes for 22/09/2022
+- breaking-change: remove `hasCheckoutLink` and `checkoutUrl` from the return fields of [`createMovieOrder`](/docs/graphql/mutations#createmovieorder). See the changes [here](https://github.com/wetix/openapi-doc/commit/34ce0c2393db1e1bbb3f28960fae43de2b7fdae4) and the description of the breaking change [here](/docs/overview/breaking_changes#breaking-changes-for-22092022).
+
 ### Documentation and Schema Changes for 01/08/2022
 - chore: update [`Signature Algorithm`](/docs/security/signature) docs. See the changes [here](https://github.com/wetix/openapi-doc/commit/b1727ac80b42ef4b2acf2b55d06e062d088751a2).
 
