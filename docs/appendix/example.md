@@ -1498,7 +1498,7 @@ query {
 
 ## Creating MovieOrderSession to Get Seat Layout
 
-<img src="/img/seat_layout.jpeg" width="200"/> 
+<img src="/img/seat_layout.jpeg" width="200"/>
 
 #### Sample GraphQL mutation:
 
@@ -3310,6 +3310,7 @@ mutation ReserveSeats($input: ReserveSeatsInput!) {
   }
 }
 ```
+
 **Sample GraphQL response:**
 
 ```
@@ -3517,7 +3518,6 @@ mutation CreateMovieOrder(
       }
     ],
     "promoCode": null,
-    "redirectUrl": "https://payment.shoppe.my"
   },
   "signature": {
     "algorithm": "SHA256",
@@ -3610,8 +3610,7 @@ mutation CreateMovieOrder(
         "quantity": 1
       }
     ],
-    "promoCode": null,
-    "redirectUrl": "https://payment.shoppe.my"
+    "promoCode": null
   },
   "signature": {
     "algorithm": "SHA256",

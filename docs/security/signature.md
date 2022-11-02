@@ -3,23 +3,25 @@ sidebar_label: "Signature Algorithm"
 sidebar_position: 1
 ---
 
-
 # Signature Algorithm
+
 WeTix Open API requires requests on [createMovieOrder](/docs/graphql/mutations#createmovieorder), and [confirmMovieOrder](/docs/graphql/mutations#confirmmovieorder) mutations to be signed to ensure the authencity and integrity of the requests.
 
 :::note
 Please generate a pair of **RSA private and public keys** on your end and send only the public key to the person-in-charge of WeTix.
 :::
 
-The steps for generating a signature for a mutations are as follows: 
+The steps for generating a signature for a mutations are as follows:
 
 ### Step 1: Sort the Input Argument
-WeTix Open API mutations that require to be signed contain the **input** and **signature** arguments. The input argument will be used for generating the signature. 
+
+WeTix Open API mutations that require to be signed contain the **input** and **signature** arguments. The input argument will be used for generating the signature.
 
 :::important
+
 - Please **sort the input argument in alphabetical order** by its keys. Any **nested objects within the input argument also need to be sorted** in alphabetical order by its keys.
 - All of the fields of the input argument needs to be included even if it has no data.
-:::
+  :::
 
 **Example of unsorted input argument object**:
 
@@ -41,8 +43,7 @@ WeTix Open API mutations that require to be signed contain the **input** and **s
   ],
   "concessions": null,
   "bundles": null,
-  "promoCode": null,
-  "redirectUrl": "https://google.com"
+  "promoCode": null
 }
 ```
 
@@ -59,7 +60,6 @@ WeTix Open API mutations that require to be signed contain the **input** and **s
     "phoneNo": "167385346"
   },
   "promoCode": null,
-  "redirectUrl": "https://google.com",
   "referenceId": "123",
   "sessionKey": "EhFNb3ZpZU9yZGVyU2Vzc2lvbiIbMXpodkxWbUdBMExZbGFuUWUxMUNpbWN6Mklk",
   "tickets": [
@@ -76,8 +76,9 @@ Please ensure the sorted input argument object is **compact/ minified**.
 :::
 
 **Minified Input Argument:**
+
 ```
-{"bundles":null,"concessions":null,"customer":{"countryCode":"60","email":"harithmohamd67@gmail.com","externalId":null,"phoneNo":"167385346"},"promoCode":null,"redirectUrl":"https://google.com","referenceId":"123","sessionKey":"EhFNb3ZpZU9yZGVyU2Vzc2lvbiIbMXpodkxWbUdBMExZbGFuUWUxMUNpbWN6Mklk","tickets":[{"key":"U_-HAwEBCUdvYlRpY2tldAH_iAABBQECSUQBDAABBE5hbWUBDAABCEFyZWFDb2RlAQwAAQZBbW91bnQBBgABD1NlYXRzQWxsb2NhdGlvbgEGAAAAGv-IAQVBZHVsdAEFQURVTFQBATEB_g-gAQEA","quantity":1}]}
+{"bundles":null,"concessions":null,"customer":{"countryCode":"60","email":"harithmohamd67@gmail.com","externalId":null,"phoneNo":"167385346"},"promoCode":null,"referenceId":"123","sessionKey":"EhFNb3ZpZU9yZGVyU2Vzc2lvbiIbMXpodkxWbUdBMExZbGFuUWUxMUNpbWN6Mklk","tickets":[{"key":"U_-HAwEBCUdvYlRpY2tldAH_iAABBQECSUQBDAABBE5hbWUBDAABCEFyZWFDb2RlAQwAAQZBbW91bnQBBgABD1NlYXRzQWxsb2NhdGlvbgEGAAAAGv-IAQVBZHVsdAEFQURVTFQBATEB_g-gAQEA","quantity":1}]}
 ```
 
 ### Step 2: Encode the Sorted Input Argument
@@ -148,7 +149,6 @@ Please include the signature and other parameters in the [signature argument](/d
     "concessions": null,
     "promoCode": null,
     "bundles": null,
-    "redirectUrl": "https://google.com"
   },
   "signature": {
     "algorithm": "SHA256",
