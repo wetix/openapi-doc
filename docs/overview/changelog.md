@@ -12,6 +12,7 @@ Breaking changes include changes that will break existing queries or could affec
 ### Documentation and Schema Changes for 02/11/2022
 
 - breaking-change: remove `redirectUrl` from the [`CreateMovieOrderInput`](/docs/graphql/input_objects#createmovieorderinput) object. See the changes [here](https://github.com/wetix/openapi-doc/commit/b6be1b70113591028c4020937df0511655705b0a) and the description of the breaking change [here](/docs/overview/breaking_changes#breaking-changes-for-02112022).
+- chore: update [Confirm Movie Order](/docs/appendix/example#confirm-movie-order) example. See the changes [here](https://github.com/wetix/openapi-doc/commit/91a2a563a3695655106f9ab02a20b09073829426).
 
 ### Documentation and Schema Changes for 22/09/2022
 
