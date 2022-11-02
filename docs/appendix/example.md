@@ -3682,7 +3682,11 @@ mutation ConfirmMovieOrder(
   "input": {
     "orderKey": "EgpNb3ZpZU9yZGVyGPzenquY3pDgFioXEgtPQXV0aENsaWVudBjv1orQ4qedsBY",
   },
-  "signature": "OToc8MV22QUjjt4ZiPc8rliwRvkjNC1leuuvbxYwMYAIZ+e6FsPeXrHfd5RW72Je0++S42ZLpYni74wWOC7uTUthbcq7YsbitXMznZ4wxUwhdVv+piCFPJ8VQr/zkt/fTCLUKpCR9/fuGyGtTlJ8aYdgJXuIcAyUCuMifyS4kmw="
+  "signature":{
+   "algorithm":"SHA256",
+   "timestamp":1667384574,
+   "hash":"DKnlFa2sALd3Fg4reA9oQl9b++Mcs2B7ffzYerA3BytGmw2UJPdQ//LrUY1eXml8Tw32VERb0iwVAcdQI/DNpPU28dLa2VmvoX3J8GPuJwfcegU5KzC4dmGLwblrOSva10cG9/tgG4XQe0bUES53j1KFELyjKIgVvTtYm3GkRbk="
+  }
 }
 ```
 
