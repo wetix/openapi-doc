@@ -59,14 +59,17 @@ The cryptographic hash functions.
 
 The types of seats.
 
-| Value          | Description |
-| -------------- | ----------- |
-| `STANDARD`     |             |
-| `WHEEL_CHAIR`  |             |
-| `HOUSE`        |             |
-| `TWIN`         |             |
-| `BEAN_BAG`     |             |
-| `CUDDLE_COUCH` |             |
+| Value         | Description |
+| ------------- | ----------- |
+| `STANDARD`    |             |
+| `WHEEL_CHAIR` |             |
+| `HOUSE`       |             |
+| `TWIN`        |             |
+| `BEAN_BAG`    |             |
+| `TWIN_SOFA`   |             |
+| `SUITE`       |             |
+| `RECLINER`    |             |
+| `CABIN`       |             |
 
 ## [SeatStatus](/docs/graphql/enums#seatstatus)
 
@@ -78,5 +81,3 @@ The statuses of seats.
 | `SOLD`      |             |
 | `BROKEN`    |             |
 | `RESERVED`  |             |
-
-

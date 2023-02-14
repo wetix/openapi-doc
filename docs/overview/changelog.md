@@ -9,6 +9,10 @@ The GraphQL schema changelog is a list of recent and upcoming changes to our Gra
 
 Breaking changes include changes that will break existing queries or could affect the runtime behavior of clients. For a list of breaking changes and when they will occur, see our [breaking changes log](/docs/overview/breaking_changes).
 
+### Documentation and Schema Changes for 14/02/2023
+
+- chore: add more enums to [`SeatType`](/docs/graphql/enums#seattype). See the changes [here](https://github.com/wetix/openapi-doc/commit/c30e5a3f79783107f98e632a49433259e03c978c).
+
 ### Documentation and Schema Changes for 02/11/2022
 
 - breaking-change: remove `redirectUrl` from the [`CreateMovieOrderInput`](/docs/graphql/input_objects#createmovieorderinput) object. See the changes [here](https://github.com/wetix/openapi-doc/commit/b6be1b70113591028c4020937df0511655705b0a) and the description of the breaking change [here](/docs/overview/breaking_changes#breaking-changes-for-02112022).
