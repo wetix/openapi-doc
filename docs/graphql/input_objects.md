@@ -42,15 +42,16 @@ Create movie order input with selected tickets and concessions.
 
 **Input Fields**
 
-| Name          | Data Type                                                                                         | Description                                   |
-| ------------- | ------------------------------------------------------------------------------------------------- | --------------------------------------------- |
-| `sessionKey`  | [Key!](/docs/graphql/scalars#key)                                                                 | Unique identifier for movie order session.    |
-| `referenceId` | [String!](/docs/graphql/scalars#string)                                                           | External unique identifier for order.         |
-| `customer`    | [CreateMovieOrderCustomerInput!](/docs/graphql/input_objects#createmovieordercustomerinput)       | Customer information for movie order session. |
-| `tickets`     | [[CreateMovieOrderTicketInput!]!](/docs/graphql/input_objects#createmovieorderticketinput)        | Selected tickets input.                       |
-| `concessions` | [[CreateMovieOrderConcessionInput]!](/docs/graphql/input_objects#createmovieorderconcessioninput) | Selected concessions input.                   |
-| `bundles`     | [[CreateMovieOrderBundleInput]!](/docs/graphql/input_objects#createmovieorderbundleinput)         | Selected bundles input.                       |
-| `promoCode`   | [String!](/docs/graphql/scalars#key)                                                              | Promo code applied by the user.               |
+| Name          | Data Type                                                                                         | Description                                                                                                                                                            |
+| ------------- | ------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `sessionKey`  | [Key!](/docs/graphql/scalars#key)                                                                 | Unique identifier for movie order session.                                                                                                                             |
+| `referenceId` | [String!](/docs/graphql/scalars#string)                                                           | External unique identifier for order.                                                                                                                                  |
+| `customer`    | [CreateMovieOrderCustomerInput!](/docs/graphql/input_objects#createmovieordercustomerinput)       | Customer information for movie order session.                                                                                                                          |
+| `tickets`     | [[CreateMovieOrderTicketInput!]!](/docs/graphql/input_objects#createmovieorderticketinput)        | Selected tickets input.                                                                                                                                                |
+| `concessions` | [[CreateMovieOrderConcessionInput]!](/docs/graphql/input_objects#createmovieorderconcessioninput) | Selected concessions input.                                                                                                                                            |
+| `bundles`     | [[CreateMovieOrderBundleInput]!](/docs/graphql/input_objects#createmovieorderbundleinput)         | Selected bundles input.                                                                                                                                                |
+| `promoCode`   | [String!](/docs/graphql/scalars#key)                                                              | Promo code applied by the user.                                                                                                                                        |
+| `notifyUrl`   | [String](/docs/graphql/scalars#key)                                                               | (Optional) Webhook notification for order completion. See [Notify Order Completion](/docs/webhook/webhook_order_notify) webhook for the full guide and implementation. |
 
 ## [CreateMovieOrderCustomerInput](/docs/graphql/input_objects#movieordercustomerinput)
 
