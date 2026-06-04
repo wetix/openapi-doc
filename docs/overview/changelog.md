@@ -9,6 +9,12 @@ The GraphQL schema changelog is a list of recent and upcoming changes to our Gra
 
 Breaking changes include changes that will break existing queries or could affect the runtime behavior of clients. For a list of breaking changes and when they will occur, see our [breaking changes log](/docs/overview/breaking_changes).
 
+### Documentation and Schema Changes for 04/06/2026
+
+- chore: add optional `notifyUrl` field to [`CreateMovieOrderInput`](/docs/graphql/input_objects#createmovieorderinput). When provided, WeTix will deliver a signed webhook notification to the given URL upon successful order completion.
+- chore: add [Notify Order Completion](/docs/webhook/webhook_order_notify) webhook documentation covering payload structure, retry behaviour (cron every 2 minutes, up to 5 attempts), and deduplication logic.
+- chore: add [Webhook Signature Verification](/docs/webhook/webhook_verify_signature) documentation.
+
 ### Documentation and Schema Changes for 14/02/2023
 
 - chore: add more enums to [`SeatType`](/docs/graphql/enums#seattype). See the changes [here](https://github.com/wetix/openapi-doc/commit/c30e5a3f79783107f98e632a49433259e03c978c).
